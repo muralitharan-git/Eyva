@@ -14,6 +14,7 @@
 		BC725264277B578600CF13E9 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC725263277B578600CF13E9 /* QuestionTableViewCell.swift */; };
 		BC725267277B5F7700CF13E9 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC725266277B5F7700CF13E9 /* DetailViewModel.swift */; };
 		BC72526A277B61E300CF13E9 /* Vitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC725269277B61E300CF13E9 /* Vitals.swift */; };
+		BC9574D2277C51B8003821BF /* Bluetooth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9574D1277C51B7003821BF /* Bluetooth.storyboard */; };
 		BC9E2AAC277BD36900819789 /* VitalsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */; };
 		BC9E2AAE277BDC0100819789 /* ViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAD277BDC0100819789 /* ViewControllerExt.swift */; };
 		BC9E2AB0277BDD7300819789 /* VitalsRecoredValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAF277BDD7300819789 /* VitalsRecoredValueViewController.swift */; };
@@ -54,7 +55,6 @@
 		BCBFDB78277833A500897C5D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBFDB77277833A500897C5D /* DashboardViewController.swift */; };
 		BCBFDB7A277833B800897C5D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBFDB79277833B800897C5D /* DetailViewController.swift */; };
 		BCBFDB7D277833DA00897C5D /* BluetoothConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBFDB7C277833DA00897C5D /* BluetoothConnectViewController.swift */; };
-		BCBFDB7F277836DD00897C5D /* Bluetooth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCBFDB7E277836DD00897C5D /* Bluetooth.storyboard */; };
 		BCBFDB8227783B4200897C5D /* StoryBoardExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBFDB8127783B4200897C5D /* StoryBoardExt.swift */; };
 		BCBFDB842778655800897C5D /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBFDB832778655800897C5D /* OnboardingPageViewController.swift */; };
 		BCBFDB862778658700897C5D /* OnBoardingSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBFDB852778658700897C5D /* OnBoardingSceneViewController.swift */; };
@@ -100,6 +100,7 @@
 		BC725263277B578600CF13E9 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		BC725266277B5F7700CF13E9 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		BC725269277B61E300CF13E9 /* Vitals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vitals.swift; sourceTree = "<group>"; };
+		BC9574D1277C51B7003821BF /* Bluetooth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bluetooth.storyboard; sourceTree = "<group>"; };
 		BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC9E2AAD277BDC0100819789 /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
 		BC9E2AAF277BDD7300819789 /* VitalsRecoredValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsRecoredValueViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +141,6 @@
 		BCBFDB77277833A500897C5D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		BCBFDB79277833B800897C5D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BCBFDB7C277833DA00897C5D /* BluetoothConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConnectViewController.swift; sourceTree = "<group>"; };
-		BCBFDB7E277836DD00897C5D /* Bluetooth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bluetooth.storyboard; sourceTree = "<group>"; };
 		BCBFDB8127783B4200897C5D /* StoryBoardExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardExt.swift; sourceTree = "<group>"; };
 		BCBFDB832778655800897C5D /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		BCBFDB852778658700897C5D /* OnBoardingSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSceneViewController.swift; sourceTree = "<group>"; };
@@ -316,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				BCBFDB7B277833C100897C5D /* ViewControllers */,
-				BCBFDB7E277836DD00897C5D /* Bluetooth.storyboard */,
 			);
 			path = "Bluetooth ";
 			sourceTree = "<group>";
@@ -348,6 +347,7 @@
 		BCBFDB7B277833C100897C5D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BC9574D1277C51B7003821BF /* Bluetooth.storyboard */,
 				BCBFDB7C277833DA00897C5D /* BluetoothConnectViewController.swift */,
 			);
 			path = ViewControllers;
@@ -388,14 +388,14 @@
 		BCE2830027773F3400EC976A /* Eyva */ = {
 			isa = PBXGroup;
 			children = (
+				BCE2830127773F3400EC976A /* AppDelegate.swift */,
+				BCE2830327773F3400EC976A /* SceneDelegate.swift */,
+				BCE2830527773F3400EC976A /* ViewController.swift */,
 				BC725268277B61D300CF13E9 /* Enums */,
 				BCB9E04B2779B647003626B1 /* Supports */,
 				BCB9E0492779B270003626B1 /* Podfile */,
 				BCB9E01D2779830D003626B1 /* Resources */,
 				BCBFDB8027783B0E00897C5D /* Extension */,
-				BCE2830127773F3400EC976A /* AppDelegate.swift */,
-				BCE2830327773F3400EC976A /* SceneDelegate.swift */,
-				BCE2830527773F3400EC976A /* ViewController.swift */,
 				BCBFDB662778329900897C5D /* OnBoarding */,
 				BCBFDB67277832A500897C5D /* Dashboard */,
 				BCBFDB68277832AF00897C5D /* Bluetooth  */,
@@ -557,6 +557,7 @@
 				BCBFDB6C2778332000897C5D /* Dashboard.storyboard in Resources */,
 				BCB9E03B27798356003626B1 /* Mulish-ExtraLight.ttf in Resources */,
 				BCB9E03A27798356003626B1 /* Mulish-BoldItalic.ttf in Resources */,
+				BC9574D2277C51B8003821BF /* Bluetooth.storyboard in Resources */,
 				BCE2830B27773F3500EC976A /* Assets.xcassets in Resources */,
 				BCB9E0482779877C003626B1 /* Poppins-Regular.ttf in Resources */,
 				BCB9E03D27798356003626B1 /* Mulish-ExtraBoldItalic.ttf in Resources */,
@@ -566,7 +567,6 @@
 				BCB9E02127798349003626B1 /* Mulish-VariableFont_wght.ttf in Resources */,
 				BCBFDB6A2778331100897C5D /* OnBoarding.storyboard in Resources */,
 				BCB9E03427798356003626B1 /* Mulish-Light.ttf in Resources */,
-				BCBFDB7F277836DD00897C5D /* Bluetooth.storyboard in Resources */,
 				BCB9E04A2779B270003626B1 /* Podfile in Resources */,
 				BCB9E03927798356003626B1 /* Mulish-MediumItalic.ttf in Resources */,
 				BCB9E02227798349003626B1 /* Mulish-Italic-VariableFont_wght.ttf in Resources */,
