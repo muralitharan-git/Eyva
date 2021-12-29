@@ -14,5 +14,6 @@ struct VitalInfo {
     var temperature: Float
     var systolic: Float
     var diastolic: Float
-    var stressLevel: Float 
+    var stressLevel: Float
+    var recorededDate: Date
 }

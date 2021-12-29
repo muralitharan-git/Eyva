@@ -23,5 +23,6 @@ extension Vital {
     @NSManaged public var systolic: Float
     @NSManaged public var diastolic: Float
     @NSManaged public var stressLevel: Float
+    @NSManaged public var recordedDate: Date?
 
 }

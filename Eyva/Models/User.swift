@@ -11,5 +11,5 @@ import Foundation
 struct UserInfo {
     var name: String
     var email: String
-    var age: String 
+    var age: Int
 }

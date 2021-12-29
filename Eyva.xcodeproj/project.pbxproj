@@ -111,8 +111,8 @@
 		BC9574F4277C836C003821BF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BC9574F7277C846A003821BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BC9574F9277C84B7003821BF /* VitalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalInfo.swift; sourceTree = "<group>"; };
-		BC9574FB277C85B7003821BF /* Vital+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BC9574FC277C85B7003821BF /* Vital+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BC9574FD277C8662003821BF /* Vital+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BC9574FE277C8662003821BF /* Vital+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC9E2AAD277BDC0100819789 /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
 		BC9E2AAF277BDD7300819789 /* VitalsRecoredValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsRecoredValueViewController.swift; sourceTree = "<group>"; };
@@ -257,10 +257,10 @@
 		BC9574D7277C8209003821BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BC9574FB277C85B7003821BF /* Vital+CoreDataClass.swift */,
-				BC9574FC277C85B7003821BF /* Vital+CoreDataProperties.swift */,
 				BC9574F0277C831C003821BF /* User+CoreDataClass.swift */,
 				BC9574F1277C831C003821BF /* User+CoreDataProperties.swift */,
+				BC9574FE277C8662003821BF /* Vital+CoreDataClass.swift */,
+				BC9574FD277C8662003821BF /* Vital+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
