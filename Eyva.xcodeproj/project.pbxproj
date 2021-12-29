@@ -19,6 +19,7 @@
 		BC9574F5277C836C003821BF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9574F4277C836C003821BF /* CoreDataManager.swift */; };
 		BC9574F8277C846A003821BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9574F7277C846A003821BF /* User.swift */; };
 		BC9574FA277C84B7003821BF /* VitalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9574F9277C84B7003821BF /* VitalInfo.swift */; };
+		BC957501277C8A1C003821BF /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC957500277C8A1C003821BF /* UserDefaultsHelper.swift */; };
 		BC9E2AAC277BD36900819789 /* VitalsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */; };
 		BC9E2AAE277BDC0100819789 /* ViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAD277BDC0100819789 /* ViewControllerExt.swift */; };
 		BC9E2AB0277BDD7300819789 /* VitalsRecoredValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAF277BDD7300819789 /* VitalsRecoredValueViewController.swift */; };
@@ -113,6 +114,7 @@
 		BC9574F9277C84B7003821BF /* VitalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalInfo.swift; sourceTree = "<group>"; };
 		BC9574FD277C8662003821BF /* Vital+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BC9574FE277C8662003821BF /* Vital+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BC957500277C8A1C003821BF /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC9E2AAD277BDC0100819789 /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
 		BC9E2AAF277BDD7300819789 /* VitalsRecoredValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsRecoredValueViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +274,14 @@
 				BC9574F9277C84B7003821BF /* VitalInfo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BC9574FF277C8A05003821BF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BC957500277C8A1C003821BF /* UserDefaultsHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		BCB9E01D2779830D003626B1 /* Resources */ = {
@@ -434,6 +444,7 @@
 				BCE2830327773F3400EC976A /* SceneDelegate.swift */,
 				BCE2830527773F3400EC976A /* ViewController.swift */,
 				BCB9E0492779B270003626B1 /* Podfile */,
+				BC9574FF277C8A05003821BF /* Helper */,
 				BC725268277B61D300CF13E9 /* Enums */,
 				BCB9E04B2779B647003626B1 /* Supports */,
 				BCB9E01D2779830D003626B1 /* Resources */,
@@ -759,6 +770,7 @@
 				BCB9E04F2779BF37003626B1 /* Global.swift in Sources */,
 				BCB9E0512779F5FB003626B1 /* ViewExt.swift in Sources */,
 				BCBFDB712778335D00897C5D /* SwipeUpViewController.swift in Sources */,
+				BC957501277C8A1C003821BF /* UserDefaultsHelper.swift in Sources */,
 				BC9E2AAE277BDC0100819789 /* ViewControllerExt.swift in Sources */,
 				BC9574F5277C836C003821BF /* CoreDataManager.swift in Sources */,
 				BC725260277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift in Sources */,

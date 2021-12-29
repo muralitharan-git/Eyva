@@ -7,7 +7,7 @@
 
 import UIKit
 
-let Is_Show_OnBoarding_Screens = true
+
 
 class ViewController: UIViewController {
     
@@ -24,10 +24,10 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if Is_Show_OnBoarding_Screens {
-            navigateToOnBoardingViewController()
-        } else {
+        if UserDefaultsHelper.getUserDetailsSavedState() {
             navigateToDashboardViewController()
+        } else {
+            navigateToOnBoardingViewController()
         }
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-var userName = "Murali"
+
 
 class UserInputViewController: UIViewController {
 
@@ -33,6 +33,7 @@ class UserInputViewController: UIViewController {
     @IBAction func actionButton_Tapped(_ sender: Any) {
         let user = UserInfo(name: answers[0], email: answers[1], age: Int(answers[2]) ?? 0)
         sharedCoreDataManager.saveUserDetails(user: user) {
+            UserDefaultsHelper.setuserDetailsIsSaved()
             self.navigateToDashboardViewController()
         } onError: { _ in }
     }
@@ -40,10 +41,6 @@ class UserInputViewController: UIViewController {
     @objc func textFieldDidChange(_ textField: UITextField) {
         answers[textField.tag] = textField.text  ?? ""
         updateCTAButtonStateBasedOnData()
-        
-        if textField.tag == 0 {
-            userName = textField.text ?? ""
-        }
     }
     
     private func updateCTAButtonStateBasedOnData() {
