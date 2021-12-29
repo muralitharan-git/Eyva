@@ -75,6 +75,11 @@ final class CoreDataManager {
         self.modelName = modelName
     }
     
+    internal func saveUserDetails(onSave: @escaping OnSuccess, onError: @escaping OnError) {
+        
+    }
+    
+    
 //    internal func saveStrategy(_ strategy: Strategy, onSave: @escaping OnSuccess, onError: @escaping OnError) {
 //
 //        let strategyEntity = NSEntityDescription.entity(forEntityName: "StrategyInfo", in: managedObjectContext)!

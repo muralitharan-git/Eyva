@@ -10,11 +10,12 @@
         <attribute name="glucose" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="heartrate" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="oxygen" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="stressLevel" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="systolic" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="temperature" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
         <element name="User" positionX="-63" positionY="-18" width="128" height="74"/>
-        <element name="Vital" positionX="-54" positionY="18" width="128" height="119"/>
+        <element name="Vital" positionX="-54" positionY="18" width="128" height="134"/>
     </elements>
 </model>

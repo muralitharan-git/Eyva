@@ -17,6 +17,8 @@
 		BC9574D2277C51B8003821BF /* Bluetooth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9574D1277C51B7003821BF /* Bluetooth.storyboard */; };
 		BC9574D6277C8103003821BF /* Evya.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC9574D4277C8103003821BF /* Evya.xcdatamodeld */; };
 		BC9574F5277C836C003821BF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9574F4277C836C003821BF /* CoreDataManager.swift */; };
+		BC9574F8277C846A003821BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9574F7277C846A003821BF /* User.swift */; };
+		BC9574FA277C84B7003821BF /* VitalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9574F9277C84B7003821BF /* VitalInfo.swift */; };
 		BC9E2AAC277BD36900819789 /* VitalsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */; };
 		BC9E2AAE277BDC0100819789 /* ViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAD277BDC0100819789 /* ViewControllerExt.swift */; };
 		BC9E2AB0277BDD7300819789 /* VitalsRecoredValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAF277BDD7300819789 /* VitalsRecoredValueViewController.swift */; };
@@ -106,9 +108,11 @@
 		BC9574D5277C8103003821BF /* Evya.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evya.xcdatamodel; sourceTree = "<group>"; };
 		BC9574F0277C831C003821BF /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC9574F1277C831C003821BF /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BC9574F2277C831C003821BF /* Vital+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BC9574F3277C831C003821BF /* Vital+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BC9574F4277C836C003821BF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BC9574F7277C846A003821BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BC9574F9277C84B7003821BF /* VitalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalInfo.swift; sourceTree = "<group>"; };
+		BC9574FB277C85B7003821BF /* Vital+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BC9574FC277C85B7003821BF /* Vital+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC9E2AAD277BDC0100819789 /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
 		BC9E2AAF277BDD7300819789 /* VitalsRecoredValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsRecoredValueViewController.swift; sourceTree = "<group>"; };
@@ -253,12 +257,21 @@
 		BC9574D7277C8209003821BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC9574FB277C85B7003821BF /* Vital+CoreDataClass.swift */,
+				BC9574FC277C85B7003821BF /* Vital+CoreDataProperties.swift */,
 				BC9574F0277C831C003821BF /* User+CoreDataClass.swift */,
 				BC9574F1277C831C003821BF /* User+CoreDataProperties.swift */,
-				BC9574F2277C831C003821BF /* Vital+CoreDataClass.swift */,
-				BC9574F3277C831C003821BF /* Vital+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BC9574F6277C845C003821BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC9574F7277C846A003821BF /* User.swift */,
+				BC9574F9277C84B7003821BF /* VitalInfo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		BCB9E01D2779830D003626B1 /* Resources */ = {
@@ -417,18 +430,19 @@
 		BCE2830027773F3400EC976A /* Eyva */ = {
 			isa = PBXGroup;
 			children = (
-				BC9574D3277C80D8003821BF /* Core Data */,
 				BCE2830127773F3400EC976A /* AppDelegate.swift */,
 				BCE2830327773F3400EC976A /* SceneDelegate.swift */,
 				BCE2830527773F3400EC976A /* ViewController.swift */,
+				BCB9E0492779B270003626B1 /* Podfile */,
 				BC725268277B61D300CF13E9 /* Enums */,
 				BCB9E04B2779B647003626B1 /* Supports */,
-				BCB9E0492779B270003626B1 /* Podfile */,
 				BCB9E01D2779830D003626B1 /* Resources */,
 				BCBFDB8027783B0E00897C5D /* Extension */,
 				BCBFDB662778329900897C5D /* OnBoarding */,
 				BCBFDB67277832A500897C5D /* Dashboard */,
 				BCBFDB68277832AF00897C5D /* Bluetooth  */,
+				BC9574D3277C80D8003821BF /* Core Data */,
+				BC9574F6277C845C003821BF /* Models */,
 				BCE2830727773F3400EC976A /* Main.storyboard */,
 				BCE2830A27773F3500EC976A /* Assets.xcassets */,
 				BCE2830C27773F3500EC976A /* LaunchScreen.storyboard */,
@@ -731,6 +745,7 @@
 				BC9E2AB0277BDD7300819789 /* VitalsRecoredValueViewController.swift in Sources */,
 				BC725262277B3A1500CF13E9 /* ActionsTableViewCell.swift in Sources */,
 				BCE2830627773F3400EC976A /* ViewController.swift in Sources */,
+				BC9574F8277C846A003821BF /* User.swift in Sources */,
 				BCBFDB78277833A500897C5D /* DashboardViewController.swift in Sources */,
 				BCBFDB862778658700897C5D /* OnBoardingSceneViewController.swift in Sources */,
 				BCE2830227773F3400EC976A /* AppDelegate.swift in Sources */,
@@ -748,6 +763,7 @@
 				BC9574F5277C836C003821BF /* CoreDataManager.swift in Sources */,
 				BC725260277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift in Sources */,
 				BC9574D6277C8103003821BF /* Evya.xcdatamodeld in Sources */,
+				BC9574FA277C84B7003821BF /* VitalInfo.swift in Sources */,
 				BC9E2AAC277BD36900819789 /* VitalsCollectionViewCell.swift in Sources */,
 				BCE2830427773F3400EC976A /* SceneDelegate.swift in Sources */,
 				BCBFDB752778338400897C5D /* UserInputViewController.swift in Sources */,
