@@ -31,6 +31,21 @@ final class CoreDataManager {
         }
     }
     
+    internal func fetchUserName() -> String {
+        let context = managedObjectContext
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        do {
+            let results = try context.fetch(fetchRequest)
+            if let latestUser = results.last, let user = latestUser as? User {
+               return user.name ?? ""
+            }
+        } catch {
+            let fetchError = error as NSError
+            print("\(fetchError), \(fetchError.localizedDescription)")
+        }
+        return ""
+    }
+    
     private(set) lazy var managedObjectContext: NSManagedObjectContext = {
         let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = persistantStoreCoordinator

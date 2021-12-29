@@ -24,7 +24,7 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome "
+        welcomeLabel.text = "Welcome " + sharedCoreDataManager.fetchUserName()
         bluetoothConnectionButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 16)
     }
     
