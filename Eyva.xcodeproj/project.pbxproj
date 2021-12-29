@@ -15,6 +15,8 @@
 		BC725267277B5F7700CF13E9 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC725266277B5F7700CF13E9 /* DetailViewModel.swift */; };
 		BC72526A277B61E300CF13E9 /* Vitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC725269277B61E300CF13E9 /* Vitals.swift */; };
 		BC9574D2277C51B8003821BF /* Bluetooth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9574D1277C51B7003821BF /* Bluetooth.storyboard */; };
+		BC9574D6277C8103003821BF /* Evya.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC9574D4277C8103003821BF /* Evya.xcdatamodeld */; };
+		BC9574F5277C836C003821BF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9574F4277C836C003821BF /* CoreDataManager.swift */; };
 		BC9E2AAC277BD36900819789 /* VitalsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */; };
 		BC9E2AAE277BDC0100819789 /* ViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAD277BDC0100819789 /* ViewControllerExt.swift */; };
 		BC9E2AB0277BDD7300819789 /* VitalsRecoredValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E2AAF277BDD7300819789 /* VitalsRecoredValueViewController.swift */; };
@@ -101,6 +103,12 @@
 		BC725266277B5F7700CF13E9 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		BC725269277B61E300CF13E9 /* Vitals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vitals.swift; sourceTree = "<group>"; };
 		BC9574D1277C51B7003821BF /* Bluetooth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bluetooth.storyboard; sourceTree = "<group>"; };
+		BC9574D5277C8103003821BF /* Evya.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evya.xcdatamodel; sourceTree = "<group>"; };
+		BC9574F0277C831C003821BF /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BC9574F1277C831C003821BF /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BC9574F2277C831C003821BF /* Vital+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BC9574F3277C831C003821BF /* Vital+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BC9574F4277C836C003821BF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC9E2AAD277BDC0100819789 /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
 		BC9E2AAF277BDD7300819789 /* VitalsRecoredValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsRecoredValueViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +238,27 @@
 				BC725269277B61E300CF13E9 /* Vitals.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		BC9574D3277C80D8003821BF /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				BC9574D7277C8209003821BF /* Model */,
+				BC9574D4277C8103003821BF /* Evya.xcdatamodeld */,
+				BC9574F4277C836C003821BF /* CoreDataManager.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		BC9574D7277C8209003821BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC9574F0277C831C003821BF /* User+CoreDataClass.swift */,
+				BC9574F1277C831C003821BF /* User+CoreDataProperties.swift */,
+				BC9574F2277C831C003821BF /* Vital+CoreDataClass.swift */,
+				BC9574F3277C831C003821BF /* Vital+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BCB9E01D2779830D003626B1 /* Resources */ = {
@@ -388,6 +417,7 @@
 		BCE2830027773F3400EC976A /* Eyva */ = {
 			isa = PBXGroup;
 			children = (
+				BC9574D3277C80D8003821BF /* Core Data */,
 				BCE2830127773F3400EC976A /* AppDelegate.swift */,
 				BCE2830327773F3400EC976A /* SceneDelegate.swift */,
 				BCE2830527773F3400EC976A /* ViewController.swift */,
@@ -715,7 +745,9 @@
 				BCB9E0512779F5FB003626B1 /* ViewExt.swift in Sources */,
 				BCBFDB712778335D00897C5D /* SwipeUpViewController.swift in Sources */,
 				BC9E2AAE277BDC0100819789 /* ViewControllerExt.swift in Sources */,
+				BC9574F5277C836C003821BF /* CoreDataManager.swift in Sources */,
 				BC725260277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift in Sources */,
+				BC9574D6277C8103003821BF /* Evya.xcdatamodeld in Sources */,
 				BC9E2AAC277BD36900819789 /* VitalsCollectionViewCell.swift in Sources */,
 				BCE2830427773F3400EC976A /* SceneDelegate.swift in Sources */,
 				BCBFDB752778338400897C5D /* UserInputViewController.swift in Sources */,
@@ -1094,6 +1126,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BC9574D4277C8103003821BF /* Evya.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BC9574D5277C8103003821BF /* Evya.xcdatamodel */,
+			);
+			currentVersion = BC9574D5277C8103003821BF /* Evya.xcdatamodel */;
+			path = Evya.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BCE282F627773F3400EC976A /* Project object */;
 }
