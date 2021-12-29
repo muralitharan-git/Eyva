@@ -12,14 +12,14 @@ let sharedCoreDataManager = CoreDataManager.getSharedInsatnce()
 
 final class CoreDataManager {
     
+    private let modelName: String
+    
     class func getSharedInsatnce() -> CoreDataManager {
         struct Static {
             static let instance = CoreDataManager(modelName: "Evya")
         }
         return Static.instance
     }
-    
-    private let modelName: String
     
     internal var isEmpty: Bool {
         do {

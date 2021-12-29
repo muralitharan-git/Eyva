@@ -31,7 +31,10 @@ class UserInputViewController: UIViewController {
     }
     
     @IBAction func actionButton_Tapped(_ sender: Any) {
-        navigateToDashboardViewController()
+        let user = UserInfo(name: answers[0], email: answers[1], age: Int(answers[2]) ?? 0)
+        sharedCoreDataManager.saveUserDetails(user: user) {
+            self.navigateToDashboardViewController()
+        } onError: { _ in }
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
