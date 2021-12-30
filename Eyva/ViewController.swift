@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if UserDefaultsHelper.getUserDetailsSavedState() {
-            navigateToDashboardViewController()
+            navigateToHomeViewController()
         } else {
             navigateToOnBoardingViewController()
         }
@@ -35,6 +35,12 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "OnBoarding", bundle: Bundle.main)
         let swipeUpViewController = storyboard.instantiateViewController(withIdentifier: "SwipeUpViewController") as! SwipeUpViewController
         navigationController?.pushViewController(swipeUpViewController, animated: false)
+    }
+    
+    private func navigateToHomeViewController() {
+        let storyboard = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
+        let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        navigationController?.pushViewController(homeViewController, animated: true)
     }
 }
 
