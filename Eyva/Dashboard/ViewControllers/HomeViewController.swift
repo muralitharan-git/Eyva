@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
     
     internal func presentBluetoothdViewController() {
         let storyboard = UIStoryboard(name: "Bluetooth", bundle: Bundle.main)
-        let connectViewController = storyboard.instantiateViewController(withIdentifier: "BluetoothConnectViewController") as! BluetoothConnectViewController
+        let connectViewController = storyboard.instantiateInitialViewController() as! UINavigationController
         connectViewController.modalPresentationStyle = .fullScreen
         present(connectViewController, animated: true, completion: nil)
     }

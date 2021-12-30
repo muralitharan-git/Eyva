@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -668,7 +668,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCp-H4-I3c">
+                            <button opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCp-H4-I3c">
                                 <rect key="frame" x="26" y="78" width="44" height="44"/>
                                 <color key="backgroundColor" red="0.80784313730000001" green="0.71764705880000002" blue="1" alpha="0.80386373300000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -687,7 +687,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvv-KR-HWC">
-                                <rect key="frame" x="28" y="176" width="358" height="17"/>
+                                <rect key="frame" x="28" y="173.5" width="358" height="15.5"/>
                                 <string key="text">Here is how your inner body is doing iterms of wellness.
 </string>
                                 <fontDescription key="fontDescription" name="MulishRoman-Regular" family="Mulish" pointSize="13"/>
@@ -695,19 +695,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Murali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCV-RZ-sm9">
-                                <rect key="frame" x="28" y="135" width="108" height="32"/>
+                                <rect key="frame" x="28" y="135" width="99.5" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12-12-2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mop-HT-ahM">
-                                <rect key="frame" x="328" y="148" width="68" height="16"/>
+                                <rect key="frame" x="333" y="147.5" width="63" height="14"/>
                                 <fontDescription key="fontDescription" name="MulishRoman-Regular" family="Mulish" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qMY-gT-buE">
-                                <rect key="frame" x="0.0" y="217" width="414" height="679"/>
+                                <rect key="frame" x="0.0" y="213" width="414" height="683"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -729,19 +729,19 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4C-2I-O6v">
-                                                            <rect key="frame" x="82" y="10" width="37" height="18"/>
+                                                            <rect key="frame" x="82" y="10" width="34.5" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v26-6h-aZD">
-                                                            <rect key="frame" x="80" y="35" width="66.5" height="31.5"/>
+                                                            <rect key="frame" x="80" y="33.5" width="61.5" height="29.5"/>
                                                             <fontDescription key="fontDescription" name="Mulish-ExtraBold" family="Mulish" pointSize="25"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAd-zA-rdd">
-                                                            <rect key="frame" x="162.5" y="46" width="37" height="18"/>
+                                                            <rect key="frame" x="157.5" y="44" width="34.5" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -798,28 +798,63 @@
                                     <outlet property="delegate" destination="kdR-lv-miD" id="a2Z-Fo-XKx"/>
                                 </connections>
                             </tableView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qk-dr-A3O">
+                                <rect key="frame" x="0.0" y="896" width="414" height="0.0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pD-Zb-o4Q">
+                                        <rect key="frame" x="46" y="20" width="322" height="50"/>
+                                        <color key="backgroundColor" red="0.71764705880000002" green="0.36078431370000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Nx6-qt-j44"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Finish"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="finishButton_Tapped" destination="kdR-lv-miD" eventType="touchUpInside" id="Bas-Xj-YJQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9pD-Zb-o4Q" firstAttribute="top" secondItem="5Qk-dr-A3O" secondAttribute="top" constant="20" id="47z-nI-fOL"/>
+                                    <constraint firstItem="9pD-Zb-o4Q" firstAttribute="leading" secondItem="5Qk-dr-A3O" secondAttribute="leading" constant="46" id="DCl-sP-4BM"/>
+                                    <constraint firstAttribute="trailing" secondItem="9pD-Zb-o4Q" secondAttribute="trailing" constant="46" id="qJS-xE-ft7"/>
+                                    <constraint firstAttribute="height" id="tDg-I3-8JA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z5C-cc-o3X"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="5Qk-dr-A3O" firstAttribute="leading" secondItem="Z5C-cc-o3X" secondAttribute="leading" id="01D-DO-jYU"/>
                             <constraint firstItem="Yvv-KR-HWC" firstAttribute="leading" secondItem="Z5C-cc-o3X" secondAttribute="leading" constant="28" id="2YY-tx-JgG"/>
+                            <constraint firstItem="Z5C-cc-o3X" firstAttribute="trailing" secondItem="5Qk-dr-A3O" secondAttribute="trailing" id="Aga-xj-505"/>
                             <constraint firstItem="Z5C-cc-o3X" firstAttribute="trailing" secondItem="Yvv-KR-HWC" secondAttribute="trailing" constant="28" id="E7v-JF-IUY"/>
                             <constraint firstItem="Z5C-cc-o3X" firstAttribute="trailing" secondItem="mop-HT-ahM" secondAttribute="trailing" constant="18" id="N4P-g9-cun"/>
                             <constraint firstItem="Yvv-KR-HWC" firstAttribute="top" secondItem="PCV-RZ-sm9" secondAttribute="bottom" constant="9" id="Nfc-jy-5np"/>
                             <constraint firstItem="PCV-RZ-sm9" firstAttribute="top" secondItem="XCp-H4-I3c" secondAttribute="bottom" constant="13" id="OQs-Uz-4oQ"/>
                             <constraint firstItem="PCV-RZ-sm9" firstAttribute="leading" secondItem="Z5C-cc-o3X" secondAttribute="leading" constant="28" id="Z2T-4F-tsj"/>
+                            <constraint firstAttribute="bottom" secondItem="5Qk-dr-A3O" secondAttribute="bottom" id="atD-Rs-WNX"/>
                             <constraint firstItem="XCp-H4-I3c" firstAttribute="leading" secondItem="Z5C-cc-o3X" secondAttribute="leading" constant="26" id="bpE-n2-WNj"/>
                             <constraint firstItem="qMY-gT-buE" firstAttribute="trailing" secondItem="Z5C-cc-o3X" secondAttribute="trailing" id="eLx-Vu-jmI"/>
-                            <constraint firstAttribute="bottom" secondItem="qMY-gT-buE" secondAttribute="bottom" id="gdp-TV-oQ2"/>
                             <constraint firstItem="XCp-H4-I3c" firstAttribute="top" secondItem="Z5C-cc-o3X" secondAttribute="top" constant="34" id="kzd-ci-hFc"/>
                             <constraint firstItem="mop-HT-ahM" firstAttribute="firstBaseline" secondItem="PCV-RZ-sm9" secondAttribute="firstBaseline" id="lZC-lU-hfQ"/>
                             <constraint firstItem="qMY-gT-buE" firstAttribute="leading" secondItem="Z5C-cc-o3X" secondAttribute="leading" id="pb8-Is-gpo"/>
                             <constraint firstItem="qMY-gT-buE" firstAttribute="top" secondItem="Yvv-KR-HWC" secondAttribute="bottom" constant="24" id="sTW-UM-LbN"/>
+                            <constraint firstItem="5Qk-dr-A3O" firstAttribute="top" secondItem="qMY-gT-buE" secondAttribute="bottom" id="tv4-9F-mKM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="XCp-H4-I3c" id="LOw-zI-WRI"/>
+                        <outlet property="backButtonHeightConstraint" destination="AZ0-4L-BWY" id="tbB-lb-eZy"/>
                         <outlet property="dateLabel" destination="mop-HT-ahM" id="SZD-Ui-dcQ"/>
+                        <outlet property="finishViewHeightConstraint" destination="tDg-I3-8JA" id="ud6-Cr-hrH"/>
                         <outlet property="nameLabel" destination="PCV-RZ-sm9" id="DH9-kz-eHB"/>
                     </connections>
                 </viewController>
