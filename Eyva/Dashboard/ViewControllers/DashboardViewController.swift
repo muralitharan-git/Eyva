@@ -67,18 +67,15 @@ class DashboardViewController: UIViewController {
         present(connectViewController, animated: true, completion: nil)
     }
 
-   
-    
     private func getAllVitalsImage(_ index: Int) -> UIImage? {
         return index % 2 == 0 ? UIImage(named: "even-all-vitals") : UIImage(named: "odd-all-vitals")
     }
-    
 }
 
 extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 160, height: 100)
+        return CGSize(width: 160, height: 80)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
