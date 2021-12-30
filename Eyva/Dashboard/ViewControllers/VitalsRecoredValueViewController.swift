@@ -8,20 +8,32 @@
 import UIKit
 
 class VitalsRecoredValueViewController: UIViewController {
-    @IBOutlet weak var backButton: UIButton!
+    
+    // MARK: Variables
+    internal var shouldShowFinish =  false
+    
+    // MARK: IBOutlets
+    @IBOutlet private weak var backButton: UIButton!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var backButtonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var finishViewHeightConstraint: NSLayoutConstraint!
+    
+    // MARK: Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        backButtonHeightConstraint.constant = shouldShowFinish ? 0 : 44
+        finishViewHeightConstraint.constant = shouldShowFinish ? 120 : 0
     }
-    
 
-    @IBAction func backButton_Tapped(_ sender: Any) {
+    @IBAction private func backButton_Tapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction private func finishButton_Tapped() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension VitalsRecoredValueViewController: UITableViewDataSource, UITableViewDelegate {

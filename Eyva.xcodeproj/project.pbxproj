@@ -10,6 +10,7 @@
 		325594DE277D5C5E004E6383 /* RecordedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */; };
 		325594E0277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */; };
 		6ADF312BB0B99B7D55AA4E4C /* Pods_Eyva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8F111C309795A64B7AC45E /* Pods_Eyva.framework */; };
+		9FD3A583277DE0A600E17867 /* ConnectionStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3A582277DE0A600E17867 /* ConnectionStatusViewController.swift */; };
 		B8DE0498C0073B84DCA36F90 /* Pods_Eyva_EyvaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D1F386DF5AB835FF8F5061 /* Pods_Eyva_EyvaUITests.framework */; };
 		BC725260277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC72525F277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift */; };
 		BC725262277B3A1500CF13E9 /* ActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC725261277B3A1500CF13E9 /* ActionsTableViewCell.swift */; };
@@ -104,6 +105,7 @@
 		87BA304D1AF802E4E6278F0B /* Pods-Eyva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eyva.release.xcconfig"; path = "Target Support Files/Pods-Eyva/Pods-Eyva.release.xcconfig"; sourceTree = "<group>"; };
 		936FC3C19321FB920C3F2BD6 /* Pods-EyvaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyvaTests.debug.xcconfig"; path = "Target Support Files/Pods-EyvaTests/Pods-EyvaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99C1F9DB089F93B1F3F25E6E /* Pods_EyvaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EyvaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FD3A582277DE0A600E17867 /* ConnectionStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatusViewController.swift; sourceTree = "<group>"; };
 		BC72525F277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		BC725261277B3A1500CF13E9 /* ActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsTableViewCell.swift; sourceTree = "<group>"; };
 		BC725263277B578600CF13E9 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				BCBFDB7B277833C100897C5D /* ViewControllers */,
+				BC9574D1277C51B7003821BF /* Bluetooth.storyboard */,
 			);
 			path = "Bluetooth ";
 			sourceTree = "<group>";
@@ -405,8 +408,8 @@
 		BCBFDB7B277833C100897C5D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BC9574D1277C51B7003821BF /* Bluetooth.storyboard */,
 				BCBFDB7C277833DA00897C5D /* BluetoothConnectViewController.swift */,
+				9FD3A582277DE0A600E17867 /* ConnectionStatusViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -788,6 +791,7 @@
 				BCE2830427773F3400EC976A /* SceneDelegate.swift in Sources */,
 				BCBFDB752778338400897C5D /* UserInputViewController.swift in Sources */,
 				BCBFDB732778336A00897C5D /* OnBoardingViewController.swift in Sources */,
+				9FD3A583277DE0A600E17867 /* ConnectionStatusViewController.swift in Sources */,
 				BCBFDB8227783B4200897C5D /* StoryBoardExt.swift in Sources */,
 				BC725264277B578600CF13E9 /* QuestionTableViewCell.swift in Sources */,
 				BCBFDB7A277833B800897C5D /* DetailViewController.swift in Sources */,
