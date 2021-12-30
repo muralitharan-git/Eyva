@@ -15,6 +15,9 @@
         <array key="Mulish-ExtraBold.ttf">
             <string>Mulish-ExtraBold</string>
         </array>
+        <array key="Mulish-Light.ttf">
+            <string>Mulish-Light</string>
+        </array>
         <array key="Mulish-Regular.ttf">
             <string>Mulish-Regular</string>
         </array>
@@ -236,8 +239,129 @@
                                             <outlet property="viewAllButton" destination="1cu-Vp-mAO" id="vBA-QM-HLQ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VitalDataTableViewCell" rowHeight="211" id="41e-nJ-Uou" customClass="VitalDataTableViewCell" customModule="Eyva" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="475.5" width="414" height="211"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="41e-nJ-Uou" id="9ik-AL-0NS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="211"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3U7-rj-hRo">
+                                                    <rect key="frame" x="9" y="7.5" width="396" height="150"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="UjJ-eY-P9z"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="20" id="LPD-en-qci">
+                                                        <size key="itemSize" width="185" height="181"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VitalsDataCollectionViewCell" id="qNj-9g-jDG" customClass="VitalsDataCollectionViewCell" customModule="Eyva" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="-15.5" width="185" height="181"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LAD-1T-2FR" customClass="GradientBackgroundView" customModule="Eyva" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="185" height="181"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj2-XQ-hSe">
+                                                                        <rect key="frame" x="71.5" y="44" width="42" height="21"/>
+                                                                        <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c3l-FB-wvt">
+                                                                        <rect key="frame" x="13" y="66" width="50" height="50"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="mJI-wj-TGK"/>
+                                                                            <constraint firstAttribute="height" constant="20" id="pSb-h9-Ea3"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyu-yM-nvk">
+                                                                        <rect key="frame" x="121" y="98" width="25" height="13"/>
+                                                                        <fontDescription key="fontDescription" name="Mulish-Light" family="Mulish" pointSize="10"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="223" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaE-zw-gcH">
+                                                                        <rect key="frame" x="71" y="106" width="42" height="21"/>
+                                                                        <fontDescription key="fontDescription" name="Mulish-ExtraBold" family="Mulish" pointSize="19"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="c3l-FB-wvt" firstAttribute="centerY" secondItem="LAD-1T-2FR" secondAttribute="centerY" id="AMp-nY-gdn"/>
+                                                                    <constraint firstItem="Pyu-yM-nvk" firstAttribute="centerY" secondItem="WaE-zw-gcH" secondAttribute="centerY" id="BfU-eQ-XBW"/>
+                                                                    <constraint firstItem="c3l-FB-wvt" firstAttribute="leading" secondItem="LAD-1T-2FR" secondAttribute="leading" constant="13" id="EVa-JY-PRN"/>
+                                                                    <constraint firstItem="WaE-zw-gcH" firstAttribute="leading" secondItem="c3l-FB-wvt" secondAttribute="trailing" constant="8" symbolic="YES" id="PSb-kE-GCG"/>
+                                                                    <constraint firstItem="c3l-FB-wvt" firstAttribute="top" secondItem="Sj2-XQ-hSe" secondAttribute="bottom" constant="1" id="aaO-E8-Q22"/>
+                                                                    <constraint firstItem="Sj2-XQ-hSe" firstAttribute="leading" secondItem="c3l-FB-wvt" secondAttribute="trailing" constant="8.5" id="bNg-62-cSR"/>
+                                                                    <constraint firstItem="Pyu-yM-nvk" firstAttribute="leading" secondItem="WaE-zw-gcH" secondAttribute="trailing" constant="8" symbolic="YES" id="do3-a9-OHH"/>
+                                                                    <constraint firstItem="WaE-zw-gcH" firstAttribute="centerY" secondItem="c3l-FB-wvt" secondAttribute="centerY" constant="8" id="zsJ-ps-vbt"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                            <size key="customSize" width="185" height="181"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="containerView" destination="LAD-1T-2FR" id="CRg-dJ-K1K"/>
+                                                                <outlet property="typeImageView" destination="c3l-FB-wvt" id="p3D-tS-Ey2"/>
+                                                                <outlet property="typeLabel" destination="Sj2-XQ-hSe" id="xih-Et-j8q"/>
+                                                                <outlet property="unitLabel" destination="Pyu-yM-nvk" id="oOL-Gp-nVc"/>
+                                                                <outlet property="valueLabel" destination="WaE-zw-gcH" id="9ai-eO-CjH"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="41e-nJ-Uou" id="GD3-1S-mhA"/>
+                                                        <outlet property="delegate" destination="41e-nJ-Uou" id="WvT-Zo-hNk"/>
+                                                    </connections>
+                                                </collectionView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Understand how the Vitals affect your body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ4-No-j6j">
+                                                    <rect key="frame" x="9" y="10" width="303" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fP2-xd-Jp5">
+                                                    <rect key="frame" x="315" y="2.5" width="90" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="j6V-8E-Kfh"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="View All"/>
+                                                    <connections>
+                                                        <action selector="viewAllButton_Tapped:" destination="41e-nJ-Uou" eventType="touchUpInside" id="lak-xp-HnV"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3U7-rj-hRo" firstAttribute="top" secondItem="nJ4-No-j6j" secondAttribute="bottom" constant="-18" id="3mt-Xk-jSw"/>
+                                                <constraint firstItem="nJ4-No-j6j" firstAttribute="leading" secondItem="9ik-AL-0NS" secondAttribute="leading" constant="9" id="Czv-vK-EZq"/>
+                                                <constraint firstItem="nJ4-No-j6j" firstAttribute="top" secondItem="9ik-AL-0NS" secondAttribute="top" constant="10" id="UpP-IS-m9P"/>
+                                                <constraint firstItem="fP2-xd-Jp5" firstAttribute="centerY" secondItem="nJ4-No-j6j" secondAttribute="centerY" id="dGH-O1-f1M"/>
+                                                <constraint firstItem="fP2-xd-Jp5" firstAttribute="leading" secondItem="nJ4-No-j6j" secondAttribute="trailing" constant="3" id="eCn-nJ-DDh"/>
+                                                <constraint firstAttribute="trailing" secondItem="3U7-rj-hRo" secondAttribute="trailing" constant="9" id="rdq-jR-GGC"/>
+                                                <constraint firstItem="3U7-rj-hRo" firstAttribute="leading" secondItem="9ik-AL-0NS" secondAttribute="leading" constant="9" id="t3b-lX-UkC"/>
+                                                <constraint firstAttribute="trailing" secondItem="fP2-xd-Jp5" secondAttribute="trailing" constant="9" id="vQf-hX-vh1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="collectionView" destination="3U7-rj-hRo" id="2ri-YH-7Ii"/>
+                                            <outlet property="headerLabel" destination="nJ4-No-j6j" id="oyN-JP-e7D"/>
+                                            <outlet property="viewAllButton" destination="fP2-xd-Jp5" id="56y-xH-ehB"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewDescriptionCell" rowHeight="159" id="h4R-Bn-yxh" customClass="HomeTableViewDescriptionCell" customModule="Eyva" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="475.5" width="414" height="159"/>
+                                        <rect key="frame" x="0.0" y="686.5" width="414" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h4R-Bn-yxh" id="NzG-b2-Qhs">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="159"/>

@@ -71,7 +71,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.vitalRecordedState = homeViewModel.recordedState
                 cell.delegate = self
                 return cell
-            } else {
+            } else if homeViewModel.recordedState == .one {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "VitalDataTableViewCell") as! VitalDataTableViewCell
+                cell.delegate = self
+                return cell
+            }else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RecordedTableViewCell") as! RecordedTableViewCell
                 cell.delegate = self 
                 return cell
@@ -89,7 +93,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension HomeViewController: GenericVitalInfoTableViewCellDelegate {
+extension HomeViewController: GenericVitalInfoTableViewCellDelegate, VitalDataTableViewCellDelegate {
     func viewAllButtonTapped() {
         
     }
