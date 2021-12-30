@@ -15,7 +15,7 @@ enum VitalRecordedState {
 
 class HomeViewModel {
     
-    internal var recordedState: VitalRecordedState = .none
+    internal var recordedState: VitalRecordedState = .multiple
     
     internal func numberOfRows() -> Int {
         switch recordedState {

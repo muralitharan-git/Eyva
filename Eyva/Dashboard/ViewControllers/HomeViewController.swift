@@ -23,9 +23,9 @@ class HomeViewController: UIViewController {
         
         
         let colors = [
-                  UIColor(red: 0.718, green: 0.361, blue: 1, alpha: 1).cgColor,
-                  UIColor(red: 0.404, green: 0.102, blue: 0.894, alpha: 1).cgColor
-                ]
+            UIColor(red: 0.718, green: 0.361, blue: 1, alpha: 1).cgColor,
+            UIColor(red: 0.404, green: 0.102, blue: 0.894, alpha: 1).cgColor
+        ]
         
         actionButton.applyGradient(colors: colors)
     }
@@ -46,11 +46,11 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 300
+        return 100
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let rect = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 300)
+        let rect = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 100)
         let footerView = UIView(frame:rect)
         footerView.backgroundColor = UIColor.clear
         return footerView
@@ -68,13 +68,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         } else if indexPath.row == 1 {
             if homeViewModel.recordedState == .none {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "GenericVitalInfoTableViewCell") as! GenericVitalInfoTableViewCell
+                cell.vitalRecordedState = homeViewModel.recordedState
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RecordedTableViewCell") as! RecordedTableViewCell
+                
                 return cell
             }
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GenericVitalInfoTableViewCell") as! GenericVitalInfoTableViewCell
+            cell.vitalRecordedState = homeViewModel.recordedState
             return cell
         }
     }

@@ -21,7 +21,7 @@ extension RecordedTableViewCell: UICollectionViewDelegate,
                               UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 160, height: 100)
+        return CGSize(width: 160, height: 90)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
