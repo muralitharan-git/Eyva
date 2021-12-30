@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		325594DE277D5C5E004E6383 /* RecordedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */; };
 		325594E0277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */; };
+		328882AE277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328882AD277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift */; };
 		32CE6336277D8C8A00CB8AE1 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6335277D8C8A00CB8AE1 /* ActionButton.swift */; };
 		32CE6338277D8D1B00CB8AE1 /* ButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6337277D8D1B00CB8AE1 /* ButtonExt.swift */; };
 		32CE633A277D9C7300CB8AE1 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6339277D9C7300CB8AE1 /* GradientBackgroundView.swift */; };
@@ -107,6 +108,7 @@
 		20BF815301C55FD8937B7746 /* Pods-Eyva-EyvaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eyva-EyvaUITests.release.xcconfig"; path = "Target Support Files/Pods-Eyva-EyvaUITests/Pods-Eyva-EyvaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedTableViewCell.swift; sourceTree = "<group>"; };
 		325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericVitalInfoTableViewCell.swift; sourceTree = "<group>"; };
+		328882AD277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllVitalsTableViewCell.swift; sourceTree = "<group>"; };
 		32CE6335277D8C8A00CB8AE1 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		32CE6337277D8D1B00CB8AE1 /* ButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExt.swift; sourceTree = "<group>"; };
 		32CE6339277D9C7300CB8AE1 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				32CE633B277D9EC900CB8AE1 /* DashboardCollectionViewCell.swift */,
 				32CE633D277DC4FE00CB8AE1 /* VitalDataTableViewCell.swift */,
 				32CE633F277DC52D00CB8AE1 /* VitalsDataCollectionViewCell.swift */,
+				328882AD277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -801,6 +804,7 @@
 				BC9E2AB8277C372100819789 /* HomeViewModel.swift in Sources */,
 				BC725267277B5F7700CF13E9 /* DetailViewModel.swift in Sources */,
 				BC9E2AB6277C361700819789 /* HomeViewController.swift in Sources */,
+				328882AE277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift in Sources */,
 				BCB9E04F2779BF37003626B1 /* Global.swift in Sources */,
 				32CE6340277DC52D00CB8AE1 /* VitalsDataCollectionViewCell.swift in Sources */,
 				BCB9E0512779F5FB003626B1 /* ViewExt.swift in Sources */,

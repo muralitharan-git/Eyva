@@ -28,4 +28,10 @@ extension UIViewController {
         let recordedViewController = storyboard.instantiateViewController(withIdentifier: "VitalsRecoredValueViewController") as! VitalsRecoredValueViewController
         navigationController?.pushViewController(recordedViewController, animated: true)
     }
+    
+    internal func navigateToViewAllVitalsViewController() {
+        let storyboard = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
+        let viewAllVitalsViewController = storyboard.instantiateViewController(withIdentifier: "ViewAllVitalsViewController") as! ViewAllVitalsViewController
+        navigationController?.pushViewController(viewAllVitalsViewController, animated: true)
+    }
 }

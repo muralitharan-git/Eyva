@@ -133,7 +133,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension HomeViewController: GenericVitalInfoTableViewCellDelegate, VitalDataTableViewCellDelegate {
     func viewAllButtonTapped() {
-        
+        navigateToViewAllVitalsViewController()
     }
     
     func navigateToSelectedVitalInfo(_ type: Vitals) {
