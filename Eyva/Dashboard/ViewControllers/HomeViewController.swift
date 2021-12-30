@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var subHeaderLabel: UILabel!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -18,20 +19,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundOverlay-Image-test"))
-        
-        
-        
-        
-        let colors = [
-            UIColor(red: 0.718, green: 0.361, blue: 1, alpha: 1).cgColor,
-            UIColor(red: 0.404, green: 0.102, blue: 0.894, alpha: 1).cgColor
-        ]
-        
-        actionButton.applyGradient(colors: colors)
-        
+        nameLabel.text = sharedCoreDataManager.fetchUserName()
         tableView.rowHeight = UITableView.automaticDimension
+    
         fillSubHeaderLabel()
+       
+        actionButton.setTitle("I want to connect to Eyva", for: .normal)
+        actionButton.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 17)
+        actionButton.setTitleColor(.white, for: .normal)
+        //fillGradientForActionButton()
     }
     
     private func fillSubHeaderLabel() {
@@ -47,6 +43,28 @@ class HomeViewController: UIViewController {
        let mutableAttributedString = NSMutableAttributedString(string: "The flowers of Anthea are slowly withering to reflect your inner body. Help them bloom again.",
                                                                attributes: attributes)
         subHeaderLabel.attributedText = mutableAttributedString
+    }
+    
+    private func fillGradientForActionButton() {
+        actionButton.backgroundColor = nil
+        actionButton.layoutIfNeeded()
+        
+        let layer0 = CAGradientLayer()
+
+        layer0.colors = [
+          UIColor(red: 0.718, green: 0.361, blue: 1, alpha: 1).cgColor,
+          UIColor(red: 0.404, green: 0.102, blue: 0.894, alpha: 1).cgColor
+        ]
+        layer0.locations = [0, 1]
+        layer0.startPoint = CGPoint(x: 0.25, y: 0.5)
+        layer0.endPoint = CGPoint(x: 0.75, y: 0.5)
+        layer0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: -0.67, b: 1, c: -1, d: -0.67, tx: 1.35, ty: 0.34))
+
+        layer0.bounds = actionButton.bounds.insetBy(dx: -0.5*actionButton.bounds.size.width, dy: -0.5*actionButton.bounds.size.height)
+
+        layer0.position = actionButton.center
+       // actionButton.layer.insertSublayer(layer0, at: 0)
+        actionButton.layer.addSublayer(layer0)
     }
     
     @IBAction func bluetoothButton_Tapped(_ sender: Any) {

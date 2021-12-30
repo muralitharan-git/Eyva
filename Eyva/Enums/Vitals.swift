@@ -15,6 +15,7 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
     case temperature = "Temperature"
     case bloodPressure = "Blood Pressure"
     case stress = "Stress Levels"
+    case ecg = "ECG"
     
     var description: String {
         return rawValue
@@ -42,32 +43,36 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
         case .heartrate:
             return "BPM"
         case .glucose:
-            return "BPM"
+            return "mg/dl"
         case .oxygen:
-            return "BPM"
+            return "SPO2"
         case .temperature:
-            return "BPM"
+            return "C"
         case .bloodPressure:
-            return "BPM"
-        default:
-            return "BPM"
+            return "mmHg"
+        case .stress:
+            return "mmHg"
+        case .ecg:
+            return "mmHg"
         }
     }
     
     var longDescription: String {
         switch self {
         case .heartrate:
-            return "Having too much sugar in the blood for long periods of time can cause serious health problems if it's not treated. Hyperglycemia can damage the vessels that supply blood to vital organs, which can increase the risk of heart disease and stroke, kidney disease, vision problems, and nerve problems."
+            return "Heart rate is important to circulate oxygen and nutrient-rich blood throughout the body."
         case .glucose:
-            return "Having too much sugar in the blood for long periods of time can cause serious health problems if it's not treated. Hyperglycemia can damage the vessels that supply blood to vital organs, which can increase the risk of heart disease and stroke, kidney disease, vision problems, and nerve problems."
+            return "Blood glucose is an important source of energy and provides nutrients to the body's organs, muscles, and nervous system."
         case .oxygen:
-            return "Having too much sugar in the blood for long periods of time can cause serious health problems if it's not treated. Hyperglycemia can damage the vessels that supply blood to vital organs, which can increase the risk of heart disease and stroke, kidney disease, vision problems, and nerve problems."
+            return "A normal SpO2 level is vital to maintaining the health of all tissue in the body."
         case .temperature:
-            return "Having too much sugar in the blood for long periods of time can cause serious health problems if it's not treated. Hyperglycemia can damage the vessels that supply blood to vital organs, which can increase the risk of heart disease and stroke, kidney disease, vision problems, and nerve problems."
+            return "It is important that we maintain an optimum temperature for the enzymes in our bodies. If it's too hot, our enzymes will inactive/lose their function. If it's too cold, the enzymes will too become ineffective (their function will slow down too much)."
         case .bloodPressure:
-            return "Having too much sugar in the blood for long periods of time can cause serious health problems if it's not treated. Hyperglycemia can damage the vessels that supply blood to vital organs, which can increase the risk of heart disease and stroke, kidney disease, vision problems, and nerve problems."
-        default:
-            return "Having too much sugar in the blood for long periods of time can cause serious health problems if it's not treated. Hyperglycemia can damage the vessels that supply blood to vital organs, which can increase the risk of heart disease and stroke, kidney disease, vision problems, and nerve problems."
+            return "Normal blood pressure is important for the proper flow of blood from the heart to the body's organs and tissues."
+        case .stress:
+            return "It might be a demanding boss, distrubed relation with friends or family, Experiencing some stress levels on a daily basis is common. But chronic & overwhelming stress can impact mental and physical health."
+        case .ecg:
+            return "An ECG (electrocardiogram) is important to see how the heart is functioning. It records the electrical activity of your heart at rest and provides information about your heart rate and rhythm. \n \nHeart diseases and irregular heart beats can be detected in ECGs."
         }
     }
     
@@ -94,10 +99,10 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
                     "Drink atleast 2 ltrs water everyday",
                     "Meditate everyday"]
         default:
-                        return ["Eat leafy greens",
-                                "Drink atleast 2 ltrs water everyday",
-                                "Meditate everyday"]
-                        
+            return ["Eat leafy greens",
+                    "Drink atleast 2 ltrs water everyday",
+                    "Meditate everyday"]
+            
         }
     }
     
@@ -106,7 +111,7 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
         case .heartrate:
             return UIImage(named: "\(prefix)-heartrate")
         case .glucose:
-           return UIImage(named: "\(prefix)-glucose")
+            return UIImage(named: "\(prefix)-glucose")
         case .oxygen:
             return UIImage(named: "\(prefix)-oxygen")
         case .temperature:
