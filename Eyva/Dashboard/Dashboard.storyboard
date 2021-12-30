@@ -47,7 +47,7 @@
                                 <rect key="frame" x="0.0" y="107.5" width="414" height="788.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordedTableViewCell" rowHeight="220" id="DQv-F6-IdX" customClass="RecordedTableViewCell" customModule="Eyva" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecordedTableViewCell" rowHeight="220" id="DQv-F6-IdX" customClass="RecordedTableViewCell" customModule="Eyva" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DQv-F6-IdX" id="FR6-Uy-Lef">
@@ -55,7 +55,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X22-4H-eQ3">
-                                                    <rect key="frame" x="9" y="21.5" width="405" height="150"/>
+                                                    <rect key="frame" x="9" y="11.5" width="405" height="150"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="id5-Il-6yG"/>
@@ -123,7 +123,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="X22-4H-eQ3" secondAttribute="trailing" id="2i5-DB-G2r"/>
-                                                <constraint firstItem="X22-4H-eQ3" firstAttribute="top" secondItem="Ir6-EL-Aw3" secondAttribute="bottom" constant="-5" id="Xvy-QA-pJ2"/>
+                                                <constraint firstItem="X22-4H-eQ3" firstAttribute="top" secondItem="Ir6-EL-Aw3" secondAttribute="bottom" constant="-15" id="Xvy-QA-pJ2"/>
                                                 <constraint firstItem="Ir6-EL-Aw3" firstAttribute="leading" secondItem="FR6-Uy-Lef" secondAttribute="leading" constant="9" id="gGx-Va-z22"/>
                                                 <constraint firstItem="Ir6-EL-Aw3" firstAttribute="top" secondItem="FR6-Uy-Lef" secondAttribute="top" constant="11" id="jb1-Tr-hfm"/>
                                                 <constraint firstItem="X22-4H-eQ3" firstAttribute="leading" secondItem="FR6-Uy-Lef" secondAttribute="leading" constant="9" id="wBK-OM-tgv"/>
@@ -141,14 +141,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="211"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Understand how the Vitals affect your body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f7-LJ-3yi">
-                                                    <rect key="frame" x="9" y="10" width="245.5" height="15.5"/>
-                                                    <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nfm-qr-y6r">
-                                                    <rect key="frame" x="9" y="20.5" width="396" height="150"/>
+                                                    <rect key="frame" x="9" y="7.5" width="396" height="150"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="gVf-qy-Puq"/>
@@ -207,11 +201,31 @@
                                                         <outlet property="delegate" destination="6yF-zr-g8L" id="hPj-3B-sM6"/>
                                                     </connections>
                                                 </collectionView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Understand how the Vitals affect your body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f7-LJ-3yi">
+                                                    <rect key="frame" x="9" y="10" width="303" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cu-Vp-mAO">
+                                                    <rect key="frame" x="315" y="2.5" width="90" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="Bvy-Cd-7Se"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="View All"/>
+                                                    <connections>
+                                                        <action selector="viewAllButton_Tapped:" destination="6yF-zr-g8L" eventType="touchUpInside" id="13Z-iM-wIw"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="1cu-Vp-mAO" firstAttribute="centerY" secondItem="2f7-LJ-3yi" secondAttribute="centerY" id="Kfb-yl-bsf"/>
                                                 <constraint firstItem="2f7-LJ-3yi" firstAttribute="top" secondItem="DyM-GS-F6O" secondAttribute="top" constant="10" id="M6V-Rz-TcX"/>
-                                                <constraint firstItem="nfm-qr-y6r" firstAttribute="top" secondItem="2f7-LJ-3yi" secondAttribute="bottom" constant="-5" id="PqM-Rx-ECn"/>
+                                                <constraint firstItem="nfm-qr-y6r" firstAttribute="top" secondItem="2f7-LJ-3yi" secondAttribute="bottom" constant="-18" id="PqM-Rx-ECn"/>
                                                 <constraint firstAttribute="trailing" secondItem="nfm-qr-y6r" secondAttribute="trailing" constant="9" id="QtE-kE-8bM"/>
+                                                <constraint firstItem="1cu-Vp-mAO" firstAttribute="leading" secondItem="2f7-LJ-3yi" secondAttribute="trailing" constant="3" id="Sjk-1c-t6F"/>
+                                                <constraint firstAttribute="trailing" secondItem="1cu-Vp-mAO" secondAttribute="trailing" constant="9" id="oKQ-pZ-ezN"/>
                                                 <constraint firstItem="nfm-qr-y6r" firstAttribute="leading" secondItem="DyM-GS-F6O" secondAttribute="leading" constant="9" id="ojL-Rl-JA3"/>
                                                 <constraint firstItem="2f7-LJ-3yi" firstAttribute="leading" secondItem="DyM-GS-F6O" secondAttribute="leading" constant="9" id="rVh-xB-M6H"/>
                                             </constraints>
@@ -219,6 +233,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="collectionView" destination="nfm-qr-y6r" id="Oq2-vb-o6a"/>
+                                            <outlet property="viewAllButton" destination="1cu-Vp-mAO" id="vBA-QM-HLQ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewDescriptionCell" rowHeight="159" id="h4R-Bn-yxh" customClass="HomeTableViewDescriptionCell" customModule="Eyva" customModuleProvider="target">

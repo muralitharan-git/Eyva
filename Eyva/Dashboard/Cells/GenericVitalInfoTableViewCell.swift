@@ -9,8 +9,23 @@ import UIKit
 
 class GenericVitalInfoTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var viewAllButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     internal var vitalRecordedState: VitalRecordedState!
+    
+    weak var delegate: GenericVitalInfoTableViewCellDelegate?
+    
+  
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        viewAllButton.titleLabel?.font = UIFont(name: "Mulish-SemiBold", size: 12)
+        viewAllButton.titleLabel?.text = "View All"
+        viewAllButton.titleLabel?.textColor = .white
+    }
+    
+    @IBAction func viewAllButton_Tapped(_ sender: Any) {
+        delegate?.viewAllButtonTapped()
+    }
 }
 
 extension GenericVitalInfoTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -33,4 +48,13 @@ extension GenericVitalInfoTableViewCell: UICollectionViewDelegate, UICollectionV
         cell.fillData(Vitals.allCases[indexPath.row], state: vitalRecordedState)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.navigateToSelectedVitalInfo(Vitals.allCases[indexPath.row])
+    }
+}
+
+protocol GenericVitalInfoTableViewCellDelegate: AnyObject {
+    func viewAllButtonTapped()
+    func navigateToSelectedVitalInfo(_ type: Vitals)
 }

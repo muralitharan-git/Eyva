@@ -69,6 +69,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             if homeViewModel.recordedState == .none {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "GenericVitalInfoTableViewCell") as! GenericVitalInfoTableViewCell
                 cell.vitalRecordedState = homeViewModel.recordedState
+                cell.delegate = self
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RecordedTableViewCell") as! RecordedTableViewCell
@@ -78,12 +79,22 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GenericVitalInfoTableViewCell") as! GenericVitalInfoTableViewCell
             cell.vitalRecordedState = homeViewModel.recordedState
+            cell.delegate = self
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        return 140
     }
 }
 
+extension HomeViewController: GenericVitalInfoTableViewCellDelegate {
+    func viewAllButtonTapped() {
+        
+    }
+    
+    func navigateToSelectedVitalInfo(_ type: Vitals) {
+        navigateToDetailViewController(type)
+    }
+}
