@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var subHeaderLabel: UILabel!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var actionButton: UIButton!
@@ -30,6 +31,22 @@ class HomeViewController: UIViewController {
         actionButton.applyGradient(colors: colors)
         
         tableView.rowHeight = UITableView.automaticDimension
+        fillSubHeaderLabel()
+    }
+    
+    private func fillSubHeaderLabel() {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.33
+        let font = UIFont(name: "Mulish-Regular", size: 12)
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: font as Any,
+            .foregroundColor: UIColor.white,
+            .paragraphStyle: paragraphStyle,
+            .kern: 1
+        ]
+       let mutableAttributedString = NSMutableAttributedString(string: "The flowers of Anthea are slowly withering to reflect your inner body. Help them bloom again.",
+                                                               attributes: attributes)
+        subHeaderLabel.attributedText = mutableAttributedString
     }
     
     @IBAction func bluetoothButton_Tapped(_ sender: Any) {
