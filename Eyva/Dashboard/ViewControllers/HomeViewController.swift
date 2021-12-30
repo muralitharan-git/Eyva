@@ -17,9 +17,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundOverlay-Image-test"))
+        //tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundOverlay-Image-test"))
         
-        tableView.tableHeaderView?.frame.size = CGSize(width: tableView.frame.width, height: 300)
+        
         
         
         let colors = [
@@ -28,6 +28,8 @@ class HomeViewController: UIViewController {
         ]
         
         actionButton.applyGradient(colors: colors)
+        
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     @IBAction func bluetoothButton_Tapped(_ sender: Any) {
@@ -64,6 +66,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewDescriptionCell") as! HomeTableViewDescriptionCell
+            cell.fillData()
             return cell
         } else if indexPath.row == 1 {
             if homeViewModel.recordedState == .none {
@@ -88,9 +91,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 140
+//    }
 }
 
 extension HomeViewController: GenericVitalInfoTableViewCellDelegate, VitalDataTableViewCellDelegate {
