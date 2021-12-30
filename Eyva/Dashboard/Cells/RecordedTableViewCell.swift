@@ -11,9 +11,7 @@ class RecordedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private func getAllVitalsImage(_ index: Int) -> UIImage? {
-        return index % 2 == 0 ? UIImage(named: "even-all-vitals") : UIImage(named: "odd-all-vitals")
-    }
+   
 }
 
 extension RecordedTableViewCell: UICollectionViewDelegate,
@@ -21,7 +19,7 @@ extension RecordedTableViewCell: UICollectionViewDelegate,
                               UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 160, height: 90)
+        return CGSize(width: 160, height: 85)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -34,7 +32,8 @@ extension RecordedTableViewCell: UICollectionViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VitalsCollectionViewCell", for: indexPath) as! VitalsCollectionViewCell
-        cell.fillDate(date: "29-12-2021", allVitalsImage: getAllVitalsImage(indexPath.row))
+        cell.tag = indexPath.row 
+        cell.fillDate(date: "29-12-2021")
         return cell
     }
 }

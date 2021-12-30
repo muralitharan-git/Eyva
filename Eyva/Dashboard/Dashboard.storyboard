@@ -70,7 +70,7 @@
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VitalsCollectionViewCell" id="UVp-Zh-WmG" customClass="VitalsCollectionViewCell" customModule="Eyva" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="-15.5" width="185" height="181"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lFA-1n-5yM">
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lFA-1n-5yM" customClass="GradientBackgroundView" customModule="Eyva" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="185" height="181"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <subviews>
@@ -104,6 +104,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <outlet property="allVitalsImageView" destination="kCX-yR-dPw" id="ReT-ww-myE"/>
+                                                                <outlet property="containerView" destination="lFA-1n-5yM" id="bwq-r9-ROp"/>
                                                                 <outlet property="dateLabel" destination="M0x-LG-fPL" id="a1I-kl-3mw"/>
                                                             </connections>
                                                         </collectionViewCell>

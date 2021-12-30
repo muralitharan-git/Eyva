@@ -97,7 +97,7 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
         
         if collectionView == vitalsCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VitalsCollectionViewCell", for: indexPath) as! VitalsCollectionViewCell
-            cell.fillDate(date: "29-12-2021", allVitalsImage: getAllVitalsImage(indexPath.row))
+         //   cell.fillDate(date: "29-12-2021", allVitalsImage: getAllVitalsImage(indexPath.row))
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardCollectionViewCell", for: indexPath) as! DashboardCollectionViewCell
