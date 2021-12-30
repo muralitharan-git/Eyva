@@ -67,11 +67,7 @@ class DashboardViewController: UIViewController {
         present(connectViewController, animated: true, completion: nil)
     }
 
-    private func navigateToRecoredVitalsViewController() {
-        let storyboard = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
-        let recordedViewController = storyboard.instantiateViewController(withIdentifier: "VitalsRecoredValueViewController") as! VitalsRecoredValueViewController
-        navigationController?.pushViewController(recordedViewController, animated: true)
-    }
+   
     
     private func getAllVitalsImage(_ index: Int) -> UIImage? {
         return index % 2 == 0 ? UIImage(named: "even-all-vitals") : UIImage(named: "odd-all-vitals")

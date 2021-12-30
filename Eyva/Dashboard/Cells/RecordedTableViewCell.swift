@@ -10,7 +10,7 @@ import UIKit
 class RecordedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    internal weak var delegate: RecordedTableViewCellDelegate?
    
 }
 
@@ -36,4 +36,13 @@ extension RecordedTableViewCell: UICollectionViewDelegate,
         cell.fillDate(date: "29-12-2021")
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.navigateToRecordedVitalDetails("")
+    }
+    
+}
+
+protocol RecordedTableViewCellDelegate: AnyObject {
+    func navigateToRecordedVitalDetails(_ date: String)
 }

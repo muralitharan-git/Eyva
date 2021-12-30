@@ -22,4 +22,10 @@ extension UIViewController {
         detailViewController.vitalType = selectedVital
         navigationController?.pushViewController(detailViewController, animated: true)
     }
+    
+    internal func navigateToRecoredVitalsViewController() {
+        let storyboard = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
+        let recordedViewController = storyboard.instantiateViewController(withIdentifier: "VitalsRecoredValueViewController") as! VitalsRecoredValueViewController
+        navigationController?.pushViewController(recordedViewController, animated: true)
+    }
 }

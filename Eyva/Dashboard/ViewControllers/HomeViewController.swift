@@ -73,7 +73,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RecordedTableViewCell") as! RecordedTableViewCell
-                
+                cell.delegate = self 
                 return cell
             }
         } else {
@@ -96,5 +96,11 @@ extension HomeViewController: GenericVitalInfoTableViewCellDelegate {
     
     func navigateToSelectedVitalInfo(_ type: Vitals) {
         navigateToDetailViewController(type)
+    }
+}
+
+extension HomeViewController: RecordedTableViewCellDelegate {
+    func navigateToRecordedVitalDetails(_ date: String) {
+        navigateToRecoredVitalsViewController()
     }
 }

@@ -19,7 +19,7 @@ class VitalsCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if tag % 2 == 0 {
+        if tag % 2 != 0 {
             containerView.setColors(pinkGradientBG)
             allVitalsImageView.image = UIImage(named: "even-all-vitals")
         } else {
