@@ -14,6 +14,7 @@ class GenericVitalInfoTableViewCell: UITableViewCell {
     private func getAllVitalsImage(_ index: Int) -> UIImage? {
         return index % 2 == 0 ? UIImage(named: "even-all-vitals") : UIImage(named: "odd-all-vitals")
     }
+  
     
 }
 
@@ -33,6 +34,7 @@ extension GenericVitalInfoTableViewCell: UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell { 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardCollectionViewCell", for: indexPath) as! DashboardCollectionViewCell
+        cell.tag = indexPath.row 
         cell.textLabel.text = Vitals.allCases[indexPath.row].rawValue
         cell.iconImageView.image = getAllVitalsImage(indexPath.row)
         

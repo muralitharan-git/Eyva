@@ -11,13 +11,23 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-   
+    @IBOutlet weak var actionButton: UIButton!
+    
+    private let homeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundOverlay-Image-test"))
-        //tableView.rowHeight = UITableView.automaticDimension
+        
         tableView.tableHeaderView?.frame.size = CGSize(width: tableView.frame.width, height: 300)
+        
+        
+        let colors = [
+                  UIColor(red: 0.718, green: 0.361, blue: 1, alpha: 1).cgColor,
+                  UIColor(red: 0.404, green: 0.102, blue: 0.894, alpha: 1).cgColor
+                ]
+        
+        actionButton.applyGradient(colors: colors)
     }
     
     @IBAction func bluetoothButton_Tapped(_ sender: Any) {
@@ -47,7 +57,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return homeViewModel.numberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,8 +66,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewDescriptionCell") as! HomeTableViewDescriptionCell
             return cell
         } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RecordedTableViewCell") as! RecordedTableViewCell
-            return cell
+            if homeViewModel.recordedState == .none {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "GenericVitalInfoTableViewCell") as! GenericVitalInfoTableViewCell
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "RecordedTableViewCell") as! RecordedTableViewCell
+                return cell
+            }
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GenericVitalInfoTableViewCell") as! GenericVitalInfoTableViewCell
             return cell

@@ -133,7 +133,3 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
     }
 }
 
-class DashboardCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var textLabel: UILabel!
-}

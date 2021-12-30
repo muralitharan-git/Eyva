@@ -162,7 +162,7 @@
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashboardCollectionViewCell" id="ifR-5u-aQM" customClass="DashboardCollectionViewCell" customModule="Eyva" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="-15.5" width="185" height="181"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fc8-KB-CIv">
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fc8-KB-CIv" customClass="GradientBackgroundView" customModule="Eyva" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="185" height="181"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <subviews>
@@ -195,6 +195,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
+                                                                <outlet property="containerView" destination="fc8-KB-CIv" id="JP8-hP-ikO"/>
                                                                 <outlet property="iconImageView" destination="ytF-8Q-oKA" id="El8-zF-0pj"/>
                                                                 <outlet property="textLabel" destination="gRB-DX-DM5" id="9rv-ed-9Fc"/>
                                                             </connections>
@@ -287,6 +288,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="actionButton" destination="F4O-iW-WIg" id="edZ-GD-EHa"/>
                         <outlet property="tableView" destination="Y47-zz-sEE" id="hBt-qq-X0Z"/>
                         <outlet property="welcomeLabel" destination="lzj-nA-X1K" id="ZEw-P4-AVw"/>
                     </connections>

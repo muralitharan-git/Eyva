@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		325594DE277D5C5E004E6383 /* RecordedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */; };
 		325594E0277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */; };
+		32CE6336277D8C8A00CB8AE1 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6335277D8C8A00CB8AE1 /* ActionButton.swift */; };
+		32CE6338277D8D1B00CB8AE1 /* ButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6337277D8D1B00CB8AE1 /* ButtonExt.swift */; };
+		32CE633A277D9C7300CB8AE1 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6339277D9C7300CB8AE1 /* GradientBackgroundView.swift */; };
+		32CE633C277D9EC900CB8AE1 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE633B277D9EC900CB8AE1 /* DashboardCollectionViewCell.swift */; };
 		6ADF312BB0B99B7D55AA4E4C /* Pods_Eyva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8F111C309795A64B7AC45E /* Pods_Eyva.framework */; };
 		B8DE0498C0073B84DCA36F90 /* Pods_Eyva_EyvaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D1F386DF5AB835FF8F5061 /* Pods_Eyva_EyvaUITests.framework */; };
 		BC725260277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC72525F277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift */; };
@@ -99,6 +103,10 @@
 		20BF815301C55FD8937B7746 /* Pods-Eyva-EyvaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eyva-EyvaUITests.release.xcconfig"; path = "Target Support Files/Pods-Eyva-EyvaUITests/Pods-Eyva-EyvaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedTableViewCell.swift; sourceTree = "<group>"; };
 		325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericVitalInfoTableViewCell.swift; sourceTree = "<group>"; };
+		32CE6335277D8C8A00CB8AE1 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		32CE6337277D8D1B00CB8AE1 /* ButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExt.swift; sourceTree = "<group>"; };
+		32CE6339277D9C7300CB8AE1 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
+		32CE633B277D9EC900CB8AE1 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		35734332840F105BB5C1B253 /* Pods-EyvaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyvaTests.release.xcconfig"; path = "Target Support Files/Pods-EyvaTests/Pods-EyvaTests.release.xcconfig"; sourceTree = "<group>"; };
 		578C5BC5F6661D324894687F /* Pods-Eyva-EyvaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eyva-EyvaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Eyva-EyvaUITests/Pods-Eyva-EyvaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		87BA304D1AF802E4E6278F0B /* Pods-Eyva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eyva.release.xcconfig"; path = "Target Support Files/Pods-Eyva/Pods-Eyva.release.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +239,7 @@
 				BC9E2AB9277C3CC100819789 /* HomeTableViewDescriptionCell.swift */,
 				325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */,
 				325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */,
+				32CE633B277D9EC900CB8AE1 /* DashboardCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -346,6 +355,8 @@
 			children = (
 				BCB9E04C2779B657003626B1 /* CustomButton.swift */,
 				BCB9E04E2779BF37003626B1 /* Global.swift */,
+				32CE6335277D8C8A00CB8AE1 /* ActionButton.swift */,
+				32CE6339277D9C7300CB8AE1 /* GradientBackgroundView.swift */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -393,11 +404,11 @@
 		BCBFDB762778338C00897C5D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BC9E2AB5277C361700819789 /* HomeViewController.swift */,
 				BCBFDB77277833A500897C5D /* DashboardViewController.swift */,
 				BCBFDB79277833B800897C5D /* DetailViewController.swift */,
 				BC9E2AAF277BDD7300819789 /* VitalsRecoredValueViewController.swift */,
 				BC9E2AB1277BDD8600819789 /* ViewAllVitalsViewController.swift */,
-				BC9E2AB5277C361700819789 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -417,6 +428,7 @@
 				BCBFDB8127783B4200897C5D /* StoryBoardExt.swift */,
 				BCB9E0502779F5FB003626B1 /* ViewExt.swift */,
 				BC9E2AAD277BDC0100819789 /* ViewControllerExt.swift */,
+				32CE6337277D8D1B00CB8AE1 /* ButtonExt.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -764,7 +776,9 @@
 				BCE2830627773F3400EC976A /* ViewController.swift in Sources */,
 				BC9574F8277C846A003821BF /* User.swift in Sources */,
 				BCBFDB78277833A500897C5D /* DashboardViewController.swift in Sources */,
+				32CE6338277D8D1B00CB8AE1 /* ButtonExt.swift in Sources */,
 				BCBFDB862778658700897C5D /* OnBoardingSceneViewController.swift in Sources */,
+				32CE633A277D9C7300CB8AE1 /* GradientBackgroundView.swift in Sources */,
 				BCE2830227773F3400EC976A /* AppDelegate.swift in Sources */,
 				BC72526A277B61E300CF13E9 /* Vitals.swift in Sources */,
 				BCBFDB7D277833DA00897C5D /* BluetoothConnectViewController.swift in Sources */,
@@ -778,9 +792,11 @@
 				BCBFDB712778335D00897C5D /* SwipeUpViewController.swift in Sources */,
 				BC957501277C8A1C003821BF /* UserDefaultsHelper.swift in Sources */,
 				BC9E2AAE277BDC0100819789 /* ViewControllerExt.swift in Sources */,
+				32CE633C277D9EC900CB8AE1 /* DashboardCollectionViewCell.swift in Sources */,
 				BC9574F5277C836C003821BF /* CoreDataManager.swift in Sources */,
 				BC725260277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift in Sources */,
 				BC9574D6277C8103003821BF /* Evya.xcdatamodeld in Sources */,
+				32CE6336277D8C8A00CB8AE1 /* ActionButton.swift in Sources */,
 				BC9574FA277C84B7003821BF /* VitalInfo.swift in Sources */,
 				BC9E2AAC277BD36900819789 /* VitalsCollectionViewCell.swift in Sources */,
 				325594DE277D5C5E004E6383 /* RecordedTableViewCell.swift in Sources */,
