@@ -12,6 +12,9 @@ class ActionsTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     internal func fillData(_ type: Vitals) {
-        titleLabel.text = type.idealRangeVerbiage
+        titleLabel.attributedText = getMutableAttributedString(text: type.idealRangeVerbiage,
+                                                               font: UIFont(name: "Mulish-SemiBold", size: 15)!,
+                                                               textColor: .white,
+                                                               lineHeight: 1.59)
     }
 }

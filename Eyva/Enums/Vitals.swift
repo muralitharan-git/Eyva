@@ -43,11 +43,11 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
         case .heartrate:
             return "60-100 \(unit)"
         case .glucose:
-            return "Fasting         70-100 \(unit) \n\nAfter Food    135-140 \(unit)"
+            return "Fasting         70-100 \(unit) \nAfter Food    135-140 \(unit)"
         case .oxygen:
             return "95 % or higher"
         case .temperature:
-            return "97.8 F (36.5 C) - 99 F (37.2 C)"
+            return "97.8° F (36.5°C) - 99°F (37.2°C)"
         case .bloodPressure:
             return "90/60\(unit) and 120/80\(unit)"
         case .stress:
