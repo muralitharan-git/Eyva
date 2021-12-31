@@ -10,10 +10,15 @@ import UIKit
 class ViewAllVitalsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        headerLabel.attributedText = getMutableAttributedString(text: "Understand how the Vitals affect your body",
+                                                                font: UIFont(name: "Mulish-Regular", size: 13)!,
+                                                                textColor: .white,
+                                                                lineHeight: 2.45)
     }
 
 
@@ -38,6 +43,6 @@ extension ViewAllVitalsViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130
+        return 115
     }
 }

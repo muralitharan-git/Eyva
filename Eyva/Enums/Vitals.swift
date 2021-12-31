@@ -127,7 +127,7 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
     
     func getIcon(_ prefix: String) -> UIImage? {
         switch self {
-        case .heartrate:
+        case .heartrate, .ecg:
             return UIImage(named: "\(prefix)-heartrate")
         case .glucose:
             return UIImage(named: "\(prefix)-glucose")

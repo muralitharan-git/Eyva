@@ -225,6 +225,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		328882B0277EA3CF00F2DD16 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BC9E2AB3277BE2C500819789 /* VitalsValueTableViewCell.swift */,
+				BC9E2AB9277C3CC100819789 /* HomeTableViewDescriptionCell.swift */,
+				325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */,
+				BC72525F277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift */,
+				BC725261277B3A1500CF13E9 /* ActionsTableViewCell.swift */,
+				BC725263277B578600CF13E9 /* QuestionTableViewCell.swift */,
+			);
+			path = "TableView Cells";
+			sourceTree = "<group>";
+		};
 		4AEA26B0509B2B2D2A8CE902 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,13 +254,7 @@
 		BC72525E277B375E00CF13E9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				BC72525F277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift */,
-				BC725261277B3A1500CF13E9 /* ActionsTableViewCell.swift */,
-				BC725263277B578600CF13E9 /* QuestionTableViewCell.swift */,
 				BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */,
-				BC9E2AB3277BE2C500819789 /* VitalsValueTableViewCell.swift */,
-				BC9E2AB9277C3CC100819789 /* HomeTableViewDescriptionCell.swift */,
-				325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */,
 				325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */,
 				32CE633B277D9EC900CB8AE1 /* DashboardCollectionViewCell.swift */,
 				32CE633D277DC4FE00CB8AE1 /* VitalDataTableViewCell.swift */,
@@ -387,6 +394,7 @@
 		BCBFDB67277832A500897C5D /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				328882B0277EA3CF00F2DD16 /* TableView Cells */,
 				BC725265277B5F5D00CF13E9 /* ViewModel */,
 				BC72525E277B375E00CF13E9 /* Cells */,
 				BCBFDB762778338C00897C5D /* ViewControllers */,
