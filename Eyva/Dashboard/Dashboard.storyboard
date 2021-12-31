@@ -689,9 +689,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCp-H4-I3c">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-dotted" translatesAutoresizingMaskIntoConstraints="NO" id="o8G-sT-7hK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCp-H4-I3c">
                                 <rect key="frame" x="26" y="78" width="44" height="44"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.71764705880000002" blue="1" alpha="0.80386373300000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.71764705880000002" blue="1" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="AZ0-4L-BWY"/>
                                     <constraint firstAttribute="width" constant="44" id="iH3-vM-q7t"/>
@@ -854,8 +857,11 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5Qk-dr-A3O" firstAttribute="leading" secondItem="Z5C-cc-o3X" secondAttribute="leading" id="01D-DO-jYU"/>
+                            <constraint firstItem="o8G-sT-7hK" firstAttribute="leading" secondItem="Z5C-cc-o3X" secondAttribute="leading" id="0p8-m9-mI0"/>
                             <constraint firstItem="Yvv-KR-HWC" firstAttribute="leading" secondItem="Z5C-cc-o3X" secondAttribute="leading" constant="28" id="2YY-tx-JgG"/>
+                            <constraint firstAttribute="bottom" secondItem="o8G-sT-7hK" secondAttribute="bottom" id="2cO-ZY-7p5"/>
                             <constraint firstItem="Z5C-cc-o3X" firstAttribute="trailing" secondItem="5Qk-dr-A3O" secondAttribute="trailing" id="Aga-xj-505"/>
+                            <constraint firstItem="Z5C-cc-o3X" firstAttribute="trailing" secondItem="o8G-sT-7hK" secondAttribute="trailing" id="DQW-Bb-UjN"/>
                             <constraint firstItem="Z5C-cc-o3X" firstAttribute="trailing" secondItem="Yvv-KR-HWC" secondAttribute="trailing" constant="28" id="E7v-JF-IUY"/>
                             <constraint firstItem="Z5C-cc-o3X" firstAttribute="trailing" secondItem="mop-HT-ahM" secondAttribute="trailing" constant="18" id="N4P-g9-cun"/>
                             <constraint firstItem="Yvv-KR-HWC" firstAttribute="top" secondItem="PCV-RZ-sm9" secondAttribute="bottom" constant="9" id="Nfc-jy-5np"/>
@@ -864,11 +870,12 @@
                             <constraint firstAttribute="bottom" secondItem="5Qk-dr-A3O" secondAttribute="bottom" id="atD-Rs-WNX"/>
                             <constraint firstItem="XCp-H4-I3c" firstAttribute="leading" secondItem="Z5C-cc-o3X" secondAttribute="leading" constant="26" id="bpE-n2-WNj"/>
                             <constraint firstItem="qMY-gT-buE" firstAttribute="trailing" secondItem="Z5C-cc-o3X" secondAttribute="trailing" id="eLx-Vu-jmI"/>
-                            <constraint firstItem="XCp-H4-I3c" firstAttribute="top" secondItem="Z5C-cc-o3X" secondAttribute="top" constant="34" id="kzd-ci-hFc"/>
+                            <constraint firstItem="XCp-H4-I3c" firstAttribute="top" secondItem="Qjh-g8-9v7" secondAttribute="top" constant="78" id="kzd-ci-hFc"/>
                             <constraint firstItem="mop-HT-ahM" firstAttribute="firstBaseline" secondItem="PCV-RZ-sm9" secondAttribute="firstBaseline" id="lZC-lU-hfQ"/>
                             <constraint firstItem="qMY-gT-buE" firstAttribute="leading" secondItem="Z5C-cc-o3X" secondAttribute="leading" id="pb8-Is-gpo"/>
                             <constraint firstItem="qMY-gT-buE" firstAttribute="top" secondItem="Yvv-KR-HWC" secondAttribute="bottom" constant="24" id="sTW-UM-LbN"/>
                             <constraint firstItem="5Qk-dr-A3O" firstAttribute="top" secondItem="qMY-gT-buE" secondAttribute="bottom" id="tv4-9F-mKM"/>
+                            <constraint firstItem="o8G-sT-7hK" firstAttribute="top" secondItem="Qjh-g8-9v7" secondAttribute="top" id="v3v-N8-5Vn"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1245,6 +1252,7 @@
     </scenes>
     <resources>
         <image name="back-icon" width="7.5" height="12"/>
+        <image name="background-dotted" width="428" height="926"/>
         <image name="background-image-test" width="214" height="463"/>
         <image name="odd-all-vitals" width="139" height="29.5"/>
         <image name="ovalshape" width="19" height="23"/>
