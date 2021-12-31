@@ -10,4 +10,9 @@ import UIKit
 class QuestionTableViewCell: UITableViewCell {
 
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    internal func fillData(_ vitalType: Vitals) {
+        titleLabel.text = "Ideal range of \(vitalType.rawValue) in your body"
+    }
 }

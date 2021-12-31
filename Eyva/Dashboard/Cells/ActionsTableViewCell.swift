@@ -11,7 +11,7 @@ class ActionsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     
-    internal func fillData(_ desc: String) {
-        titleLabel.text = desc
+    internal func fillData(_ type: Vitals) {
+        titleLabel.text = type.idealRangeVerbiage
     }
 }

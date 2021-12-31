@@ -10,7 +10,7 @@ import UIKit
 
 enum Vitals: String, CustomStringConvertible, CaseIterable {
     case heartrate = "Heart rate"
-    case glucose = "Glucose"
+    case glucose = "Blood Glucose"
     case oxygen = "Oxygen"
     case temperature = "Temperature"
     case bloodPressure = "Blood Pressure"
@@ -38,12 +38,31 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
         }
     }
     
+    var idealRangeVerbiage: String {
+        switch self {
+        case .heartrate:
+            return "60-100 \(unit)"
+        case .glucose:
+            return "Fasting         70-100 \(unit) \n\nAfter Food    135-140 \(unit)"
+        case .oxygen:
+            return "95 % or higher"
+        case .temperature:
+            return "97.8 F (36.5 C) - 99 F (37.2 C)"
+        case .bloodPressure:
+            return "90/60\(unit) and 120/80\(unit)"
+        case .stress:
+            return "95% or higher"
+        case .ecg:
+            return ""
+        }
+    }
+    
     var unit: String {
         switch self {
         case .heartrate:
             return "BPM"
         case .glucose:
-            return "mg/dl"
+            return "mg/dL"
         case .oxygen:
             return "SPO2"
         case .temperature:

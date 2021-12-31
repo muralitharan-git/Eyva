@@ -25,7 +25,7 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vitalType.positiveActions.count + 2
+        return vitalType.idealRangeVerbiage.count > 0 ? 3 : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,10 +36,11 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTableViewCell") as! QuestionTableViewCell
+            cell.fillData(vitalType)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ActionsTableViewCell") as! ActionsTableViewCell
-            cell.fillData(vitalType.positiveActions[indexPath.row - 2])
+            cell.fillData(vitalType)
             return cell
         }
     }

@@ -11,12 +11,12 @@ class DetailDescriptionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var idealRangeLabel: UILabel!
+   
     @IBOutlet weak var descriptionLabel: UILabel!
     
     internal func fillData(title: String, longDesc: String, range: String) {
         titleLabel.text = title
-        idealRangeLabel.text = range
+       // idealRangeLabel.text = range
         descriptionLabel.text = longDesc
     }
     
