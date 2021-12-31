@@ -36,12 +36,6 @@ class ViewController: UIViewController {
         let swipeUpViewController = storyboard.instantiateViewController(withIdentifier: "SwipeUpViewController") as! SwipeUpViewController
         navigationController?.pushViewController(swipeUpViewController, animated: false)
     }
-    
-    private func navigateToHomeViewController() {
-        let storyboard = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
-        let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        navigationController?.pushViewController(homeViewController, animated: true)
-    }
 }
 
 

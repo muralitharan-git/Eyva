@@ -34,4 +34,10 @@ extension UIViewController {
         let viewAllVitalsViewController = storyboard.instantiateViewController(withIdentifier: "ViewAllVitalsViewController") as! ViewAllVitalsViewController
         navigationController?.pushViewController(viewAllVitalsViewController, animated: true)
     }
+    
+    internal func navigateToHomeViewController() {
+        let storyboard = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
+        let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        navigationController?.pushViewController(homeViewController, animated: true)
+    }
 }

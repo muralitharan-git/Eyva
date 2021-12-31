@@ -34,7 +34,7 @@ class UserInputViewController: UIViewController {
         let user = UserInfo(name: answers[0], email: answers[1], age: Int(answers[2]) ?? 0)
         sharedCoreDataManager.saveUserDetails(user: user) {
             UserDefaultsHelper.setuserDetailsIsSaved()
-            self.navigateToDashboardViewController()
+            self.navigateToHomeViewController()
         } onError: { _ in }
     }
     
