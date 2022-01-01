@@ -17,6 +17,10 @@
 		32CE633E277DC4FE00CB8AE1 /* VitalDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE633D277DC4FE00CB8AE1 /* VitalDataTableViewCell.swift */; };
 		32CE6340277DC52D00CB8AE1 /* VitalsDataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE633F277DC52D00CB8AE1 /* VitalsDataCollectionViewCell.swift */; };
 		32CE6342277E15A500CB8AE1 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CE6341277E15A500CB8AE1 /* Poppins-Medium.ttf */; };
+		32FB52FB277F414C003207FE /* InsightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FB52FA277F414C003207FE /* InsightsViewModel.swift */; };
+		32FB52FF277F41BF003207FE /* ViewAllRecordedDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FB52FE277F41BF003207FE /* ViewAllRecordedDataViewController.swift */; };
+		32FB5301277F41DB003207FE /* VitalDataDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FB5300277F41DB003207FE /* VitalDataDetailedViewController.swift */; };
+		32FB5303277F41EC003207FE /* Insights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32FB5302277F41EC003207FE /* Insights.storyboard */; };
 		6ADF312BB0B99B7D55AA4E4C /* Pods_Eyva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8F111C309795A64B7AC45E /* Pods_Eyva.framework */; };
 		9FD3A583277DE0A600E17867 /* ConnectionStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3A582277DE0A600E17867 /* ConnectionStatusViewController.swift */; };
 		B8DE0498C0073B84DCA36F90 /* Pods_Eyva_EyvaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D1F386DF5AB835FF8F5061 /* Pods_Eyva_EyvaUITests.framework */; };
@@ -116,6 +120,10 @@
 		32CE633D277DC4FE00CB8AE1 /* VitalDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalDataTableViewCell.swift; sourceTree = "<group>"; };
 		32CE633F277DC52D00CB8AE1 /* VitalsDataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsDataCollectionViewCell.swift; sourceTree = "<group>"; };
 		32CE6341277E15A500CB8AE1 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		32FB52FA277F414C003207FE /* InsightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewModel.swift; sourceTree = "<group>"; };
+		32FB52FE277F41BF003207FE /* ViewAllRecordedDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllRecordedDataViewController.swift; sourceTree = "<group>"; };
+		32FB5300277F41DB003207FE /* VitalDataDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalDataDetailedViewController.swift; sourceTree = "<group>"; };
+		32FB5302277F41EC003207FE /* Insights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Insights.storyboard; sourceTree = "<group>"; };
 		35734332840F105BB5C1B253 /* Pods-EyvaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyvaTests.release.xcconfig"; path = "Target Support Files/Pods-EyvaTests/Pods-EyvaTests.release.xcconfig"; sourceTree = "<group>"; };
 		578C5BC5F6661D324894687F /* Pods-Eyva-EyvaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eyva-EyvaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Eyva-EyvaUITests/Pods-Eyva-EyvaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		87BA304D1AF802E4E6278F0B /* Pods-Eyva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eyva.release.xcconfig"; path = "Target Support Files/Pods-Eyva/Pods-Eyva.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,7 +236,6 @@
 		328882B0277EA3CF00F2DD16 /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
-				BC9E2AB3277BE2C500819789 /* VitalsValueTableViewCell.swift */,
 				BC9E2AB9277C3CC100819789 /* HomeTableViewDescriptionCell.swift */,
 				325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */,
 				BC72525F277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift */,
@@ -236,6 +243,42 @@
 				BC725263277B578600CF13E9 /* QuestionTableViewCell.swift */,
 			);
 			path = "TableView Cells";
+			sourceTree = "<group>";
+		};
+		32FB52F9277F4127003207FE /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				32FB5304277F41F5003207FE /* Cells */,
+				32FB52FD277F415E003207FE /* ViewControllers */,
+				32FB52FC277F4151003207FE /* ViewModel */,
+				32FB5302277F41EC003207FE /* Insights.storyboard */,
+			);
+			path = Insights;
+			sourceTree = "<group>";
+		};
+		32FB52FC277F4151003207FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				32FB52FA277F414C003207FE /* InsightsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		32FB52FD277F415E003207FE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				32FB52FE277F41BF003207FE /* ViewAllRecordedDataViewController.swift */,
+				32FB5300277F41DB003207FE /* VitalDataDetailedViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		32FB5304277F41F5003207FE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BC9E2AB3277BE2C500819789 /* VitalsValueTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		4AEA26B0509B2B2D2A8CE902 /* Pods */ = {
@@ -485,6 +528,7 @@
 				BCE2830327773F3400EC976A /* SceneDelegate.swift */,
 				BCE2830527773F3400EC976A /* ViewController.swift */,
 				BCB9E0492779B270003626B1 /* Podfile */,
+				32FB52F9277F4127003207FE /* Insights */,
 				BC9574FF277C8A05003821BF /* Helper */,
 				BC725268277B61D300CF13E9 /* Enums */,
 				BCB9E04B2779B647003626B1 /* Supports */,
@@ -655,6 +699,7 @@
 				BCB9E03B27798356003626B1 /* Mulish-ExtraLight.ttf in Resources */,
 				BCB9E03A27798356003626B1 /* Mulish-BoldItalic.ttf in Resources */,
 				BC9574D2277C51B8003821BF /* Bluetooth.storyboard in Resources */,
+				32FB5303277F41EC003207FE /* Insights.storyboard in Resources */,
 				BCE2830B27773F3500EC976A /* Assets.xcassets in Resources */,
 				BCB9E0482779877C003626B1 /* Poppins-Regular.ttf in Resources */,
 				BCB9E03D27798356003626B1 /* Mulish-ExtraBoldItalic.ttf in Resources */,
@@ -813,6 +858,7 @@
 				BC725267277B5F7700CF13E9 /* DetailViewModel.swift in Sources */,
 				BC9E2AB6277C361700819789 /* HomeViewController.swift in Sources */,
 				328882AE277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift in Sources */,
+				32FB52FB277F414C003207FE /* InsightsViewModel.swift in Sources */,
 				BCB9E04F2779BF37003626B1 /* Global.swift in Sources */,
 				32CE6340277DC52D00CB8AE1 /* VitalsDataCollectionViewCell.swift in Sources */,
 				BCB9E0512779F5FB003626B1 /* ViewExt.swift in Sources */,
@@ -821,12 +867,14 @@
 				BC9E2AAE277BDC0100819789 /* ViewControllerExt.swift in Sources */,
 				32CE633C277D9EC900CB8AE1 /* DashboardCollectionViewCell.swift in Sources */,
 				BC9574F5277C836C003821BF /* CoreDataManager.swift in Sources */,
+				32FB52FF277F41BF003207FE /* ViewAllRecordedDataViewController.swift in Sources */,
 				BC725260277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift in Sources */,
 				BC9574D6277C8103003821BF /* Evya.xcdatamodeld in Sources */,
 				32CE6336277D8C8A00CB8AE1 /* ActionButton.swift in Sources */,
 				BC9574FA277C84B7003821BF /* VitalInfo.swift in Sources */,
 				BC9E2AAC277BD36900819789 /* VitalsCollectionViewCell.swift in Sources */,
 				325594DE277D5C5E004E6383 /* RecordedTableViewCell.swift in Sources */,
+				32FB5301277F41DB003207FE /* VitalDataDetailedViewController.swift in Sources */,
 				325594E0277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift in Sources */,
 				BCE2830427773F3400EC976A /* SceneDelegate.swift in Sources */,
 				BCBFDB752778338400897C5D /* UserInputViewController.swift in Sources */,
