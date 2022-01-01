@@ -20,7 +20,6 @@ class UserInputViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        actionButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 20)
         configureButtons()
         view.enableTapToDismissKeyboard()
     }
@@ -28,6 +27,12 @@ class UserInputViewController: UIViewController {
     private func configureButtons() {
         actionButton.setBackgroundColor(rgb(48, 20, 88, 1.0), for: .disabled)
         actionButton.setBackgroundColor(rgb(183, 92, 255, 1.0), for: .normal)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        actionButton.applyGradient(colors: [rgb(183, 92, 255, 1.0).cgColor, rgb(103, 26, 228, 1.0).cgColor])
+        actionButton.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 17)
     }
     
     @IBAction func actionButton_Tapped(_ sender: Any) {

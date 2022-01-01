@@ -11,6 +11,9 @@
         <array key="Mulish-Bold.ttf">
             <string>Mulish-Bold</string>
         </array>
+        <array key="Mulish-SemiBold.ttf">
+            <string>Mulish-SemiBold</string>
+        </array>
         <array key="Mulish-VariableFont_wght.ttf">
             <string>MulishRoman-Regular</string>
         </array>
@@ -184,14 +187,14 @@
                                                     <color key="textColor" red="0.70980392156862748" green="0.70196078431372544" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZG-CT-URT">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZG-CT-URT">
                                                     <rect key="frame" x="20" y="50" width="374" height="44"/>
                                                     <color key="backgroundColor" red="0.62745098039215685" green="0.89411764705882346" blue="0.92941176470588238" alpha="0.0016000000000000001" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="ebE-6P-y6p"/>
                                                     </constraints>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="MulishRoman-Regular" family="Mulish" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 </textField>
                                             </subviews>
