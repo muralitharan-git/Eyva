@@ -14,6 +14,11 @@ enum ResultRange {
     case low
 }
 
+enum VitalEnabled {
+    case yes
+    case no
+}
+
 enum Vitals: String, CustomStringConvertible, CaseIterable {
     case heartrate = "Heart rate"
     case glucose = "Blood Glucose"
@@ -21,7 +26,6 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
     case temperature = "Temperature"
     case bloodPressure = "Blood Pressure"
     case stress = "Stress Levels"
-    case ecg = "ECG"
     
     var description: String {
         return rawValue
@@ -30,17 +34,17 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
     var idealRange: String {
         switch self {
         case .heartrate:
-            return "60 - 80"
+            return "60-80"
         case .glucose:
-            return "60 - 80"
+            return "70-150"
         case .oxygen:
-            return "60 - 80"
+            return "95% or Higher"
         case .temperature:
             return "60 - 80"
         case .bloodPressure:
-            return "60 - 80"
-        default:
-            return "60 - 80"
+            return "90/60 - 120/80"
+        case .stress:
+            return "22-60"
         }
     }
     
@@ -58,8 +62,6 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return "90/60\(unit) and 120/80\(unit)"
         case .stress:
             return "95% or higher"
-        case .ecg:
-            return ""
         }
     }
     
@@ -76,8 +78,6 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
         case .bloodPressure:
             return "mmHg"
         case .stress:
-            return "mmHg"
-        case .ecg:
             return "mmHg"
         }
     }
@@ -96,14 +96,21 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return "Normal blood pressure is important for the proper flow of blood from the heart to the body's organs and tissues."
         case .stress:
             return "It might be a demanding boss, distrubed relation with friends or family, Experiencing some stress levels on a daily basis is common. But chronic & overwhelming stress can impact mental and physical health."
-        case .ecg:
-            return "An ECG (electrocardiogram) is important to see how the heart is functioning. It records the electrical activity of your heart at rest and provides information about your heart rate and rhythm. \n \nHeart diseases and irregular heart beats can be detected in ECGs."
+        }
+    }
+    
+    func getVitalSupportState() -> VitalEnabled {
+        switch self {
+        case .temperature:
+            return .no
+        default:
+            return .yes
         }
     }
     
     func getIcon(_ prefix: String) -> UIImage? {
         switch self {
-        case .heartrate, .ecg:
+        case .heartrate:
             return UIImage(named: "\(prefix)-heartrate")
         case .glucose:
             return UIImage(named: "\(prefix)-glucose")
