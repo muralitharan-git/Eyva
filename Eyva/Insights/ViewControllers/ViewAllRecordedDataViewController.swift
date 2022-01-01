@@ -75,7 +75,6 @@ extension ViewAllRecordedDataViewController: UITableViewDataSource, UITableViewD
         let type = Vitals.allCases[indexPath.row]
         if type.getVitalSupportState() == .yes {
             let insightsStoryBoard = UIStoryboard(name: "Insights", bundle: nil)
-          
             let detailViewController = insightsStoryBoard.instantiateViewController(identifier: "VitalDataDetailedViewController", creator: { coder in
                 return VitalDataDetailedViewController(coder: coder, range: self.getRangeForType(type), type: type, viewModel: self.viewModel)
             })

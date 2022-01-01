@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,13 +24,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-flower-petals" translatesAutoresizingMaskIntoConstraints="NO" id="6nW-xM-Gdh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzc-Uo-Gu9">
                                 <rect key="frame" x="20" y="774" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="M3e-3c-5Uc"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Swipe up"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enter to Anthea Realm"/>
                                 <connections>
                                     <segue destination="muw-ye-GW0" kind="show" id="m5L-Jr-Wdh"/>
                                 </connections>
@@ -39,8 +43,12 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6nW-xM-Gdh" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="1s2-aL-Hm0"/>
+                            <constraint firstAttribute="bottom" secondItem="6nW-xM-Gdh" secondAttribute="bottom" id="42x-SI-xWg"/>
                             <constraint firstItem="hzc-Uo-Gu9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="CPM-2e-Jtd"/>
+                            <constraint firstItem="6nW-xM-Gdh" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="F8g-Mj-qZL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hzc-Uo-Gu9" secondAttribute="trailing" constant="20" id="QFI-nX-meC"/>
+                            <constraint firstItem="6nW-xM-Gdh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Xq9-fK-4V3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hzc-Uo-Gu9" secondAttribute="bottom" constant="38" id="cEs-XW-aAt"/>
                         </constraints>
                     </view>
@@ -286,6 +294,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background-flower-petals" width="428" height="926"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
