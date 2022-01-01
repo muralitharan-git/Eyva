@@ -59,14 +59,17 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 100
+        return 350
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let rect = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 100)
-        let footerView = UIView(frame:rect)
-        footerView.backgroundColor = UIColor.clear
-        return footerView
+        let rect = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 350)
+        let headerView = UIView(frame: rect)
+        let backgroundImage = UIImageView(frame: rect)
+        backgroundImage.image = UIImage(named: "homepage-top")
+        headerView.addSubview(backgroundImage)
+        headerView.backgroundColor = UIColor.clear
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -40,20 +40,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-dotted" translatesAutoresizingMaskIntoConstraints="NO" id="vAF-cp-yy7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzj-nA-X1K">
-                                <rect key="frame" x="20" y="59" width="374" height="31.5"/>
-                                <fontDescription key="fontDescription" name="Mulish-ExtraBold" family="Mulish" pointSize="25"/>
-                                <color key="textColor" red="0.65098039215686276" green="0.52156862745098043" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The flowers of Anthea are slowly withering to reflect your inner body. Help them bloom again." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bth-uz-UST">
-                                <rect key="frame" x="18" y="101" width="391" height="30.5"/>
-                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="300" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Y47-zz-sEE">
-                                <rect key="frame" x="0.0" y="90.5" width="414" height="805.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecordedTableViewCell" rowHeight="220" id="DQv-F6-IdX" customClass="RecordedTableViewCell" customModule="Eyva" customModuleProvider="target">
@@ -401,6 +389,18 @@
                                     <outlet property="delegate" destination="I4R-2u-iQm" id="2TB-0P-UQw"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzj-nA-X1K">
+                                <rect key="frame" x="20" y="62" width="374" height="31.5"/>
+                                <fontDescription key="fontDescription" name="Mulish-ExtraBold" family="Mulish" pointSize="25"/>
+                                <color key="textColor" red="0.65098039215686276" green="0.52156862745098043" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The flowers of Anthea are slowly withering to reflect your inner body. Help them bloom again." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bth-uz-UST">
+                                <rect key="frame" x="18" y="104" width="391" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4O-iW-WIg">
                                 <rect key="frame" x="20" y="806" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.71764705880000002" green="0.36078431370000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -425,10 +425,10 @@
                         <constraints>
                             <constraint firstItem="Y47-zz-sEE" firstAttribute="leading" secondItem="CHz-dg-TCO" secondAttribute="leading" id="AOb-5C-5Eo"/>
                             <constraint firstAttribute="bottom" secondItem="F4O-iW-WIg" secondAttribute="bottom" constant="40" id="F43-sp-CeW"/>
-                            <constraint firstItem="lzj-nA-X1K" firstAttribute="top" secondItem="CHz-dg-TCO" secondAttribute="top" constant="15" id="Pca-nD-1aB"/>
+                            <constraint firstItem="Y47-zz-sEE" firstAttribute="top" secondItem="4Su-0D-XYT" secondAttribute="top" id="MLw-Yb-ZBV"/>
+                            <constraint firstItem="lzj-nA-X1K" firstAttribute="top" secondItem="CHz-dg-TCO" secondAttribute="top" constant="18" id="Pca-nD-1aB"/>
                             <constraint firstItem="vAF-cp-yy7" firstAttribute="leading" secondItem="4Su-0D-XYT" secondAttribute="leading" id="aA4-0z-QHp"/>
                             <constraint firstItem="CHz-dg-TCO" firstAttribute="trailing" secondItem="F4O-iW-WIg" secondAttribute="trailing" constant="20" id="bF6-Vl-ZUx"/>
-                            <constraint firstItem="Y47-zz-sEE" firstAttribute="top" secondItem="lzj-nA-X1K" secondAttribute="bottom" id="c3C-1g-tSu"/>
                             <constraint firstAttribute="trailing" secondItem="vAF-cp-yy7" secondAttribute="trailing" id="dYL-at-Krz"/>
                             <constraint firstItem="F4O-iW-WIg" firstAttribute="leading" secondItem="CHz-dg-TCO" secondAttribute="leading" constant="20" id="f9f-8U-iu9"/>
                             <constraint firstItem="CHz-dg-TCO" firstAttribute="trailing" secondItem="lzj-nA-X1K" secondAttribute="trailing" constant="20" id="fEa-uh-Fi2"/>
