@@ -7,6 +7,8 @@ target 'Eyva' do
 
   # Pods for Eyva
   pod 'IQKeyboardManagerSwift'
+  pod 'Gifu'
+  
   target 'EyvaTests' do
     inherit! :search_paths
     # Pods for testing

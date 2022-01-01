@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-image-test" translatesAutoresizingMaskIntoConstraints="NO" id="UX2-q1-HNk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluetooth-connect" translatesAutoresizingMaskIntoConstraints="NO" id="UuF-5W-K38">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfZ-j2-Mve">
@@ -119,53 +119,53 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsI-uk-zAD">
                                 <rect key="frame" x="0.0" y="896" width="414" height="730"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FpN-Fa-ZGh">
-                                        <rect key="frame" x="0.0" y="55" width="414" height="200"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Eyva-device" translatesAutoresizingMaskIntoConstraints="NO" id="FpN-Fa-ZGh">
+                                        <rect key="frame" x="0.0" y="25" width="414" height="240"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="Oxa-wp-VyQ"/>
+                                            <constraint firstAttribute="height" constant="240" id="Oxa-wp-VyQ"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ovalshape" translatesAutoresizingMaskIntoConstraints="NO" id="cYw-Zi-3zD">
-                                        <rect key="frame" x="46" y="267" width="12" height="14"/>
+                                        <rect key="frame" x="46" y="277" width="12" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="CbM-vm-61T"/>
                                             <constraint firstAttribute="width" constant="12" id="hVc-te-hj1"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold Eyva in both your hands" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cC-Ts-dbE">
-                                        <rect key="frame" x="74" y="265" width="187" height="18"/>
+                                        <rect key="frame" x="74" y="275" width="187" height="18"/>
                                         <fontDescription key="fontDescription" name="Mulish-Light" family="Mulish" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ovalshape" translatesAutoresizingMaskIntoConstraints="NO" id="oaN-hE-X3G">
-                                        <rect key="frame" x="46" y="325" width="12" height="14"/>
+                                        <rect key="frame" x="46" y="335" width="12" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="GJN-zj-HdC"/>
                                             <constraint firstAttribute="height" constant="14" id="PWf-KN-hp6"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put both of your thumbs on the circles" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jge-lV-lcw">
-                                        <rect key="frame" x="74" y="323" width="240" height="18"/>
+                                        <rect key="frame" x="74" y="333" width="240" height="18"/>
                                         <fontDescription key="fontDescription" name="Mulish-Light" family="Mulish" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ovalshape" translatesAutoresizingMaskIntoConstraints="NO" id="48C-nH-5w8">
-                                        <rect key="frame" x="46" y="383" width="12" height="14"/>
+                                        <rect key="frame" x="46" y="393" width="12" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="ELm-yF-ZH6"/>
                                             <constraint firstAttribute="height" constant="14" id="zcN-Xz-kTL"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let Eyva do it's magic and connect with your innerself" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoj-jh-6kv">
-                                        <rect key="frame" x="74" y="372.5" width="255" height="35.5"/>
+                                        <rect key="frame" x="74" y="382.5" width="255" height="35.5"/>
                                         <fontDescription key="fontDescription" name="Mulish-Light" family="Mulish" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0x-JZ-ZZo">
-                                        <rect key="frame" x="46" y="477" width="322" height="44"/>
+                                        <rect key="frame" x="46" y="487" width="322" height="44"/>
                                         <color key="backgroundColor" red="0.71764705880000002" green="0.36078431370000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="c7r-dg-ULf"/>
@@ -193,7 +193,7 @@
                                     <constraint firstItem="q0x-JZ-ZZo" firstAttribute="top" secondItem="48C-nH-5w8" secondAttribute="bottom" constant="80" id="8jx-GY-AZ5"/>
                                     <constraint firstItem="3cC-Ts-dbE" firstAttribute="centerY" secondItem="cYw-Zi-3zD" secondAttribute="centerY" id="CRS-8n-0t0"/>
                                     <constraint firstItem="cYw-Zi-3zD" firstAttribute="top" secondItem="FpN-Fa-ZGh" secondAttribute="bottom" constant="12" id="EAp-A9-E89"/>
-                                    <constraint firstItem="FpN-Fa-ZGh" firstAttribute="top" secondItem="zsI-uk-zAD" secondAttribute="top" constant="55" id="GXj-hj-HRz"/>
+                                    <constraint firstItem="FpN-Fa-ZGh" firstAttribute="top" secondItem="zsI-uk-zAD" secondAttribute="top" constant="25" id="GXj-hj-HRz"/>
                                     <constraint firstItem="hoj-jh-6kv" firstAttribute="leading" secondItem="48C-nH-5w8" secondAttribute="trailing" constant="16" id="J0c-ld-QWi"/>
                                     <constraint firstItem="oaN-hE-X3G" firstAttribute="top" secondItem="cYw-Zi-3zD" secondAttribute="bottom" constant="44" id="LHA-ro-iJk"/>
                                     <constraint firstItem="3cC-Ts-dbE" firstAttribute="leading" secondItem="cYw-Zi-3zD" secondAttribute="trailing" constant="16" id="MlE-QV-EHr"/>
@@ -219,28 +219,29 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UX2-q1-HNk" secondAttribute="trailing" id="1Yz-IQ-2sc"/>
-                            <constraint firstAttribute="bottom" secondItem="UX2-q1-HNk" secondAttribute="bottom" id="6Od-iK-icZ"/>
                             <constraint firstItem="je8-Nn-zXc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="6Su-id-hqI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="je8-Nn-zXc" secondAttribute="trailing" constant="18" id="9KT-GP-4x7"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="omv-17-BUM" secondAttribute="bottom" constant="30" id="ALQ-XT-aht"/>
+                            <constraint firstItem="UuF-5W-K38" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Av5-RD-8tu"/>
                             <constraint firstItem="je8-Nn-zXc" firstAttribute="top" secondItem="SZY-E6-Qxr" secondAttribute="bottom" constant="12" id="ISI-WE-tkx"/>
-                            <constraint firstItem="zsI-uk-zAD" firstAttribute="top" secondItem="UX2-q1-HNk" secondAttribute="bottom" id="JOU-AB-QmD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zsI-uk-zAD" secondAttribute="trailing" id="L2L-lm-Hsi"/>
-                            <constraint firstItem="UX2-q1-HNk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YmL-1r-3o5"/>
+                            <constraint firstItem="UuF-5W-K38" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="SwA-ox-YgR"/>
                             <constraint firstAttribute="bottom" secondItem="je8-Nn-zXc" secondAttribute="bottom" constant="150" id="bTb-n9-ZnI"/>
                             <constraint firstItem="zsI-uk-zAD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mr0-9K-hd6"/>
                             <constraint firstItem="omv-17-BUM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="46" id="nUr-Vx-EKt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="omv-17-BUM" secondAttribute="trailing" constant="46" id="oxk-7A-zev"/>
                             <constraint firstItem="IfZ-j2-Mve" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="26" id="poT-hf-p1O"/>
-                            <constraint firstItem="UX2-q1-HNk" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="qha-S2-Z9M"/>
+                            <constraint firstItem="zsI-uk-zAD" firstAttribute="top" secondItem="UuF-5W-K38" secondAttribute="bottom" id="prV-iy-6iG"/>
                             <constraint firstItem="IfZ-j2-Mve" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="78" id="smE-39-FCv"/>
+                            <constraint firstItem="UuF-5W-K38" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="uGS-PC-GFv"/>
                             <constraint firstItem="SZY-E6-Qxr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="vn5-WM-pVh"/>
+                            <constraint firstItem="UuF-5W-K38" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wd2-mQ-dNh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Sj-hT-2aI"/>
                     <connections>
-                        <outlet property="bottomSheetTopConstraint" destination="JOU-AB-QmD" id="uc0-OL-BfI"/>
+                        <outlet property="backgroundImageView" destination="UuF-5W-K38" id="JDY-02-HM8"/>
+                        <outlet property="bottomSheetTopConstraint" destination="prV-iy-6iG" id="dAR-NF-kEu"/>
                         <outlet property="connectLabel" destination="ky5-uv-gX3" id="lES-oB-Lmi"/>
                         <outlet property="gradientView" destination="zsI-uk-zAD" id="777-ra-OuV"/>
                         <outlet property="meetEyvaButton" destination="omv-17-BUM" id="uhT-Tv-LcU"/>
@@ -258,7 +259,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-image-test" translatesAutoresizingMaskIntoConstraints="NO" id="Dpd-af-EO7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluetooth-data" translatesAutoresizingMaskIntoConstraints="NO" id="Dpd-af-EO7" customClass="GIFImageView" customModule="Gifu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obU-TJ-SW7">
@@ -365,6 +366,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animatedImageView" destination="Dpd-af-EO7" id="uVb-Vn-poi"/>
                         <outlet property="connectionProgressView" destination="yQS-b4-4hl" id="9dG-7n-mei"/>
                         <outlet property="connectionUpdateLabel" destination="BcO-TD-ceE" id="O5F-Lb-mqA"/>
                         <outlet property="initialConnectionView" destination="obU-TJ-SW7" id="1ZD-ao-rWe"/>
@@ -397,8 +399,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Eyva-device" width="551" height="413.5"/>
         <image name="back-icon" width="7.5" height="12"/>
-        <image name="background-image-test" width="214" height="463"/>
+        <image name="bluetooth-connect" width="856" height="1852"/>
+        <image name="bluetooth-data" width="115.5" height="250"/>
         <image name="ovalshape" width="19" height="23"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

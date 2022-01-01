@@ -13,6 +13,7 @@ class BluetoothConnectViewController: UIViewController {
     @IBOutlet private weak var connectLabel: UILabel!
     @IBOutlet private weak var meetEyvaButton: UIButton!
     @IBOutlet private weak var gradientView: UIView!
+    @IBOutlet private weak var backgroundImageView: UIImageView!
     @IBOutlet private weak var bottomSheetTopConstraint: NSLayoutConstraint!
     
     // MARK: Life Cycle Methods
@@ -43,8 +44,10 @@ class BluetoothConnectViewController: UIViewController {
     @IBAction private func connectButton_Tapped(button: UIButton) {
         button.isUserInteractionEnabled = false
         connectLabel.text = "Connecting"
+        backgroundImageView.image = UIImage(named: "bluetooth-connecting")
         DispatchQueue.main.asyncAfter(deadline: .now()+3, execute: {
             self.connectLabel.text = "Connected"
+            self.backgroundImageView.image = UIImage(named: "bluetooth-connected")
             self.meetEyvaButton.isHidden = false
         })
     }
