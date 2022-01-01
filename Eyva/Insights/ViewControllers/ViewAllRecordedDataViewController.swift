@@ -9,9 +9,12 @@ import UIKit
 
 class ViewAllRecordedDataViewController: UIViewController {
     
+    @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var trackedDateLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var backButtonTopConstraint: NSLayoutConstraint!
     
     private var viewModel: InsightsViewModel
     
@@ -28,6 +31,15 @@ class ViewAllRecordedDataViewController: UIViewController {
         super.viewDidLoad()
         trackedDateLabel.text = viewModel.getTrackedDate()
         nameLabel.attributedText = viewModel.getHeaderDetails()
+        finishButton.setTitle("Finish", for: .normal)
+        finishButton.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 16)
+        finishButton.isHidden = viewModel.dataSource != .bluetoothDevice
+        backButton.isHidden = viewModel.dataSource == .bluetoothDevice
+        backButtonTopConstraint.constant = viewModel.dataSource == .bluetoothDevice ? 20 : 78
+    }
+    
+    @IBAction func finishButton_Tapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func backButton_Tapped(_ sender: Any) {
@@ -43,7 +55,6 @@ extension ViewAllRecordedDataViewController: UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VitalsValueTableViewCell") as! VitalsValueTableViewCell
         let type = Vitals.allCases[indexPath.row]
-        let recordedValue = viewModel.getRecordedValue(type)
         let range = getRangeForType(type)
         let value = viewModel.getValue(type)
         cell.fillData(type: type, value: value, range: range)

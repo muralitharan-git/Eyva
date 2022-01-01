@@ -79,6 +79,36 @@
                                 <rect key="frame" x="0.0" y="208.5" width="414" height="687.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ZK5-68-Yif">
+                                    <rect key="frame" x="0.0" y="210" width="414" height="86"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JW3-Gt-nwP">
+                                            <rect key="frame" x="30" y="21" width="354" height="44"/>
+                                            <color key="backgroundColor" red="0.71764705882352942" green="0.36078431372549019" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="t1z-Ks-vks"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Finish"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="finishButton_Tapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bQP-pw-x4N"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="JW3-Gt-nwP" secondAttribute="trailing" constant="30" id="Ffx-9P-CIJ"/>
+                                        <constraint firstItem="JW3-Gt-nwP" firstAttribute="leading" secondItem="ZK5-68-Yif" secondAttribute="leading" constant="30" id="gq3-GV-zuD"/>
+                                        <constraint firstItem="JW3-Gt-nwP" firstAttribute="centerY" secondItem="ZK5-68-Yif" secondAttribute="centerY" id="yFd-0i-Tn7"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="VitalsValueTableViewCell" rowHeight="143" id="jHw-5f-KMZ" customClass="VitalsValueTableViewCell" customModule="Eyva" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="143"/>
@@ -200,6 +230,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="NML-5g-FJS" id="iVu-go-L4c"/>
+                        <outlet property="backButtonTopConstraint" destination="QpT-Co-QvL" id="lz5-yU-W6V"/>
+                        <outlet property="finishButton" destination="JW3-Gt-nwP" id="bl7-wm-B8X"/>
                         <outlet property="nameLabel" destination="eqN-cz-sos" id="a0Y-rk-bjo"/>
                         <outlet property="tableView" destination="gq3-RH-sxV" id="eOO-bi-QjA"/>
                         <outlet property="trackedDateLabel" destination="dFl-FB-cqA" id="81S-oq-PtS"/>

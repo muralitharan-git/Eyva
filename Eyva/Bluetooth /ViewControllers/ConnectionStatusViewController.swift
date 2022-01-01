@@ -79,9 +79,7 @@ class ConnectionStatusViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction private func showResultsButton_Tapped() {
-        let storyboard = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
-        let recordedViewController = storyboard.instantiateViewController(withIdentifier: "VitalsRecoredValueViewController") as! VitalsRecoredValueViewController
-        recordedViewController.shouldShowFinish = true
-        navigationController?.pushViewController(recordedViewController, animated: true)
+        let info = VitalInfo(heartrate: 80.0, oxygen: 99.0, glucose: 189.0, temperature: 0.0, systolic: 120.0, diastolic: 80.0, stressLevel: 78.0, recorededDate: Date())
+        navigateToViewAllRecordedViewController(vitalInfo: info, dataSource: .bluetoothDevice)
     }
 }

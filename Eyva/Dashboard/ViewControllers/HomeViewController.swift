@@ -139,13 +139,8 @@ extension HomeViewController: GenericVitalInfoTableViewCellDelegate {
 
 extension HomeViewController: VitalDataTableViewCellDelegate {
     func viewAllOfVitalRecordedData() {
-        let insightsStoryBoard = UIStoryboard(name: "Insights", bundle: nil)
         let info = VitalInfo(heartrate: 80.0, oxygen: 99.0, glucose: 189.0, temperature: 0.0, systolic: 120.0, diastolic: 80.0, stressLevel: 78.0, recorededDate: Date())
-        let insightsViewController = insightsStoryBoard.instantiateViewController(identifier: "ViewAllRecordedDataViewController", creator: { coder in
-            return ViewAllRecordedDataViewController(coder: coder, vitalInfo: info, dataSource: .local)
-        })
-        navigationController?.pushViewController(insightsViewController,
-                                                 animated: true)
+        navigateToViewAllRecordedViewController(vitalInfo: info, dataSource: .local)
     }
     
     func navigateToDataDetailedVitalController(_ type: Vitals) {

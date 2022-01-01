@@ -16,7 +16,7 @@ enum VitalsDataSource {
 class InsightsViewModel {
     
     private var vitalsInfo: VitalInfo
-    private var dataSource: VitalsDataSource
+    internal var dataSource: VitalsDataSource
     
     init(vitalsInfo: VitalInfo, dataSource: VitalsDataSource) {
         self.vitalsInfo = vitalsInfo

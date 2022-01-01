@@ -40,4 +40,13 @@ extension UIViewController {
         let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         navigationController?.pushViewController(homeViewController, animated: true)
     }
+    
+    internal func navigateToViewAllRecordedViewController(vitalInfo: VitalInfo, dataSource: VitalsDataSource) {
+        let insightsStoryBoard = UIStoryboard(name: "Insights", bundle: nil)
+        let insightsViewController = insightsStoryBoard.instantiateViewController(identifier: "ViewAllRecordedDataViewController", creator: { coder in
+            return ViewAllRecordedDataViewController(coder: coder, vitalInfo: vitalInfo, dataSource: dataSource)
+        })
+        navigationController?.pushViewController(insightsViewController,
+                                                 animated: true)
+    }
 }
