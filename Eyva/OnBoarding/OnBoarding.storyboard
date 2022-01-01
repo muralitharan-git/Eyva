@@ -11,6 +11,9 @@
         <array key="Mulish-Bold.ttf">
             <string>Mulish-Bold</string>
         </array>
+        <array key="Mulish-SemiBold.ttf">
+            <string>Mulish-SemiBold</string>
+        </array>
         <array key="Mulish-VariableFont_wght.ttf">
             <string>MulishRoman-Regular</string>
         </array>
@@ -161,14 +164,14 @@
                                 <color key="textColor" red="0.19215686274509802" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="people connected with Eyva" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTc-S1-BPi">
-                                <rect key="frame" x="103.5" y="228" width="207" height="20.5"/>
-                                <fontDescription key="fontDescription" name="MulishRoman-Regular" family="Mulish" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="people are exploring the Anthea Realm with you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTc-S1-BPi">
+                                <rect key="frame" x="20" y="228" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="MulishRoman-Regular" family="Mulish" pointSize="15"/>
                                 <color key="textColor" red="0.70980392156862748" green="0.70196078431372544" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ame-8e-fh6">
-                                <rect key="frame" x="0.0" y="279.5" width="414" height="450.5"/>
+                                <rect key="frame" x="0.0" y="278" width="414" height="452"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserInputCell" rowHeight="123" id="pPU-tb-4gF" customClass="UserInputCell" customModule="Eyva" customModuleProvider="target">
@@ -184,14 +187,14 @@
                                                     <color key="textColor" red="0.70980392156862748" green="0.70196078431372544" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZG-CT-URT">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZG-CT-URT">
                                                     <rect key="frame" x="20" y="50" width="374" height="44"/>
                                                     <color key="backgroundColor" red="0.62745098039215685" green="0.89411764705882346" blue="0.92941176470588238" alpha="0.0016000000000000001" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="ebE-6P-y6p"/>
                                                     </constraints>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="MulishRoman-Regular" family="Mulish" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 </textField>
                                             </subviews>
@@ -237,6 +240,7 @@
                         <viewLayoutGuide key="safeArea" id="mCp-jC-h4c"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mCp-jC-h4c" firstAttribute="trailing" secondItem="pTc-S1-BPi" secondAttribute="trailing" constant="20" id="4Wz-FG-qBN"/>
                             <constraint firstItem="mCp-jC-h4c" firstAttribute="trailing" secondItem="z96-33-Msx" secondAttribute="trailing" constant="20" id="6aa-ok-zgQ"/>
                             <constraint firstItem="Yjt-Xf-Eeu" firstAttribute="top" secondItem="3Qu-mT-GSX" secondAttribute="bottom" constant="40" id="6b1-S1-YZe"/>
                             <constraint firstItem="ame-8e-fh6" firstAttribute="leading" secondItem="mCp-jC-h4c" secondAttribute="leading" id="6sc-8M-UQ0"/>
@@ -249,6 +253,7 @@
                             <constraint firstItem="pTc-S1-BPi" firstAttribute="top" secondItem="Yjt-Xf-Eeu" secondAttribute="bottom" constant="8" symbolic="YES" id="irp-KW-fz2"/>
                             <constraint firstItem="mCp-jC-h4c" firstAttribute="bottom" secondItem="z96-33-Msx" secondAttribute="bottom" constant="31" id="mNc-mR-Zrp"/>
                             <constraint firstItem="z96-33-Msx" firstAttribute="top" secondItem="ame-8e-fh6" secondAttribute="bottom" constant="51" id="qmj-aM-bYc"/>
+                            <constraint firstItem="pTc-S1-BPi" firstAttribute="leading" secondItem="mCp-jC-h4c" secondAttribute="leading" constant="20" id="tKj-8S-dwi"/>
                             <constraint firstItem="3Qu-mT-GSX" firstAttribute="centerX" secondItem="tnH-pV-gpK" secondAttribute="centerX" id="xQs-sl-nbo"/>
                         </constraints>
                     </view>

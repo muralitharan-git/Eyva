@@ -20,11 +20,16 @@ class OnBoardingViewController: UIViewController {
         super.viewDidLoad()
         view.addGestureRecognizer(createSwipeGestureRecognizer(for: .left))
         view.addGestureRecognizer(createSwipeGestureRecognizer(for: .right))
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        nextButton.applyGradient(colors: [rgb(183, 92, 255, 1.0).cgColor, rgb(103, 26, 228, 1.0).cgColor])
         setUIComponents()
     }
     
     private func setUIComponents() {
-        nextButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 20)
+        nextButton.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 17)
         nextButton.setTitleColor(.white, for: .normal)
     }
     
