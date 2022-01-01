@@ -23,7 +23,7 @@ class VitalDataTableViewCell: UITableViewCell {
     }
     
     @IBAction func viewAllButton_Tapped(_ sender: Any) {
-        delegate?.viewAllButtonTapped()
+        delegate?.viewAllOfVitalRecordedData()
     }
 }
 
@@ -49,11 +49,11 @@ extension VitalDataTableViewCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.navigateToSelectedVitalInfo(Vitals.allCases[indexPath.row])
+        delegate?.navigateToDataDetailedVitalController(Vitals.allCases[indexPath.row])
     }
 }
 
 protocol VitalDataTableViewCellDelegate: AnyObject {
-    func viewAllButtonTapped()
-    func navigateToSelectedVitalInfo(_ type: Vitals)
+    func viewAllOfVitalRecordedData()
+    func navigateToDataDetailedVitalController(_ type: Vitals)
 }

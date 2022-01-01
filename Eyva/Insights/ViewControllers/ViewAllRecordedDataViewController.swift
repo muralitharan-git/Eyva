@@ -43,8 +43,10 @@ extension ViewAllRecordedDataViewController: UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VitalsValueTableViewCell") as! VitalsValueTableViewCell
         let type = Vitals.allCases[indexPath.row]
+        let recordedValue = viewModel.getRecordedValue(type)
+        let range = type.fetchResultRange(recordedValue.0, value2: recordedValue.1)
         let value = viewModel.getValue(type)
-        cell.fillData(type: type, value: value)
+        cell.fillData(type: type, value: value, range: range)
         return cell
     }
     

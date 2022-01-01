@@ -143,12 +143,15 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
     }
     
     func heartRateRange(_ value: Int) -> ResultRange {
-        if value < 60 {
-            return .low
-        } else if value > 80 {
-            return .high
-        } else {
+        let normalRange = 60...80
+        if normalRange.contains(value) {
             return .normal
+        } else {
+            if value < 60 {
+               return .low
+            } else {
+                return .high
+            }
         }
     }
     
@@ -169,12 +172,15 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
     }
     
     func glucoseRange(_ value: Int) -> ResultRange {
-        if value < 70 {
-            return .low
-        } else if value > 150 {
-            return .high
-        } else {
+        let normalRange = 70...150
+        if normalRange.contains(value) {
             return .normal
+        } else {
+            if value < 70 {
+                return .low
+            } else {
+                return .high
+            }
         }
     }
     

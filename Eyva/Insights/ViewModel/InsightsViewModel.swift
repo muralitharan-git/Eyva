@@ -33,12 +33,12 @@ class InsightsViewModel {
         let headerText = getMutableAttributedString(text: "Hi ",
                                                     font:  UIFont(name: "Mulish-ExtraBold", size: 25)!,
                                                     textColor: .white,
-                                                    lineHeight: 3.82)
+                                                    lineHeight: 1.00)
         
         let name = getMutableAttributedString(text: sharedCoreDataManager.fetchUserName(),
                                               font:  UIFont(name: "Mulish-ExtraBold", size: 25)!,
-                                              textColor: rgb(166, 133, 219, 1.0),
-                                              lineHeight: 3.82)
+                                              textColor: rgb(166, 133, 218, 1.0),
+                                              lineHeight: 1.0)
         
         headerText.append(name)
         return headerText
@@ -61,4 +61,20 @@ class InsightsViewModel {
         }
     }
     
+    internal func getRecordedValue(_ type: Vitals) -> (Int, Int) {
+        switch type {
+        case .heartrate:
+            return (Int(vitalsInfo.heartrate), 0)
+        case .glucose:
+            return (Int(vitalsInfo.glucose), 0)
+        case .stress:
+            return (Int(vitalsInfo.stressLevel), 0)
+        case .bloodPressure:
+            return (Int(vitalsInfo.systolic), Int(vitalsInfo.diastolic))
+        case .oxygen:
+            return (Int(vitalsInfo.oxygen), 0)
+        default:
+            return (0, 0)
+        }
+    }
 }
