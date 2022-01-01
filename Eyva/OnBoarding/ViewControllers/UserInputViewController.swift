@@ -79,6 +79,7 @@ class UserInputCell: UITableViewCell {
         super.layoutSubviews()
         textField.layer.cornerRadius = 22
         textField.layer.masksToBounds = true
+        textField.backgroundColor = rgb(160, 228, 237, 0.16)
     }
 }
 
