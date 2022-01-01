@@ -31,10 +31,11 @@ let blueGradientBG = [
 internal func getMutableAttributedString(text: String,
                                   font: UIFont,
                                   textColor: UIColor,
-                                  lineHeight: CGFloat) -> NSMutableAttributedString {
+                                  lineHeight: CGFloat,
+                                 _ textAlignment: NSTextAlignment = .left) -> NSMutableAttributedString {
     let paragraphStyle = NSMutableParagraphStyle()
     paragraphStyle.lineHeightMultiple = lineHeight
-    paragraphStyle.alignment = .left
+    paragraphStyle.alignment = textAlignment
     let attributes: [NSAttributedString.Key: Any] = [
         .font: font as Any,
         .foregroundColor: textColor,

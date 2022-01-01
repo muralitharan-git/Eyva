@@ -14,17 +14,22 @@ class OnBoardingSceneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        descriptionLabel.text = setDescriptionLabel()
+        
+        descriptionLabel.attributedText = getMutableAttributedString(text: setDescriptionLabel(),
+                                                                     font: UIFont(name: "Mulish-Regular", size: 20)!,
+                                                                     textColor: rgb(181, 179, 183, 1),
+                                                                     lineHeight: 1.59,
+                                                                     .center)
     }
     
     private func setDescriptionLabel() -> String {
         switch currentIndex {
         case 0:
-            return "In a far world 100 light years ahead there's a virtual world created by the ONE."
+            return "The flowers of Anthea bloom in a blissful reverie undisturbed from all of humanity."
         case 1:
-            return "The physical, material possessions become invalid there but the nature of the world reponds to the 6 unique elements."
+            return "Powerful, Magical and Healing. The Anthea flowers blossom in their realm, protected by an extraordinary almighty waterfall only a few have dared to pass."
         case 2:
-            return "It's time to take a step in this new age, this new dimension, and this new reality and connect with your true form of wealth!"
+            return "But if you wish to join us on this journey, we promise you an ethereal nexus like no other-for the Anthea Realm’s ancient magic heals you from within. "
         default:
             return ""
         }

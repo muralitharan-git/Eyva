@@ -49,7 +49,7 @@ class OnBoardingViewController: UIViewController {
     
     private func updateButtonTitleBasedOnState() {
         let isInLastIndex = isCurrentStateIsinLastIndex()
-        nextButton.setTitle(isInLastIndex ? "Start Wandering" : "Next", for: .normal)
+        nextButton.setTitle(isInLastIndex ? "Take me to the Anthea Realm" : "Next", for: .normal)
         setUIComponents()
     }
     

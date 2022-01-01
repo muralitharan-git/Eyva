@@ -11,8 +11,8 @@
         <array key="Mulish-VariableFont_wght.ttf">
             <string>MulishRoman-Regular</string>
         </array>
-        <array key="Nunito-Regular.ttf">
-            <string>Nunito-Regular</string>
+        <array key="Nunito-ExtraLight.ttf">
+            <string>Nunito-ExtraLight</string>
         </array>
     </customFonts>
     <scenes>
@@ -65,14 +65,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-dotted" translatesAutoresizingMaskIntoConstraints="NO" id="Qtr-R5-TXL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eyva" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyw-Rx-F9c">
-                                <rect key="frame" x="137.5" y="65" width="139.5" height="89"/>
-                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="65"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="139.5" y="45" width="135" height="89"/>
+                                <fontDescription key="fontDescription" name="Nunito-ExtraLight" family="Nunito" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNV-0Y-Lpc">
-                                <rect key="frame" x="20" y="719" width="374" height="50"/>
+                                <rect key="frame" x="20" y="708" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.71764705882352942" green="0.36078431372549019" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DtF-LO-6PI"/>
@@ -90,30 +93,34 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DmU-Xt-oNd">
-                                <rect key="frame" x="0.0" y="215" width="414" height="412"/>
+                                <rect key="frame" x="0.0" y="174" width="414" height="442"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="2Xo-QA-QJE" kind="embed" id="yYG-t9-RsE"/>
                                 </connections>
                             </containerView>
                             <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Uib-bI-KOQ">
-                                <rect key="frame" x="129" y="671" width="156" height="26"/>
+                                <rect key="frame" x="129" y="660" width="156" height="26"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gTw-Kv-XNx"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DmU-Xt-oNd" firstAttribute="leading" secondItem="gTw-Kv-XNx" secondAttribute="leading" id="2cx-Ab-pQU"/>
-                            <constraint firstItem="DmU-Xt-oNd" firstAttribute="top" secondItem="Eyw-Rx-F9c" secondAttribute="bottom" constant="61" id="ELv-If-qW7"/>
+                            <constraint firstItem="DmU-Xt-oNd" firstAttribute="top" secondItem="Eyw-Rx-F9c" secondAttribute="bottom" constant="40" id="ELv-If-qW7"/>
                             <constraint firstItem="Uib-bI-KOQ" firstAttribute="centerX" secondItem="y0T-4F-pKc" secondAttribute="centerX" id="EOL-4I-zD2"/>
                             <constraint firstItem="oNV-0Y-Lpc" firstAttribute="top" secondItem="DmU-Xt-oNd" secondAttribute="bottom" constant="92" id="HZO-qK-cKC"/>
                             <constraint firstItem="gTw-Kv-XNx" firstAttribute="trailing" secondItem="oNV-0Y-Lpc" secondAttribute="trailing" constant="20" id="Hz8-8F-dk5"/>
                             <constraint firstItem="DmU-Xt-oNd" firstAttribute="trailing" secondItem="gTw-Kv-XNx" secondAttribute="trailing" id="LCr-EP-hQD"/>
                             <constraint firstItem="oNV-0Y-Lpc" firstAttribute="leading" secondItem="gTw-Kv-XNx" secondAttribute="leading" constant="20" id="MEO-x0-Fj9"/>
                             <constraint firstItem="oNV-0Y-Lpc" firstAttribute="top" secondItem="Uib-bI-KOQ" secondAttribute="bottom" constant="22" id="Nma-kD-gZ4"/>
-                            <constraint firstItem="Eyw-Rx-F9c" firstAttribute="top" secondItem="gTw-Kv-XNx" secondAttribute="top" constant="65" id="Xdz-12-iqr"/>
-                            <constraint firstItem="gTw-Kv-XNx" firstAttribute="bottom" secondItem="oNV-0Y-Lpc" secondAttribute="bottom" constant="39" id="eTl-DC-E7q"/>
+                            <constraint firstItem="Qtr-R5-TXL" firstAttribute="top" secondItem="y0T-4F-pKc" secondAttribute="top" id="Pf7-3G-F8J"/>
+                            <constraint firstItem="Eyw-Rx-F9c" firstAttribute="top" secondItem="gTw-Kv-XNx" secondAttribute="top" constant="45" id="Xdz-12-iqr"/>
+                            <constraint firstItem="gTw-Kv-XNx" firstAttribute="bottom" secondItem="oNV-0Y-Lpc" secondAttribute="bottom" constant="50" id="eTl-DC-E7q"/>
+                            <constraint firstItem="Qtr-R5-TXL" firstAttribute="leading" secondItem="gTw-Kv-XNx" secondAttribute="leading" id="fyg-El-V30"/>
                             <constraint firstItem="Eyw-Rx-F9c" firstAttribute="centerX" secondItem="y0T-4F-pKc" secondAttribute="centerX" id="jNL-Se-uEJ"/>
+                            <constraint firstItem="Qtr-R5-TXL" firstAttribute="trailing" secondItem="gTw-Kv-XNx" secondAttribute="trailing" id="kyF-60-h6u"/>
+                            <constraint firstAttribute="bottom" secondItem="Qtr-R5-TXL" secondAttribute="bottom" id="nxg-GL-yOO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FeM-He-cZZ"/>
@@ -255,9 +262,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTw-2E-Kyf">
-                                <rect key="frame" x="40" y="164" width="334" height="31.5"/>
+                                <rect key="frame" x="40" y="124" width="334" height="31.5"/>
                                 <fontDescription key="fontDescription" name="MulishRoman-Regular" family="Mulish" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -266,7 +273,7 @@
                         <constraints>
                             <constraint firstItem="q7y-5I-2sj" firstAttribute="trailing" secondItem="bTw-2E-Kyf" secondAttribute="trailing" constant="40" id="0Dq-4V-lKR"/>
                             <constraint firstItem="bTw-2E-Kyf" firstAttribute="leading" secondItem="q7y-5I-2sj" secondAttribute="leading" constant="40" id="XCf-sR-hpe"/>
-                            <constraint firstItem="bTw-2E-Kyf" firstAttribute="top" secondItem="q7y-5I-2sj" secondAttribute="top" constant="120" id="Yq7-u8-WeK"/>
+                            <constraint firstItem="bTw-2E-Kyf" firstAttribute="top" secondItem="q7y-5I-2sj" secondAttribute="top" constant="80" id="Yq7-u8-WeK"/>
                         </constraints>
                     </view>
                     <connections>
@@ -282,7 +289,7 @@
             <objects>
                 <viewController storyboardIdentifier="OnboardingPageViewController" id="2Xo-QA-QJE" customClass="OnboardingPageViewController" customModule="Eyva" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dFl-65-rsB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="412"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="442"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="V2e-Py-1a2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -294,6 +301,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background-dotted" width="428" height="926"/>
         <image name="background-flower-petals" width="428" height="926"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
