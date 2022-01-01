@@ -53,6 +53,12 @@ extension ViewAllRecordedDataViewController: UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigateToDetailViewController(Vitals.allCases[indexPath.row])
+        let type = Vitals.allCases[indexPath.row]
+        if type.getVitalSupportState() == .yes {
+            
+        } else {
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.contentView.shake()
+        }
     }
 }

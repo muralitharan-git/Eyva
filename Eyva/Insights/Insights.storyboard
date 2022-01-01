@@ -150,6 +150,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="iconImageView" destination="6D3-lK-29K" id="hhG-us-RMH"/>
+                                            <outlet property="nextButton" destination="y5Q-be-cfj" id="pIY-M5-tXo"/>
                                             <outlet property="typeLabel" destination="2LT-aT-eUE" id="BGd-W9-dPb"/>
                                             <outlet property="unitLabel" destination="KKq-ZY-G1Z" id="jv1-KY-tJp"/>
                                             <outlet property="valueLabel" destination="5Qp-ky-Z4T" id="Olm-dC-TAm"/>
