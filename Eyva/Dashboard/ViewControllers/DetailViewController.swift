@@ -36,11 +36,12 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTableViewCell") as! QuestionTableViewCell
-            cell.fillData(vitalType)
+            let title = "Ideal range of \(vitalType.rawValue) in your body"
+            cell.fillData(title, font: UIFont(name: "Mulish-Regular", size: 15)!)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ActionsTableViewCell") as! ActionsTableViewCell
-            cell.fillData(vitalType)
+            cell.fillData(vitalType.idealRangeVerbiage)
             return cell
         }
     }

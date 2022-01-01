@@ -10,6 +10,7 @@
 		325594DE277D5C5E004E6383 /* RecordedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */; };
 		325594E0277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */; };
 		328882AE277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328882AD277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift */; };
+		32B64F8927800B34007B2A9F /* DataDetailedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B64F8827800B34007B2A9F /* DataDetailedHeaderTableViewCell.swift */; };
 		32CE6336277D8C8A00CB8AE1 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6335277D8C8A00CB8AE1 /* ActionButton.swift */; };
 		32CE6338277D8D1B00CB8AE1 /* ButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6337277D8D1B00CB8AE1 /* ButtonExt.swift */; };
 		32CE633A277D9C7300CB8AE1 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6339277D9C7300CB8AE1 /* GradientBackgroundView.swift */; };
@@ -113,6 +114,7 @@
 		325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedTableViewCell.swift; sourceTree = "<group>"; };
 		325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericVitalInfoTableViewCell.swift; sourceTree = "<group>"; };
 		328882AD277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllVitalsTableViewCell.swift; sourceTree = "<group>"; };
+		32B64F8827800B34007B2A9F /* DataDetailedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailedHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		32CE6335277D8C8A00CB8AE1 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		32CE6337277D8D1B00CB8AE1 /* ButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExt.swift; sourceTree = "<group>"; };
 		32CE6339277D9C7300CB8AE1 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9E2AB3277BE2C500819789 /* VitalsValueTableViewCell.swift */,
+				32B64F8827800B34007B2A9F /* DataDetailedHeaderTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -859,6 +862,7 @@
 				BC9E2AB6277C361700819789 /* HomeViewController.swift in Sources */,
 				328882AE277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift in Sources */,
 				32FB52FB277F414C003207FE /* InsightsViewModel.swift in Sources */,
+				32B64F8927800B34007B2A9F /* DataDetailedHeaderTableViewCell.swift in Sources */,
 				BCB9E04F2779BF37003626B1 /* Global.swift in Sources */,
 				32CE6340277DC52D00CB8AE1 /* VitalsDataCollectionViewCell.swift in Sources */,
 				BCB9E0512779F5FB003626B1 /* ViewExt.swift in Sources */,

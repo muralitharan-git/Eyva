@@ -12,9 +12,10 @@ class QuestionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    internal func fillData(_ vitalType: Vitals) {
-        titleLabel.attributedText = getMutableAttributedString(text: "Ideal range of \(vitalType.rawValue) in your body",
-                                                               font: UIFont(name: "Mulish-Regular", size: 15)!,
+    internal func fillData(_ text: String, font: UIFont) {
+        
+        titleLabel.attributedText = getMutableAttributedString(text: text,
+                                                               font: font,
                                                                textColor: .white,
                                                                lineHeight: 1.06)
     }

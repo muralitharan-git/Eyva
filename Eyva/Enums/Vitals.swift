@@ -8,10 +8,14 @@
 import Foundation
 import UIKit
 
-enum ResultRange {
-    case normal
-    case high
-    case low
+enum ResultRange: String, CustomStringConvertible {
+    case normal = "normal"
+    case high = "high"
+    case low = "low"
+    
+    var description: String {
+        return rawValue
+    }
 }
 
 enum VitalEnabled {
