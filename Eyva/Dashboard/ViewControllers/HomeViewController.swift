@@ -21,51 +21,22 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = sharedCoreDataManager.fetchUserName()
         tableView.rowHeight = UITableView.automaticDimension
-    
         fillSubHeaderLabel()
-       
         actionButton.setTitle("I want to connect to Eyva", for: .normal)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        actionButton.applyGradient(colors: [rgb(183, 92, 255, 1.0).cgColor, rgb(103, 26, 228, 1.0).cgColor])
         actionButton.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 17)
         actionButton.setTitleColor(.white, for: .normal)
-        //fillGradientForActionButton()
     }
     
     private func fillSubHeaderLabel() {
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.33
-        let font = UIFont(name: "Mulish-Regular", size: 12)
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font: font as Any,
-            .foregroundColor: UIColor.white,
-            .paragraphStyle: paragraphStyle,
-            .kern: 1
-        ]
-       let mutableAttributedString = NSMutableAttributedString(string: "The flowers of Anthea are slowly withering to reflect your inner body. Help them bloom again.",
-                                                               attributes: attributes)
-        subHeaderLabel.attributedText = mutableAttributedString
+        subHeaderLabel.isHidden = true 
+        subHeaderLabel.attributedText = getMutableAttributedString(text: "The flowers of Anthea are slowly withering to reflect your inner body. Help them bloom again.", font: UIFont(name: "Mulish-Regular", size: 12)!, textColor: .white, lineHeight: 3.82)
     }
     
-    private func fillGradientForActionButton() {
-        actionButton.backgroundColor = nil
-        actionButton.layoutIfNeeded()
-        
-        let layer0 = CAGradientLayer()
-
-        layer0.colors = [
-          UIColor(red: 0.718, green: 0.361, blue: 1, alpha: 1).cgColor,
-          UIColor(red: 0.404, green: 0.102, blue: 0.894, alpha: 1).cgColor
-        ]
-        layer0.locations = [0, 1]
-        layer0.startPoint = CGPoint(x: 0.25, y: 0.5)
-        layer0.endPoint = CGPoint(x: 0.75, y: 0.5)
-        layer0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: -0.67, b: 1, c: -1, d: -0.67, tx: 1.35, ty: 0.34))
-
-        layer0.bounds = actionButton.bounds.insetBy(dx: -0.5*actionButton.bounds.size.width, dy: -0.5*actionButton.bounds.size.height)
-
-        layer0.position = actionButton.center
-       // actionButton.layer.insertSublayer(layer0, at: 0)
-        actionButton.layer.addSublayer(layer0)
-    }
     
     @IBAction func bluetoothButton_Tapped(_ sender: Any) {
         presentBluetoothdViewController()
