@@ -24,6 +24,7 @@
 		32FB5301277F41DB003207FE /* VitalDataDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FB5300277F41DB003207FE /* VitalDataDetailedViewController.swift */; };
 		32FB5303277F41EC003207FE /* Insights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32FB5302277F41EC003207FE /* Insights.storyboard */; };
 		6ADF312BB0B99B7D55AA4E4C /* Pods_Eyva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8F111C309795A64B7AC45E /* Pods_Eyva.framework */; };
+		9F08BBBD27801F1D00370204 /* Bluetooth-Animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9F08BBBC27801F1D00370204 /* Bluetooth-Animation.gif */; };
 		9FD3A583277DE0A600E17867 /* ConnectionStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3A582277DE0A600E17867 /* ConnectionStatusViewController.swift */; };
 		B8DE0498C0073B84DCA36F90 /* Pods_Eyva_EyvaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D1F386DF5AB835FF8F5061 /* Pods_Eyva_EyvaUITests.framework */; };
 		BC725260277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC72525F277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift */; };
@@ -133,6 +134,7 @@
 		87BA304D1AF802E4E6278F0B /* Pods-Eyva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eyva.release.xcconfig"; path = "Target Support Files/Pods-Eyva/Pods-Eyva.release.xcconfig"; sourceTree = "<group>"; };
 		936FC3C19321FB920C3F2BD6 /* Pods-EyvaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyvaTests.debug.xcconfig"; path = "Target Support Files/Pods-EyvaTests/Pods-EyvaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99C1F9DB089F93B1F3F25E6E /* Pods_EyvaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EyvaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F08BBBC27801F1D00370204 /* Bluetooth-Animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Bluetooth-Animation.gif"; sourceTree = "<group>"; };
 		9FD3A582277DE0A600E17867 /* ConnectionStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatusViewController.swift; sourceTree = "<group>"; };
 		BC72525F277B39F900CF13E9 /* DetailDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		BC725261277B3A1500CF13E9 /* ActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsTableViewCell.swift; sourceTree = "<group>"; };
@@ -298,6 +300,14 @@
 				35734332840F105BB5C1B253 /* Pods-EyvaTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9F08BBBB27801ECB00370204 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				9F08BBBC27801F1D00370204 /* Bluetooth-Animation.gif */,
+			);
+			path = Gif;
 			sourceTree = "<group>";
 		};
 		BC72525E277B375E00CF13E9 /* Cells */ = {
@@ -530,6 +540,7 @@
 		BCE2830027773F3400EC976A /* Eyva */ = {
 			isa = PBXGroup;
 			children = (
+				9F08BBBB27801ECB00370204 /* Gif */,
 				BCE2830127773F3400EC976A /* AppDelegate.swift */,
 				BCE2830327773F3400EC976A /* SceneDelegate.swift */,
 				BCE2830527773F3400EC976A /* ViewController.swift */,
@@ -693,6 +704,7 @@
 				32CE6342277E15A500CB8AE1 /* Poppins-Medium.ttf in Resources */,
 				BCB9E03E27798356003626B1 /* Mulish-ExtraBold.ttf in Resources */,
 				BCB9E03527798356003626B1 /* Mulish-BlackItalic.ttf in Resources */,
+				9F08BBBD27801F1D00370204 /* Bluetooth-Animation.gif in Resources */,
 				BCB9E03827798356003626B1 /* Mulish-Bold.ttf in Resources */,
 				BCB9E03727798356003626B1 /* Mulish-SemiBold.ttf in Resources */,
 				BCB9E03627798356003626B1 /* Mulish-Medium.ttf in Resources */,
