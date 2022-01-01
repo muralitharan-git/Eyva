@@ -8,8 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    @IBOutlet weak var nameLabel: UILabel!
+
     @IBOutlet weak var subHeaderLabel: UILabel!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -19,10 +18,16 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = sharedCoreDataManager.fetchUserName()
+        fillUsername()
         tableView.rowHeight = UITableView.automaticDimension
         fillSubHeaderLabel()
         actionButton.setTitle("I want to connect to Eyva", for: .normal)
+    }
+    
+    private func fillUsername() {
+        let attributedString = getMutableAttributedString(text: "Welcome, ", font: UIFont(name: "Mulish-ExtraBold", size: 25)!, textColor: .white, lineHeight: 1.0)
+        attributedString.append(getMutableAttributedString(text: sharedCoreDataManager.fetchUserName(), font: UIFont(name: "Mulish-ExtraBold", size: 25)!, textColor: rgb(166, 133, 218, 1.0), lineHeight: 1.0))
+        welcomeLabel.attributedText = attributedString
     }
     
     override func viewDidLayoutSubviews() {
@@ -33,7 +38,7 @@ class HomeViewController: UIViewController {
     }
     
     private func fillSubHeaderLabel() {
-        subHeaderLabel.isHidden = true 
+        subHeaderLabel.isHidden = true
         subHeaderLabel.attributedText = getMutableAttributedString(text: "The flowers of Anthea are slowly withering to reflect your inner body. Help them bloom again.", font: UIFont(name: "Mulish-Regular", size: 12)!, textColor: .white, lineHeight: 3.82)
     }
     
