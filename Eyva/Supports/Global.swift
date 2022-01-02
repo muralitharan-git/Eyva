@@ -55,3 +55,9 @@ internal func getMutableAttributedString(text: String,
                                                             attributes: attributes)
     return mutableAttributedString
 }
+
+internal func getDateInString(_ date: Date) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "dd.MM.yyyy"
+    return dateFormatter.string(from: date)
+}

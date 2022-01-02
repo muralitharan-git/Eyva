@@ -22,7 +22,8 @@ class VitalDataTableViewCell: UITableViewCell {
         viewAllButton.titleLabel?.font = UIFont(name: "Mulish-SemiBold", size: 12)
         viewAllButton.titleLabel?.text = "View All"
         viewAllButton.titleLabel?.textColor = .white
-        headerLabel.text = "22.12.2021 | Evya reading that.."
+        let date = getDateInString(vitalInfo.recorededDate ?? Date())
+        headerLabel.text = "\(date) | Evya reading that.."
     }
     
     internal func fillData(vitalInfo: VitalInfo) {
