@@ -137,9 +137,8 @@ extension HomeViewController: GenericVitalInfoTableViewCellDelegate {
 }
 
 extension HomeViewController: VitalDataTableViewCellDelegate {
-    func viewAllOfVitalRecordedData() {
-        let info = VitalInfo(heartrate: 80.0, oxygen: 99.0, glucose: 189.0, temperature: 0.0, systolic: 120.0, diastolic: 80.0, stressLevel: 78.0, recorededDate: Date())
-        navigateToViewAllRecordedViewController(vitalInfo: info, dataSource: .local)
+    func viewAllOfVitalRecordedData(_ vitalInfo: VitalInfo) {
+        navigateToViewAllRecordedViewController(vitalInfo: vitalInfo, dataSource: .local)
     }
     
     func navigateToDataDetailedVitalViewController(_ type: Vitals, range: ResultRange, viewModel: InsightsViewModel) {

@@ -31,7 +31,7 @@ class VitalDataTableViewCell: UITableViewCell {
     }
     
     @IBAction func viewAllButton_Tapped(_ sender: Any) {
-        delegate?.viewAllOfVitalRecordedData()
+        delegate?.viewAllOfVitalRecordedData(vitalInfo)
     }
 }
 
@@ -79,6 +79,6 @@ extension VitalDataTableViewCell: UICollectionViewDelegate, UICollectionViewData
 }
 
 protocol VitalDataTableViewCellDelegate: AnyObject {
-    func viewAllOfVitalRecordedData()
+    func viewAllOfVitalRecordedData(_ vitalInfo: VitalInfo)
     func navigateToDataDetailedVitalViewController(_ type: Vitals, range: ResultRange, viewModel: InsightsViewModel)
 }
