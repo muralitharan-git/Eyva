@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var topImageView: UIImageView!
+    @IBOutlet weak var bottomImageView: UIImageView!
     
     private let homeViewModel = HomeViewModel()
     
@@ -22,6 +24,7 @@ class HomeViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         fillSubHeaderLabel()
         actionButton.setTitle("I want to connect to Eyva", for: .normal)
+        topImageView.image = UIImage(named: "homepage-top")
     }
     
     private func fillUsername() {
@@ -65,9 +68,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let rect = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 350)
         let headerView = UIView(frame: rect)
-        let backgroundImage = UIImageView(frame: rect)
-        backgroundImage.image = UIImage(named: "homepage-top")
-        headerView.addSubview(backgroundImage)
+//        let backgroundImage = UIImageView(frame: rect)
+//        backgroundImage.image = UIImage(named: "homepage-top")
+//        headerView.addSubview(backgroundImage)
         headerView.backgroundColor = UIColor.clear
         return headerView
     }

@@ -40,9 +40,49 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-dotted" translatesAutoresizingMaskIntoConstraints="NO" id="vAF-cp-yy7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u6O-qL-21F">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="WvL-Hi-gub"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage-bottom" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-CS-rvG">
+                                <rect key="frame" x="0.0" y="450" width="414" height="446"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="300" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Y47-zz-sEE">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="m2K-gi-eL5">
+                                    <rect key="frame" x="0.0" y="868" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4O-iW-WIg">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                                            <color key="backgroundColor" red="0.71764705880000002" green="0.36078431370000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="LgC-Rj-eq9"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="I want to connect Eyva"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="bluetoothButton_Tapped:" destination="I4R-2u-iQm" eventType="touchUpInside" id="36C-6W-Roz"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="F4O-iW-WIg" firstAttribute="top" secondItem="m2K-gi-eL5" secondAttribute="top" id="2dQ-zD-RwZ"/>
+                                        <constraint firstItem="F4O-iW-WIg" firstAttribute="leading" secondItem="m2K-gi-eL5" secondAttribute="leading" constant="20" id="5L3-Yz-ity"/>
+                                        <constraint firstAttribute="bottom" secondItem="F4O-iW-WIg" secondAttribute="bottom" id="jZH-qE-npq"/>
+                                        <constraint firstAttribute="trailing" secondItem="F4O-iW-WIg" secondAttribute="trailing" constant="20" id="tal-ds-yan"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecordedTableViewCell" rowHeight="220" id="DQv-F6-IdX" customClass="RecordedTableViewCell" customModule="Eyva" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="220"/>
@@ -401,41 +441,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4O-iW-WIg">
-                                <rect key="frame" x="20" y="806" width="374" height="50"/>
-                                <color key="backgroundColor" red="0.71764705880000002" green="0.36078431370000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="LgC-Rj-eq9"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="I want to connect Eyva"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="bluetoothButton_Tapped:" destination="I4R-2u-iQm" eventType="touchUpInside" id="36C-6W-Roz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CHz-dg-TCO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Y47-zz-sEE" firstAttribute="leading" secondItem="CHz-dg-TCO" secondAttribute="leading" id="AOb-5C-5Eo"/>
-                            <constraint firstAttribute="bottom" secondItem="F4O-iW-WIg" secondAttribute="bottom" constant="40" id="F43-sp-CeW"/>
+                            <constraint firstItem="fc8-CS-rvG" firstAttribute="top" secondItem="u6O-qL-21F" secondAttribute="bottom" id="CXo-NV-O7q"/>
                             <constraint firstItem="Y47-zz-sEE" firstAttribute="top" secondItem="4Su-0D-XYT" secondAttribute="top" id="MLw-Yb-ZBV"/>
+                            <constraint firstAttribute="bottom" secondItem="fc8-CS-rvG" secondAttribute="bottom" id="NG9-ig-TJt"/>
+                            <constraint firstItem="u6O-qL-21F" firstAttribute="leading" secondItem="4Su-0D-XYT" secondAttribute="leading" id="PTJ-J6-dVG"/>
                             <constraint firstItem="lzj-nA-X1K" firstAttribute="top" secondItem="CHz-dg-TCO" secondAttribute="top" constant="18" id="Pca-nD-1aB"/>
+                            <constraint firstItem="fc8-CS-rvG" firstAttribute="leading" secondItem="4Su-0D-XYT" secondAttribute="leading" id="Pm0-iB-JZJ"/>
+                            <constraint firstAttribute="trailing" secondItem="fc8-CS-rvG" secondAttribute="trailing" id="REI-Pm-g97"/>
+                            <constraint firstAttribute="trailing" secondItem="u6O-qL-21F" secondAttribute="trailing" id="Zzb-P3-348"/>
                             <constraint firstItem="vAF-cp-yy7" firstAttribute="leading" secondItem="4Su-0D-XYT" secondAttribute="leading" id="aA4-0z-QHp"/>
-                            <constraint firstItem="CHz-dg-TCO" firstAttribute="trailing" secondItem="F4O-iW-WIg" secondAttribute="trailing" constant="20" id="bF6-Vl-ZUx"/>
                             <constraint firstAttribute="trailing" secondItem="vAF-cp-yy7" secondAttribute="trailing" id="dYL-at-Krz"/>
-                            <constraint firstItem="F4O-iW-WIg" firstAttribute="leading" secondItem="CHz-dg-TCO" secondAttribute="leading" constant="20" id="f9f-8U-iu9"/>
                             <constraint firstItem="CHz-dg-TCO" firstAttribute="trailing" secondItem="lzj-nA-X1K" secondAttribute="trailing" constant="20" id="fEa-uh-Fi2"/>
                             <constraint firstItem="CHz-dg-TCO" firstAttribute="trailing" secondItem="bth-uz-UST" secondAttribute="trailing" constant="5" id="g5e-ca-pGK"/>
                             <constraint firstItem="vAF-cp-yy7" firstAttribute="top" secondItem="4Su-0D-XYT" secondAttribute="top" id="gfe-je-rNo"/>
                             <constraint firstItem="bth-uz-UST" firstAttribute="top" secondItem="lzj-nA-X1K" secondAttribute="bottom" constant="10.5" id="hVF-J5-YPy"/>
                             <constraint firstAttribute="bottom" secondItem="Y47-zz-sEE" secondAttribute="bottom" id="ka2-99-uXa"/>
+                            <constraint firstItem="u6O-qL-21F" firstAttribute="top" secondItem="4Su-0D-XYT" secondAttribute="top" id="ljc-Fa-tpE"/>
                             <constraint firstItem="lzj-nA-X1K" firstAttribute="leading" secondItem="CHz-dg-TCO" secondAttribute="leading" constant="20" id="pCe-uL-C9D"/>
                             <constraint firstItem="bth-uz-UST" firstAttribute="leading" secondItem="CHz-dg-TCO" secondAttribute="leading" constant="18" id="pj0-3U-uMG"/>
                             <constraint firstAttribute="bottom" secondItem="vAF-cp-yy7" secondAttribute="bottom" id="w3F-P5-wAG"/>
@@ -444,8 +470,10 @@
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="F4O-iW-WIg" id="edZ-GD-EHa"/>
+                        <outlet property="bottomImageView" destination="fc8-CS-rvG" id="LMs-AJ-ZYs"/>
                         <outlet property="subHeaderLabel" destination="bth-uz-UST" id="dWn-Pq-jID"/>
                         <outlet property="tableView" destination="Y47-zz-sEE" id="hBt-qq-X0Z"/>
+                        <outlet property="topImageView" destination="u6O-qL-21F" id="fHb-L0-KCV"/>
                         <outlet property="welcomeLabel" destination="lzj-nA-X1K" id="ZEw-P4-AVw"/>
                     </connections>
                 </viewController>
@@ -1245,6 +1273,7 @@
     <resources>
         <image name="back-icon" width="7.5" height="12"/>
         <image name="background-dotted" width="428" height="926"/>
+        <image name="homepage-bottom" width="324" height="512"/>
         <image name="odd-all-vitals" width="139" height="29.5"/>
         <image name="ovalshape" width="19" height="23"/>
         <image name="right-arrow" width="7.5" height="12"/>
