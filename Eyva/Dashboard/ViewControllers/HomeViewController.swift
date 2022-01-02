@@ -38,13 +38,23 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         homeViewModel.getVitalRecords()
         tableView.reloadData()
+        updateUIComponents()
     }
     
     private func fillSubHeaderLabel() {
         subHeaderLabel.isHidden = true
-        subHeaderLabel.attributedText = getMutableAttributedString(text: "The flowers of Anthea are slowly withering to reflect your inner body. Help them bloom again.", font: UIFont(name: "Mulish-Regular", size: 12)!, textColor: .white, lineHeight: 3.82)
+        subHeaderLabel.attributedText = getMutableAttributedString(text: "The flowers of Anthea are slowly withering to reflect your inner body. Help them bloom again.", font: UIFont(name: "Mulish-Regular", size: 12)!, textColor: .white, lineHeight: 1.33)
     }
     
+    private func updateUIComponents() {
+        if homeViewModel.isNotNormalRange {
+            topImageView.image = UIImage(named: "homepage-sad-top")
+            subHeaderLabel.isHidden = false
+        } else {
+            topImageView.image = UIImage(named: "homepage-top")
+            subHeaderLabel.isHidden = true
+        }
+    }
     
     @IBAction func bluetoothButton_Tapped(_ sender: Any) {
         presentBluetoothdViewController()

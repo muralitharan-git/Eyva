@@ -284,7 +284,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3U7-rj-hRo">
-                                                    <rect key="frame" x="9" y="68" width="396" height="135"/>
+                                                    <rect key="frame" x="18" y="68" width="387" height="135"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="135" id="UjJ-eY-P9z"/>
@@ -363,9 +363,9 @@
                                                     </connections>
                                                 </collectionView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Understand how the Vitals affect your body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ4-No-j6j">
-                                                    <rect key="frame" x="9" y="10" width="303" height="68"/>
+                                                    <rect key="frame" x="18" y="10" width="294" height="68"/>
                                                     <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="12"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fP2-xd-Jp5">
@@ -382,13 +382,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="3U7-rj-hRo" firstAttribute="top" secondItem="nJ4-No-j6j" secondAttribute="bottom" constant="-10" id="3mt-Xk-jSw"/>
-                                                <constraint firstItem="nJ4-No-j6j" firstAttribute="leading" secondItem="9ik-AL-0NS" secondAttribute="leading" constant="9" id="Czv-vK-EZq"/>
+                                                <constraint firstItem="nJ4-No-j6j" firstAttribute="leading" secondItem="9ik-AL-0NS" secondAttribute="leading" constant="18" id="Czv-vK-EZq"/>
                                                 <constraint firstAttribute="bottom" secondItem="3U7-rj-hRo" secondAttribute="bottom" constant="8" id="TIE-Rr-Cis"/>
                                                 <constraint firstItem="nJ4-No-j6j" firstAttribute="top" secondItem="9ik-AL-0NS" secondAttribute="top" constant="10" id="UpP-IS-m9P"/>
                                                 <constraint firstItem="fP2-xd-Jp5" firstAttribute="centerY" secondItem="nJ4-No-j6j" secondAttribute="centerY" id="dGH-O1-f1M"/>
                                                 <constraint firstItem="fP2-xd-Jp5" firstAttribute="leading" secondItem="nJ4-No-j6j" secondAttribute="trailing" constant="3" id="eCn-nJ-DDh"/>
                                                 <constraint firstAttribute="trailing" secondItem="3U7-rj-hRo" secondAttribute="trailing" constant="9" id="rdq-jR-GGC"/>
-                                                <constraint firstItem="3U7-rj-hRo" firstAttribute="leading" secondItem="9ik-AL-0NS" secondAttribute="leading" constant="9" id="t3b-lX-UkC"/>
+                                                <constraint firstItem="3U7-rj-hRo" firstAttribute="leading" secondItem="9ik-AL-0NS" secondAttribute="leading" constant="18" id="t3b-lX-UkC"/>
                                                 <constraint firstAttribute="trailing" secondItem="fP2-xd-Jp5" secondAttribute="trailing" constant="9" id="vQf-hX-vh1"/>
                                             </constraints>
                                         </tableViewCellContentView>

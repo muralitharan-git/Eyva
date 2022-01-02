@@ -78,6 +78,8 @@ class HomeViewModel {
             }
             resultRanges = ranges
             findoutNotNormalRange()
+        } else {
+            isNotNormalRange = false
         }
     }
     
