@@ -26,22 +26,22 @@ class DashboardCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        containerView.setColors(blueGradientBG)
-        iconImageView.image = vitalType.getIcon("blue")
-        return
+//        containerView.setColors(blueGradientBG)
+//        iconImageView.image = vitalType.getIcon("blue")
+//        return
         
-//        if recordedState == VitalRecordedState.none {
-//            if tag % 2 == 0 {
-//                containerView.setColors(pinkGradientBG)
-//                iconImageView.image = vitalType.getIcon("pink")
-//            } else {
-//                containerView.setColors(blueGradientBG)
-//                iconImageView.image = vitalType.getIcon("blue")
-//            }
-//        } else {
-//            containerView.setColors(blueGradientBG)
-//            iconImageView.image = vitalType.getIcon("blue")
-//        }
+        if recordedState == VitalRecordedState.none {
+            if tag % 2 == 0 {
+                containerView.setColors(pinkGradientBG)
+                iconImageView.image = vitalType.getIcon("pink")
+            } else {
+                containerView.setColors(blueGradientBG)
+                iconImageView.image = vitalType.getIcon("blue")
+            }
+        } else {
+            containerView.setColors(blueGradientBG)
+            iconImageView.image = vitalType.getIcon("blue")
+        }
     }
 }
 

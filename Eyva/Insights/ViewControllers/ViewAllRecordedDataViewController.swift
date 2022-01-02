@@ -39,7 +39,11 @@ class ViewAllRecordedDataViewController: UIViewController {
     }
     
     @IBAction func finishButton_Tapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        // Dummy data for now
+        let info = VitalInfo(heartrate: 80.0, oxygen: 99.0, glucose: 189.0, temperature: 0.0, systolic: 120.0, diastolic: 80.0, stressLevel: 78.0, recorededDate: Date())
+        sharedCoreDataManager.saveVitalDetails(vital: info) {
+            self.dismiss(animated: true, completion: nil)
+        } onError: { _ in }
     }
     
     @IBAction func backButton_Tapped(_ sender: Any) {

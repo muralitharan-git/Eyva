@@ -33,9 +33,9 @@ class HomeViewController: UIViewController {
         welcomeLabel.attributedText = attributedString
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     private func fillSubHeaderLabel() {

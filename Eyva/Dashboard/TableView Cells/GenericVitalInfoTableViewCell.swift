@@ -15,17 +15,12 @@ class GenericVitalInfoTableViewCell: UITableViewCell {
     
     weak var delegate: GenericVitalInfoTableViewCellDelegate?
     
-    override func layoutIfNeeded() {
-        super.layoutIfNeeded()
-       
-    }
-    
-    override  func awakeFromNib() {
-        super.awakeFromNib()
+    override func setNeedsLayout() {
+        super.setNeedsLayout()
         viewAllButton?.setTitleColor(.white, for: .normal)
         viewAllButton?.titleLabel?.font = UIFont(name: "Mulish-SemiBold", size: 12)
     }
-        
+    
     @IBAction func viewAllButton_Tapped(_ sender: Any) {
         delegate?.viewAllButtonTapped()
     }
