@@ -11,7 +11,12 @@ class RecordedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     internal weak var delegate: RecordedTableViewCellDelegate?
-   
+    
+    private var listOfVitalsInfo: [VitalInfo] = []
+    
+    internal func fillData(_ listOfVitalInfo: [VitalInfo]) {
+        self.listOfVitalsInfo = listOfVitalInfo
+    }
 }
 
 extension RecordedTableViewCell: UICollectionViewDelegate,
@@ -27,22 +32,23 @@ extension RecordedTableViewCell: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Vitals.allCases.count
+        return listOfVitalsInfo.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VitalsCollectionViewCell", for: indexPath) as! VitalsCollectionViewCell
-        cell.tag = indexPath.row 
-        cell.fillDate(date: "29-12-2021")
+        cell.tag = indexPath.row
+        let info = listOfVitalsInfo[indexPath.row]
+        let date = getDateInString(info.recorededDate)
+        cell.fillDate(date: date)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.navigateToRecordedVitalDetails("")
+        delegate?.navigateToRecordedVitalDetails(listOfVitalsInfo[indexPath.row])
     }
-    
 }
 
 protocol RecordedTableViewCellDelegate: AnyObject {
-    func navigateToRecordedVitalDetails(_ date: String)
+    func navigateToRecordedVitalDetails(_ vitalInfo: VitalInfo)
 }

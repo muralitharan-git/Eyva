@@ -24,8 +24,7 @@ class InsightsViewModel {
     }
     
     internal func getTrackedDate() -> String {
-        return "31-12-2021"
-        //return vitalsInfo.recorededDate
+        return getDateInString(vitalsInfo.recorededDate)
     }
     
     internal func getHeaderDetails() -> NSMutableAttributedString {

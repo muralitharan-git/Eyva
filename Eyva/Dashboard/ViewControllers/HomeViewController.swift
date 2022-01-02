@@ -108,7 +108,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
                 return cell
             }else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RecordedTableViewCell") as! RecordedTableViewCell
-                cell.delegate = self 
+                cell.delegate = self
+                cell.fillData(homeViewModel.vitalRecords)
                 return cell
             }
         } else {
@@ -147,7 +148,7 @@ extension HomeViewController: VitalDataTableViewCellDelegate {
 }
 
 extension HomeViewController: RecordedTableViewCellDelegate {
-    func navigateToRecordedVitalDetails(_ date: String) {
-        navigateToRecoredVitalsViewController()
+    func navigateToRecordedVitalDetails(_ vitalInfo: VitalInfo) {
+        navigateToViewAllRecordedViewController(vitalInfo: vitalInfo, dataSource: .local)
     }
 }

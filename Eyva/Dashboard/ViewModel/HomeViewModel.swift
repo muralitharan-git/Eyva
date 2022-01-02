@@ -35,6 +35,8 @@ class HomeViewModel {
     internal func getVitalRecords() {
         let context = sharedCoreDataManager.managedObjectContext
         let fetchRequest: NSFetchRequest<Vital> = Vital.fetchRequest()
+        let sort = NSSortDescriptor(key: #keyPath(Vital.recordedDate), ascending: true)
+        fetchRequest.sortDescriptors = [sort]
         var vitalsInfo: [VitalInfo] = []
         do {
             let results = try context.fetch(fetchRequest)
