@@ -132,7 +132,7 @@
                                                                     <constraint firstAttribute="bottom" secondItem="M0x-LG-fPL" secondAttribute="bottom" constant="8" id="sVd-U4-Wks"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
-                                                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <size key="customSize" width="185" height="181"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -220,7 +220,7 @@
                                                                     <constraint firstItem="gRB-DX-DM5" firstAttribute="leading" secondItem="ytF-8Q-oKA" secondAttribute="trailing" constant="8.5" id="j4Z-ZJ-yyB"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
-                                                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <size key="customSize" width="185" height="181"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -340,7 +340,7 @@
                                                                     <constraint firstItem="WaE-zw-gcH" firstAttribute="centerY" secondItem="c3l-FB-wvt" secondAttribute="centerY" id="zsJ-ps-vbt"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
-                                                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <size key="customSize" width="185" height="181"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
