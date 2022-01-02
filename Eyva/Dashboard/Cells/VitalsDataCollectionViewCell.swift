@@ -15,6 +15,7 @@ class VitalsDataCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var typeImageView: UIImageView!
     @IBOutlet weak var containerView: GradientBackgroundView!
     
+    @IBOutlet weak var typeLabelBottomConstriant: NSLayoutConstraint!
     private var vitalType: Vitals!
     private var resultRange: ResultRange!
     
@@ -29,8 +30,13 @@ class VitalsDataCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         if vitalType.getVitalSupportState() == .no {
-            
+            typeLabelBottomConstriant.constant = -18
+            containerView.setColors(greyGradientBG)
+            typeImageView.image = UIImage(named: "lock-icon")
+            unitLabel.isHidden = true
         } else {
+            unitLabel.isHidden = false
+            typeLabelBottomConstriant.constant = 1
             if resultRange == .normal {
                 containerView.setColors(pinkGradientBG)
                 typeImageView.image = vitalType.getIcon("pink")

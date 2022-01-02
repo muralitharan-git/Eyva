@@ -303,12 +303,6 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="185" height="181"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj2-XQ-hSe">
-                                                                        <rect key="frame" x="71.5" y="44" width="42" height="21"/>
-                                                                        <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="14"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c3l-FB-wvt">
                                                                         <rect key="frame" x="13" y="66" width="50" height="50"/>
                                                                         <constraints>
@@ -325,6 +319,12 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="223" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaE-zw-gcH">
                                                                         <rect key="frame" x="71" y="106" width="42" height="21"/>
                                                                         <fontDescription key="fontDescription" name="Mulish-ExtraBold" family="Mulish" pointSize="19"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj2-XQ-hSe">
+                                                                        <rect key="frame" x="71" y="28" width="42" height="21"/>
+                                                                        <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="14"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -351,6 +351,7 @@
                                                                 <outlet property="containerView" destination="LAD-1T-2FR" id="CRg-dJ-K1K"/>
                                                                 <outlet property="typeImageView" destination="c3l-FB-wvt" id="p3D-tS-Ey2"/>
                                                                 <outlet property="typeLabel" destination="Sj2-XQ-hSe" id="xih-Et-j8q"/>
+                                                                <outlet property="typeLabelBottomConstriant" destination="aaO-E8-Q22" id="4tL-3d-6bW"/>
                                                                 <outlet property="unitLabel" destination="Pyu-yM-nvk" id="oOL-Gp-nVc"/>
                                                                 <outlet property="valueLabel" destination="WaE-zw-gcH" id="9ai-eO-CjH"/>
                                                             </connections>

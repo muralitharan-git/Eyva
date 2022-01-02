@@ -78,12 +78,7 @@ extension ViewAllRecordedDataViewController: UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let type = Vitals.allCases[indexPath.row]
         if type.getVitalSupportState() == .yes {
-            let insightsStoryBoard = UIStoryboard(name: "Insights", bundle: nil)
-            let detailViewController = insightsStoryBoard.instantiateViewController(identifier: "VitalDataDetailedViewController", creator: { coder in
-                return VitalDataDetailedViewController(coder: coder, range: self.getRangeForType(type), type: type, viewModel: self.viewModel)
-            })
-            navigationController?.pushViewController(detailViewController,
-                                                     animated: true)
+            navigateToDataDetailedViewController(range: self.getRangeForType(type), type: type, viewModel: viewModel)
         } else {
             let cell = tableView.cellForRow(at: indexPath)
             cell?.contentView.shake()

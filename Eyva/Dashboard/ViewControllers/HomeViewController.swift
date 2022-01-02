@@ -132,8 +132,8 @@ extension HomeViewController: VitalDataTableViewCellDelegate {
         navigateToViewAllRecordedViewController(vitalInfo: info, dataSource: .local)
     }
     
-    func navigateToDataDetailedVitalController(_ type: Vitals) {
-        
+    func navigateToDataDetailedVitalViewController(_ type: Vitals, range: ResultRange, viewModel: InsightsViewModel) {
+        navigateToDataDetailedViewController(range: range, type: type, viewModel: viewModel)
     }
 }
 

@@ -49,4 +49,13 @@ extension UIViewController {
         navigationController?.pushViewController(insightsViewController,
                                                  animated: true)
     }
+    
+    internal func navigateToDataDetailedViewController(range: ResultRange, type: Vitals, viewModel: InsightsViewModel) {
+        let insightsStoryBoard = UIStoryboard(name: "Insights", bundle: nil)
+        let detailViewController = insightsStoryBoard.instantiateViewController(identifier: "VitalDataDetailedViewController", creator: { coder in
+            return VitalDataDetailedViewController(coder: coder, range: range, type: type, viewModel: viewModel)
+        })
+        navigationController?.pushViewController(detailViewController,
+                                                 animated: true)
+    }
 }

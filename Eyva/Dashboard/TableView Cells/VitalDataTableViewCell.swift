@@ -53,19 +53,32 @@ extension VitalDataTableViewCell: UICollectionViewDelegate, UICollectionViewData
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VitalsDataCollectionViewCell", for: indexPath) as! VitalsDataCollectionViewCell
         cell.tag = indexPath.row
         let type = Vitals.allCases[indexPath.row]
-        let recordedValue = type.getRecordedValue(vitalData: vitalInfo)
-        let range = type.fetchResultRange(recordedValue.0, value2: recordedValue.1)
+        let range = getRange(type)
         let displayValue = type.getValue(vitalInfo)
         cell.fillData(type, range: range, value: displayValue)
         return cell
     }
     
+    private func getRange(_ type: Vitals) -> ResultRange {
+        let recordedValue = type.getRecordedValue(vitalData: vitalInfo)
+        let range = type.fetchResultRange(recordedValue.0, value2: recordedValue.1)
+        return range
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.navigateToDataDetailedVitalController(Vitals.allCases[indexPath.row])
+        let type = Vitals.allCases[indexPath.row]
+        if type.getVitalSupportState() == .yes {
+            let range = getRange(type)
+            let viewModel = InsightsViewModel(vitalsInfo: vitalInfo, dataSource: .local)
+            delegate?.navigateToDataDetailedVitalViewController(type, range: range, viewModel: viewModel)
+        } else {
+            let cell = collectionView.cellForItem(at: indexPath)
+            cell?.shake()
+        }
     }
 }
 
 protocol VitalDataTableViewCellDelegate: AnyObject {
     func viewAllOfVitalRecordedData()
-    func navigateToDataDetailedVitalController(_ type: Vitals)
+    func navigateToDataDetailedVitalViewController(_ type: Vitals, range: ResultRange, viewModel: InsightsViewModel)
 }

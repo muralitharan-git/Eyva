@@ -32,6 +32,11 @@ let brownGradientBG = [
     UIColor(red: 0.78, green: 0.447, blue: 0.447, alpha: 1).cgColor
 ]
 
+let greyGradientBG = [
+    UIColor(red: 0.545, green: 0.533, blue: 0.545, alpha: 1).cgColor,
+    UIColor(red: 0.882, green: 0.859, blue: 0.867, alpha: 1).cgColor
+]
+
 internal func getMutableAttributedString(text: String,
                                   font: UIFont,
                                   textColor: UIColor,
