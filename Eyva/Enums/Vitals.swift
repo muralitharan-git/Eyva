@@ -312,4 +312,38 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return ""
         }
     }
+    
+    internal func getRecordedValue(vitalData: VitalInfo) -> (Int, Int) {
+        switch self {
+        case .heartrate:
+            return (Int(vitalData.heartrate), 0)
+        case .glucose:
+            return (Int(vitalData.glucose), 0)
+        case .stress:
+            return (Int(vitalData.stressLevel), 0)
+        case .bloodPressure:
+            return (Int(vitalData.systolic), Int(vitalData.diastolic))
+        case .oxygen:
+            return (Int(vitalData.oxygen), 0)
+        default:
+            return (0, 0)
+        }
+    }
+    
+    internal func getValue(_ vitalData: VitalInfo) -> String {
+        switch self {
+        case .heartrate:
+            return "\(Int(vitalData.heartrate))"
+        case .glucose:
+            return "\(Int(vitalData.glucose))"
+        case .stress:
+            return "\(Int(vitalData.stressLevel))"
+        case .bloodPressure:
+            return "\(Int(vitalData.systolic))" + "/" + "\(Int(vitalData.diastolic))"
+        case .oxygen:
+            return "\(Int(vitalData.oxygen))"
+        default:
+            return ""
+        }
+    }
 }

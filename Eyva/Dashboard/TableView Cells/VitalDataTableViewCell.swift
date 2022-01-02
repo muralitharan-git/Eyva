@@ -14,12 +14,20 @@ class VitalDataTableViewCell: UITableViewCell {
     @IBOutlet weak var viewAllButton: UIButton!
     weak var delegate: VitalDataTableViewCellDelegate?
     
+    
+    private var vitalInfo: VitalInfo!
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         viewAllButton.titleLabel?.font = UIFont(name: "Mulish-SemiBold", size: 12)
         viewAllButton.titleLabel?.text = "View All"
         viewAllButton.titleLabel?.textColor = .white
         headerLabel.text = "22.12.2021 | Evya reading that.."
+    }
+    
+    internal func fillData(vitalInfo: VitalInfo) {
+        
+        self.vitalInfo = vitalInfo
     }
     
     @IBAction func viewAllButton_Tapped(_ sender: Any) {
@@ -44,7 +52,11 @@ extension VitalDataTableViewCell: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VitalsDataCollectionViewCell", for: indexPath) as! VitalsDataCollectionViewCell
         cell.tag = indexPath.row
-        cell.fillData(Vitals.allCases[indexPath.row])
+        let type = Vitals.allCases[indexPath.row]
+        let recordedValue = type.getRecordedValue(vitalData: vitalInfo)
+        let range = type.fetchResultRange(recordedValue.0, value2: recordedValue.1)
+        let displayValue = type.getValue(vitalInfo)
+        cell.fillData(type, range: range, value: displayValue)
         return cell
     }
     

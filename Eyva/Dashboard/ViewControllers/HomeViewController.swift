@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        homeViewModel.getVitalRecords()
         fillUsername()
         tableView.rowHeight = UITableView.automaticDimension
         fillSubHeaderLabel()
@@ -35,6 +36,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        homeViewModel.getVitalRecords()
         tableView.reloadData()
     }
     
@@ -92,6 +94,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             } else if homeViewModel.recordedState == .one {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "VitalDataTableViewCell") as! VitalDataTableViewCell
                 cell.delegate = self
+                cell.fillData(vitalInfo: homeViewModel.getFirstRecord()!)
                 return cell
             }else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RecordedTableViewCell") as! RecordedTableViewCell

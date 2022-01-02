@@ -16,21 +16,28 @@ class VitalsDataCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var containerView: GradientBackgroundView!
     
     private var vitalType: Vitals!
+    private var resultRange: ResultRange!
     
-    internal func fillData(_ type: Vitals) {
+    internal func fillData(_ type: Vitals, range: ResultRange, value: String) {
         self.vitalType = type
         typeLabel.text = type.rawValue
         unitLabel.text = type.unit
+        valueLabel.text = value
+        resultRange = range
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if tag % 2 == 0 {
-            containerView.setColors(pinkGradientBG)
-            typeImageView.image = vitalType.getIcon("pink")
+        if vitalType.getVitalSupportState() == .no {
+            
         } else {
-            containerView.setColors(blueGradientBG)
-            typeImageView.image = vitalType.getIcon("blue")
+            if resultRange == .normal {
+                containerView.setColors(pinkGradientBG)
+                typeImageView.image = vitalType.getIcon("pink")
+            } else {
+                containerView.setColors(brownGradientBG)
+                typeImageView.image = vitalType.getIcon("white")
+            }
         }
     }
 }
