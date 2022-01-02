@@ -248,6 +248,7 @@
 				BC725261277B3A1500CF13E9 /* ActionsTableViewCell.swift */,
 				BC725263277B578600CF13E9 /* QuestionTableViewCell.swift */,
 				32CE633D277DC4FE00CB8AE1 /* VitalDataTableViewCell.swift */,
+				325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -314,7 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */,
-				325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */,
 				32CE633B277D9EC900CB8AE1 /* DashboardCollectionViewCell.swift */,
 				32CE633F277DC52D00CB8AE1 /* VitalsDataCollectionViewCell.swift */,
 				328882AD277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift */,
