@@ -10,6 +10,7 @@
 		325594DE277D5C5E004E6383 /* RecordedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */; };
 		325594E0277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */; };
 		328882AE277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328882AD277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift */; };
+		32970AE02781B4630058465C /* animate-launch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 32970ADF2781B4620058465C /* animate-launch.gif */; };
 		32B64F8927800B34007B2A9F /* DataDetailedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B64F8827800B34007B2A9F /* DataDetailedHeaderTableViewCell.swift */; };
 		32B64F8B278043E2007B2A9F /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B64F8A278043E2007B2A9F /* Nunito-ExtraLight.ttf */; };
 		32CE6336277D8C8A00CB8AE1 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE6335277D8C8A00CB8AE1 /* ActionButton.swift */; };
@@ -116,6 +117,7 @@
 		325594DD277D5C5E004E6383 /* RecordedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedTableViewCell.swift; sourceTree = "<group>"; };
 		325594DF277D67A3004E6383 /* GenericVitalInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericVitalInfoTableViewCell.swift; sourceTree = "<group>"; };
 		328882AD277E79AF00F2DD16 /* ViewAllVitalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllVitalsTableViewCell.swift; sourceTree = "<group>"; };
+		32970ADF2781B4620058465C /* animate-launch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animate-launch.gif"; sourceTree = "<group>"; };
 		32B64F8827800B34007B2A9F /* DataDetailedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailedHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		32B64F8A278043E2007B2A9F /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 		32CE6335277D8C8A00CB8AE1 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 		9F08BBBB27801ECB00370204 /* Gif */ = {
 			isa = PBXGroup;
 			children = (
+				32970ADF2781B4620058465C /* animate-launch.gif */,
 				9F08BBBC27801F1D00370204 /* Bluetooth-Animation.gif */,
 			);
 			path = Gif;
@@ -729,6 +732,7 @@
 				BCBFDB6A2778331100897C5D /* OnBoarding.storyboard in Resources */,
 				BCB9E03427798356003626B1 /* Mulish-Light.ttf in Resources */,
 				BCB9E04A2779B270003626B1 /* Podfile in Resources */,
+				32970AE02781B4630058465C /* animate-launch.gif in Resources */,
 				BCB9E03927798356003626B1 /* Mulish-MediumItalic.ttf in Resources */,
 				BCB9E02227798349003626B1 /* Mulish-Italic-VariableFont_wght.ttf in Resources */,
 			);

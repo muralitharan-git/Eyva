@@ -30,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-flower-petals" translatesAutoresizingMaskIntoConstraints="NO" id="6nW-xM-Gdh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-flower-petals" translatesAutoresizingMaskIntoConstraints="NO" id="6nW-xM-Gdh" customClass="GIFImageView" customModule="Gifu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzc-Uo-Gu9">
@@ -59,6 +59,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animatedImage" destination="6nW-xM-Gdh" id="IqT-Q2-Ic5"/>
                         <outlet property="swipeButton" destination="hzc-Uo-Gu9" id="6tw-kZ-OCV"/>
                     </connections>
                 </viewController>

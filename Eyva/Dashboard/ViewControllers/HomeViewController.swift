@@ -24,8 +24,8 @@ class HomeViewController: UIViewController {
         fillUsername()
         tableView.rowHeight = UITableView.automaticDimension
         fillSubHeaderLabel()
-        actionButton.setTitle("I want to connect to Eyva", for: .normal)
         topImageView.image = UIImage(named: "homepage-top")
+        actionButton.setTitle("I want to connect to Eyva", for: .normal)
     }
     
     private func fillUsername() {
@@ -39,6 +39,13 @@ class HomeViewController: UIViewController {
         homeViewModel.getVitalRecords()
         tableView.reloadData()
         updateUIComponents()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        actionButton.applyGradient(colors: [rgb(183, 92, 255, 1.0).cgColor, rgb(103, 26, 228, 1.0).cgColor])
+        actionButton.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 17)
+        actionButton.setTitleColor(.white, for: .normal)
     }
     
     private func fillSubHeaderLabel() {
@@ -121,9 +128,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-        actionButton.applyGradient(colors: [rgb(183, 92, 255, 1.0).cgColor, rgb(103, 26, 228, 1.0).cgColor])
-        actionButton.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 17)
-        actionButton.setTitleColor(.white, for: .normal)
+        
     }
 }
 

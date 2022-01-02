@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import Gifu
 
 class SwipeUpViewController: UIViewController {
    
+    @IBOutlet weak var animatedImage: GIFImageView!
     @IBOutlet weak var swipeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         swipeButton.setTitle("Enter to Anthea Realm", for: .normal)
+        animatedImage.prepareForAnimation(withGIFNamed: "animate-launch")
+        animatedImage.startAnimatingGIF()
     }
     
     override func viewDidLayoutSubviews() {
