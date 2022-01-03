@@ -85,13 +85,13 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JW3-Gt-nwP">
                                             <rect key="frame" x="30" y="21" width="354" height="44"/>
-                                            <color key="backgroundColor" red="0.71764705882352942" green="0.36078431372549019" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="t1z-Ks-vks"/>
                                             </constraints>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Finish"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="finish-button-bg"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="25"/>
@@ -490,6 +490,7 @@
     <resources>
         <image name="back-icon" width="7.5" height="12"/>
         <image name="background-dotted" width="428" height="926"/>
+        <image name="finish-button-bg" width="337" height="44"/>
         <image name="ovalshape" width="19" height="23"/>
         <image name="right-arrow" width="7.5" height="12"/>
         <systemColor name="systemBackgroundColor">

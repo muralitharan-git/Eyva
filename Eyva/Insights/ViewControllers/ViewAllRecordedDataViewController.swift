@@ -31,8 +31,6 @@ class ViewAllRecordedDataViewController: UIViewController {
         super.viewDidLoad()
         trackedDateLabel.text = viewModel.getTrackedDate()
         nameLabel.attributedText = viewModel.getHeaderDetails()
-        finishButton.setTitle("Finish", for: .normal)
-        finishButton.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 16)
         finishButton.isHidden = viewModel.dataSource != .bluetoothDevice
         backButton.isHidden = viewModel.dataSource == .bluetoothDevice
         backButtonTopConstraint.constant = viewModel.dataSource == .bluetoothDevice ? 20 : 78
