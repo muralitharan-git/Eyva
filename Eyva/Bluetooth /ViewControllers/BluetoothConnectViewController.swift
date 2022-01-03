@@ -15,11 +15,12 @@ class BluetoothConnectViewController: UIViewController {
     @IBOutlet private weak var gradientView: UIView!
     @IBOutlet private weak var backgroundImageView: UIImageView!
     @IBOutlet private weak var bottomSheetTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var overlayView: UIView!
     
     // MARK: Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        overlayView.isHidden = true
         fillGradient()
     }
     
@@ -53,6 +54,7 @@ class BluetoothConnectViewController: UIViewController {
     }
     
     @IBAction private func meetEyvaButton_Tapped() {
+        overlayView.isHidden = false
         animateBottomView(with: -676)
     }
     

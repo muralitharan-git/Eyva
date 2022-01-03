@@ -114,6 +114,10 @@
                                     <action selector="meetEyvaButton_Tapped" destination="Y6W-OH-hqX" eventType="touchUpInside" id="V0H-Hu-ZiH"/>
                                 </connections>
                             </button>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsz-UD-dNP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsI-uk-zAD">
                                 <rect key="frame" x="0.0" y="896" width="414" height="730"/>
                                 <subviews>
@@ -215,6 +219,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="jsz-UD-dNP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="26i-XD-uf0"/>
                             <constraint firstItem="je8-Nn-zXc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="6Su-id-hqI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="je8-Nn-zXc" secondAttribute="trailing" constant="18" id="9KT-GP-4x7"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="omv-17-BUM" secondAttribute="bottom" constant="30" id="ALQ-XT-aht"/>
@@ -222,7 +227,10 @@
                             <constraint firstItem="je8-Nn-zXc" firstAttribute="top" secondItem="SZY-E6-Qxr" secondAttribute="bottom" constant="12" id="ISI-WE-tkx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zsI-uk-zAD" secondAttribute="trailing" id="L2L-lm-Hsi"/>
                             <constraint firstItem="UuF-5W-K38" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="SwA-ox-YgR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jsz-UD-dNP" secondAttribute="trailing" id="ZLc-f5-Ac7"/>
                             <constraint firstAttribute="bottom" secondItem="je8-Nn-zXc" secondAttribute="bottom" constant="150" id="bTb-n9-ZnI"/>
+                            <constraint firstItem="jsz-UD-dNP" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="c1C-cu-Cip"/>
+                            <constraint firstAttribute="bottom" secondItem="jsz-UD-dNP" secondAttribute="bottom" id="jMM-Xg-xxH"/>
                             <constraint firstItem="zsI-uk-zAD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mr0-9K-hd6"/>
                             <constraint firstItem="omv-17-BUM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="46" id="nUr-Vx-EKt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="omv-17-BUM" secondAttribute="trailing" constant="46" id="oxk-7A-zev"/>
@@ -241,6 +249,7 @@
                         <outlet property="connectLabel" destination="ky5-uv-gX3" id="lES-oB-Lmi"/>
                         <outlet property="gradientView" destination="zsI-uk-zAD" id="777-ra-OuV"/>
                         <outlet property="meetEyvaButton" destination="omv-17-BUM" id="uhT-Tv-LcU"/>
+                        <outlet property="overlayView" destination="jsz-UD-dNP" id="Q2t-JR-FzW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
