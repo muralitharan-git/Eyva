@@ -25,6 +25,4 @@ class SwipeUpViewController: UIViewController {
         swipeButton.titleLabel?.font = UIFont(name: "Mulish-Regular", size: 18)
         swipeButton.setTitleColor(rgb(244, 238, 254, 1.0), for: .normal)
     }
-    
-
 }
