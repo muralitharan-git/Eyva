@@ -25,13 +25,12 @@ class UserInputViewController: UIViewController {
     }
     
     private func configureButtons() {
-        actionButton.setBackgroundColor(rgb(48, 20, 88, 1.0), for: .disabled)
-        actionButton.setBackgroundColor(rgb(183, 92, 255, 1.0), for: .normal)
+        actionButton.setImage(UIImage(named: "enabled-button-state"), for: .normal)
+        actionButton.setImage(UIImage(named: "disabled-button-state"), for: .disabled)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        actionButton.applyGradient(colors: [rgb(183, 92, 255, 1.0).cgColor, rgb(103, 26, 228, 1.0).cgColor])
         actionButton.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 17)
     }
     
