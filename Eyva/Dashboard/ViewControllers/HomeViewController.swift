@@ -39,15 +39,15 @@ class HomeViewController: UIViewController {
         homeViewModel.getVitalRecords()
         tableView.reloadData()
         updateUIComponents()
+        reloadGeneralInfoTableViewCell()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-//        actionButton.applyGradient(colors: [rgb(183, 92, 255, 1.0).cgColor, rgb(103, 26, 228, 1.0).cgColor])
-//        actionButton.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 17)
-//        actionButton.setTitleColor(.white, for: .normal)
+    private func reloadGeneralInfoTableViewCell() {
+        if let cell = tableView(tableView, cellForRowAt: IndexPath(row: 2, section: 0)) as? GenericVitalInfoTableViewCell {
+            cell.collectionView.reloadData()
+        }
     }
-    
+        
     private func fillSubHeaderLabel() {
         subHeaderLabel.isHidden = true
         subHeaderLabel.attributedText = getMutableAttributedString(text: "The flowers of Anthea are slowly withering to reflect your inner body. Help them bloom again.", font: UIFont(name: "Mulish-Regular", size: 12)!, textColor: .white, lineHeight: 1.33)

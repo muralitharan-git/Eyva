@@ -10,8 +10,8 @@ import UIKit
 class RecordedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    internal weak var delegate: RecordedTableViewCellDelegate?
     
+    internal weak var delegate: RecordedTableViewCellDelegate?
     private var listOfVitalsInfo: [VitalInfo] = []
     
     internal func fillData(_ listOfVitalInfo: [VitalInfo]) {
