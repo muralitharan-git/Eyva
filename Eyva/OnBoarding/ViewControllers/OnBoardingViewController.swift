@@ -20,11 +20,11 @@ class OnBoardingViewController: UIViewController {
         super.viewDidLoad()
         view.addGestureRecognizer(createSwipeGestureRecognizer(for: .left))
         view.addGestureRecognizer(createSwipeGestureRecognizer(for: .right))
+        updateButtonTitleBasedOnState()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        nextButton.applyGradient(colors: [rgb(183, 92, 255, 1.0).cgColor, rgb(103, 26, 228, 1.0).cgColor])
         setUIComponents()
     }
     
@@ -54,7 +54,8 @@ class OnBoardingViewController: UIViewController {
     
     private func updateButtonTitleBasedOnState() {
         let isInLastIndex = isCurrentStateIsinLastIndex()
-        nextButton.setTitle(isInLastIndex ? "Take me to the Anthea Realm" : "Next", for: .normal)
+        let bgImage = isInLastIndex ? UIImage(named: "enter-button-bg") : UIImage(named: "next-button-cta")
+        nextButton.setImage(bgImage, for: .normal)
         setUIComponents()
     }
     
