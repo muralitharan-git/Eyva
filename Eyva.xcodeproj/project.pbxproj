@@ -127,6 +127,8 @@
 		32CE633D277DC4FE00CB8AE1 /* VitalDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalDataTableViewCell.swift; sourceTree = "<group>"; };
 		32CE633F277DC52D00CB8AE1 /* VitalsDataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsDataCollectionViewCell.swift; sourceTree = "<group>"; };
 		32CE6341277E15A500CB8AE1 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		32F164C427830758002C576A /* Vital+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		32F164C527830758002C576A /* Vital+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataClass.swift"; sourceTree = "<group>"; };
 		32FB52FA277F414C003207FE /* InsightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewModel.swift; sourceTree = "<group>"; };
 		32FB52FE277F41BF003207FE /* ViewAllRecordedDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllRecordedDataViewController.swift; sourceTree = "<group>"; };
 		32FB5300277F41DB003207FE /* VitalDataDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalDataDetailedViewController.swift; sourceTree = "<group>"; };
@@ -150,8 +152,6 @@
 		BC9574F4277C836C003821BF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BC9574F7277C846A003821BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BC9574F9277C84B7003821BF /* VitalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalInfo.swift; sourceTree = "<group>"; };
-		BC9574FD277C8662003821BF /* Vital+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BC9574FE277C8662003821BF /* Vital+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vital+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC957500277C8A1C003821BF /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		BC9E2AAB277BD36900819789 /* VitalsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC9E2AAD277BDC0100819789 /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
@@ -355,10 +355,10 @@
 		BC9574D7277C8209003821BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				32F164C527830758002C576A /* Vital+CoreDataClass.swift */,
+				32F164C427830758002C576A /* Vital+CoreDataProperties.swift */,
 				BC9574F0277C831C003821BF /* User+CoreDataClass.swift */,
 				BC9574F1277C831C003821BF /* User+CoreDataProperties.swift */,
-				BC9574FE277C8662003821BF /* Vital+CoreDataClass.swift */,
-				BC9574FD277C8662003821BF /* Vital+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

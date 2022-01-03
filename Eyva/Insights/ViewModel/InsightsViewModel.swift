@@ -55,6 +55,8 @@ class InsightsViewModel {
             return "\(Int(vitalsInfo.systolic))" + "/" + "\(Int(vitalsInfo.diastolic))"
         case .oxygen:
             return "\(Int(vitalsInfo.oxygen))"
+        case .haemoglopbin:
+            return "\(Float(vitalsInfo.haemoglobin))"
         default:
             return ""
         }
@@ -72,6 +74,8 @@ class InsightsViewModel {
             return (Int(vitalsInfo.systolic), Int(vitalsInfo.diastolic))
         case .oxygen:
             return (Int(vitalsInfo.oxygen), 0)
+        case .haemoglopbin:
+            return (Int(vitalsInfo.haemoglobin), 0)
         default:
             return (0, 0)
         }

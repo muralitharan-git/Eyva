@@ -30,10 +30,12 @@ class VitalsDataCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         if vitalType.getVitalSupportState() == .no {
+            containerView.setColors([UIColor.clear.cgColor, UIColor.clear.cgColor])
             typeLabelBottomConstriant.constant = -18
             containerView.setColors(greyGradientBG)
             typeImageView.image = UIImage(named: "lock-icon")
             unitLabel.isHidden = true
+            valueLabel.text = ""
         } else {
             unitLabel.isHidden = false
             typeLabelBottomConstriant.constant = 1

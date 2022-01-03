@@ -115,7 +115,9 @@ final class CoreDataManager {
         vitalDetails.temperature = vital.temperature
         vitalDetails.diastolic = vital.diastolic
         vitalDetails.systolic = vital.systolic
+        vitalDetails.haemoglobin = vital.haemoglobin 
         vitalDetails.recordedDate = vital.recorededDate
+        
         do {
             try managedObjectContext.save()
             onSave()

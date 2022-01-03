@@ -48,7 +48,8 @@ class HomeViewModel {
                           systolic: vital.systolic,
                           diastolic: vital.diastolic,
                           stressLevel: vital.stressLevel,
-                          recorededDate: vital.recordedDate ?? Date())
+                          recorededDate: vital.recordedDate ?? Date(),
+                          haemoglobin: vital.haemoglobin)
                 vitalsInfo.append(vitaInfo)
             }
         } catch {

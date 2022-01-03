@@ -30,6 +30,7 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
     case temperature = "Temperature"
     case bloodPressure = "Blood Pressure"
     case stress = "Stress Levels"
+    case haemoglopbin = "HbA1C"
     
     var description: String {
         return rawValue
@@ -49,6 +50,8 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return "90/60 - 120/80"
         case .stress:
             return "22-60"
+        case .haemoglopbin:
+            return "4% - 5.6%"
         }
     }
     
@@ -66,6 +69,8 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return "90/60\(unit) and 120/80\(unit)"
         case .stress:
             return "95% or higher"
+        case .haemoglopbin:
+            return "4% - 5.6%"
         }
     }
     
@@ -73,7 +78,7 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
         switch self {
         case .heartrate:
             return "BPM"
-        case .glucose:
+        case .glucose, .haemoglopbin:
             return "mg/dL"
         case .oxygen:
             return "SPO2"
@@ -100,12 +105,14 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return "Normal blood pressure is important for the proper flow of blood from the heart to the body's organs and tissues."
         case .stress:
             return "It might be a demanding boss, distrubed relation with friends or family, Experiencing some stress levels on a daily basis is common. But chronic & overwhelming stress can impact mental and physical health."
+        case .haemoglopbin:
+            return "HbA1c is what’s known as glycated haemoglobin. This is something that’s made when the glucose (sugar) in your body sticks to your red blood cells. Your body can’t use the sugar properly, so more of it sticks to your blood cells and builds up in your blood. Red blood cells are active for around 2-3 months, which is why the reading is taken quarterly on average."
         }
     }
     
     func getVitalSupportState() -> VitalEnabled {
         switch self {
-        case .temperature:
+        case .temperature, .bloodPressure, .stress:
             return .no
         default:
             return .yes
@@ -124,6 +131,8 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return UIImage(named: "\(prefix)-temperature")
         case .bloodPressure:
             return UIImage(named: "\(prefix)-bp")
+        case .haemoglopbin:
+            return UIImage(named: "\(prefix)-HbA1c")
         default:
             return UIImage(named: "\(prefix)-stress")
         }
@@ -141,8 +150,22 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return glucoseRange(value)
         case .bloodPressure:
             return bloodPressureRange(value, diastolic: value2)
+        case .haemoglopbin:
+            return getHaemoglobinRange(Float(value)) // Need to revisit later
         default:
             return .normal
+        }
+    }
+    
+    func getHaemoglobinRange(_ value: Float) -> ResultRange {
+        let normalRange = Float(4.0)...Float(5.6)
+        if normalRange.contains(value) {
+            return .normal
+        } else {
+            if value < 4.0 {
+                return .low
+            }
+            return .high
         }
     }
     
@@ -215,6 +238,8 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return getOxygenActions(range)
         case .heartrate:
             return getHeartRateActions(range)
+        case .haemoglopbin:
+            return getHaemglobinActions(range)
         default:
             return []
         }
@@ -296,6 +321,23 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
         }
     }
     
+    func getHaemglobinActions(_ range: ResultRange) -> [String] {
+        switch range {
+        case .normal:
+            return ["Continue having right meal at right times.",
+                    "Continue to rest well and the good night sleep.",
+                    "Keep an eye on stress levels to maintain right HbA1C levels."]
+        case .high:
+            return ["Being mindful of portion sizes.",
+                    "Eat regularly, every 3-5 hours.",
+                    "Take a stroll for 20 mins post meal"]
+        case .low:
+            return ["Check for any weakness or palpitations.",
+                    "Eat fruits and natural sugars. Include some carbs in the daily meal.",
+                    "Have Breakfast within an hour of waking up."]
+        }
+    }
+    
     func getResultLongDescription() -> String {
         switch self {
         case .heartrate:
@@ -308,6 +350,8 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return "Blood glucose is the main source of energy to the body. The average fasting glucose level is supposed to be less than 100 mg/dL for a healthy adult. A normal blood glucose level for adults, without diabetes, two hours after eating is 90 to 110 mg/dL."
         case .bloodPressure:
             return "Blood pressure is the pressure of blood pushing against the walls of your arteries. Arteries carry blood from your heart to other parts of your body. Your blood pressure normally rises and falls throughout the day."
+        case .haemoglopbin:
+            return "Hemoglobin A1c levels between 5.7% and 6.4% mean you have prediabetes and a higher chance of getting diabetes. Levels of 6.5% or higher mean you have diabetes. However HbA1C levels need to be averaged over a period of 3 months. It's common to have higher HbA1C levels post meal."
         default:
             return ""
         }
@@ -325,6 +369,8 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return (Int(vitalData.systolic), Int(vitalData.diastolic))
         case .oxygen:
             return (Int(vitalData.oxygen), 0)
+        case .haemoglopbin:
+            return (Int(vitalData.haemoglobin), 0)
         default:
             return (0, 0)
         }
@@ -342,6 +388,8 @@ enum Vitals: String, CustomStringConvertible, CaseIterable {
             return "\(Int(vitalData.systolic))" + "/" + "\(Int(vitalData.diastolic))"
         case .oxygen:
             return "\(Int(vitalData.oxygen))"
+        case .haemoglopbin:
+            return "\(Float(vitalData.haemoglobin))"
         default:
             return ""
         }

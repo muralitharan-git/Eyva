@@ -16,4 +16,5 @@ struct VitalInfo {
     var diastolic: Float
     var stressLevel: Float
     var recorededDate: Date
+    var haemoglobin: Float
 }
