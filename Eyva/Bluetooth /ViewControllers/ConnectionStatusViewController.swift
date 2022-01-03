@@ -87,7 +87,7 @@ class ConnectionStatusViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction private func showResultsButton_Tapped() {
-        let info = VitalInfo(heartrate: 80.0, oxygen: 99.0, glucose: 189.0, temperature: 0.0, systolic: 120.0, diastolic: 80.0, stressLevel: 78.0, recorededDate: Date(), haemoglobin: 5.2)
+        let info = VitalInfo(heartrate: 80.0, oxygen: 99.0, glucose: 110.0, temperature: 0.0, systolic: 120.0, diastolic: 80.0, stressLevel: 40.0, recorededDate: Date(), haemoglobin: 4.5)
         navigateToViewAllRecordedViewController(vitalInfo: info, dataSource: .bluetoothDevice)
     }
 }
